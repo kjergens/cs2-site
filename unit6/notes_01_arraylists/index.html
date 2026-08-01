@@ -132,6 +132,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#answer-key">Answer Key</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homework-18-arraylists">Homework 18: ArrayLists</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../notes_02_arraylist_traversal/">6.2 Traversal and Algorithms</a>
@@ -338,6 +340,39 @@
 </code></pre></div></p>
 <p><strong>3.</strong> <code>list.length</code> doesn't exist on ArrayList — that's array syntax. ArrayList uses <code>list.size()</code>.</p>
 <p><strong>4.</strong> <code>[25, 30]</code>. Trace: add 10→[10], add 20→[10,20], add 30→[10,20,30], remove(0)→[20,30], set(0,25)→[25,30].</p>
+<hr />
+<h2 id="homework-18-arraylists">Homework 18: ArrayLists</h2>
+<ol>
+<li>True or False: You can add items to an ArrayList after it has been created.</li>
+<li>How do you get the first item from an ArrayList called <code>list</code>? Write the code.</li>
+<li>What does <code>list.add("dog")</code> do? (1 sentence)</li>
+<li>What is the index of the third item in any ArrayList?</li>
+<li>What does the following code print?
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">colors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">colors</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;green&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">colors</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;blue&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">colors</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">);</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">colors</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+</code></pre></div></li>
+<li>For the ArrayList in question 5, write the line of code to remove <code>"blue"</code>.</li>
+<li>What does the following code print?
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">food</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">food</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;pizza&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">food</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;pineapple&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">food</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;bread&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">food</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+</code></pre></div></li>
+<li>What does the following code print (two lines)?
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">animals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">animals</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;cat&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">animals</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;dog&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">animals</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;fish&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">animals</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="n">animals</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">animals</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+</code></pre></div></li>
+<li>Short answer (1 sentence): Why would a programmer choose an ArrayList instead of a regular array?</li>
+</ol>
               
             </div>
           </div><footer>

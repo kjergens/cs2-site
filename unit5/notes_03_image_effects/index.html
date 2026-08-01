@@ -115,6 +115,18 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#answer-key">Answer Key</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homework-17-image-transformation-brightness">Homework 17: Image Transformation — Brightness</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#part-1-the-read-modify-write-pattern">Part 1: The Read-Modify-Write Pattern</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-2-clamping">Part 2: Clamping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-3-write-the-transformation">Part 3: Write the Transformation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-4-find-the-bug">Part 4: Find the Bug</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../project2/">Project 2: FotoFun</a>
@@ -297,6 +309,113 @@
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">newB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clamp</span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
 </code></pre></div></p>
 <p><strong>4.</strong> R: clamp(200+80) = clamp(280) = 255. G: clamp(150+80) = clamp(230) = 230. B: clamp(100+80) = 180.</p>
+<hr />
+<h2 id="homework-17-image-transformation-brightness">Homework 17: Image Transformation — Brightness</h2>
+<p><em>Assigned Class 31 · Due Class 32</em></p>
+<h3 id="part-1-the-read-modify-write-pattern">Part 1: The Read-Modify-Write Pattern</h3>
+<p>Here is a method that sets every pixel to pure red, ignoring the original colors:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">makeRed</span><span class="p">(</span><span class="n">BufferedImage</span><span class="w"> </span><span class="n">img</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">img</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span><span class="w"> </span><span class="n">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">img</span><span class="p">.</span><span class="na">getWidth</span><span class="p">();</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">            </span><span class="n">Color</span><span class="w"> </span><span class="n">newColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">            </span><span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">newColor</span><span class="p">.</span><span class="na">getRGB</span><span class="p">());</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>What does <code>img.setRGB(x, y, newColor.getRGB())</code> do? Why do we call <code>.getRGB()</code> on the <code>Color</code> object instead of passing <code>newColor</code> directly?</li>
+<li><code>makeRed</code> ignores the original pixel entirely. Rewrite the inner loop body so it reads the original pixel, keeps its green and blue values, but replaces the red channel with 255.</li>
+<li><code>makeRed</code> is void — it returns nothing. Yet after calling <code>makeRed(img)</code>, the image is permanently changed. Why? (Think back to HW 7.)</li>
+<li>You have a pixel at (3, 5) with color (80, 120, 200). Write the single line of code that sets that pixel to (80, 120, 255) — same red and green, but full blue.</li>
+</ol>
+<h3 id="part-2-clamping">Part 2: Clamping</h3>
+<p>Each RGB channel must stay in the range [0, 255]. Adding or subtracting a fixed amount can push a value outside that range, so you must clamp the result.</p>
+<ol>
+<li>A pixel has red = 220. You add 50 to brighten it. a) What is 220 + 50? b) Is that a valid channel value? What should be stored instead?</li>
+<li>A pixel has blue = 20. You subtract 50 to darken it. a) What is 20 − 50? b) Is that valid? What should be stored instead?</li>
+<li>Write a helper method <code>clamp(int value)</code> that returns <code>value</code> clamped to [0, 255]: if below 0, return 0; if above 255, return 255; otherwise return the value unchanged.</li>
+</ol>
+<h3 id="part-3-write-the-transformation">Part 3: Write the Transformation</h3>
+<ol>
+<li>
+<p>Using your <code>clamp</code> method, write <code>brighten(BufferedImage img, int amount)</code>. It should add <code>amount</code> to each channel (red, green, blue) of every pixel, clamping each result to [0, 255]. The method modifies the image in place.</p>
+</li>
+<li>
+<p>Trace <code>brighten</code> on this 3-pixel image (1 row, 3 columns) with <code>amount = 40</code>. Fill in the new RGB values after brightening.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Pixel</th>
+<th>Original (R, G, B)</th>
+<th>New (R, G, B)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(0, 0)</td>
+<td>(100, 150, 200)</td>
+<td></td>
+</tr>
+<tr>
+<td>(1, 0)</td>
+<td>(220, 30, 180)</td>
+<td></td>
+</tr>
+<tr>
+<td>(2, 0)</td>
+<td>(50, 80, 10)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>What happens when you call <code>brighten(img, -30)</code>? What visual effect does that produce, and does <code>clamp</code> still protect against invalid values?</li>
+</ol>
+<h3 id="part-4-find-the-bug">Part 4: Find the Bug</h3>
+<p>11.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">brighten</span><span class="p">(</span><span class="n">BufferedImage</span><span class="w"> </span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">img</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span><span class="w"> </span><span class="n">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">img</span><span class="p">.</span><span class="na">getWidth</span><span class="p">();</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">            </span><span class="n">Color</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">));</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clamp</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">getRed</span><span class="p">()</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clamp</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">getGreen</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clamp</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">getBlue</span><span class="p">()</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">            </span><span class="n">Color</span><span class="w"> </span><span class="n">newColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Color</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">}</span>
+</code></pre></div></p>
+<ol>
+<li>What goes wrong when <code>amount</code> is large enough to push a channel past 255, or negative enough to push it below 0?
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">brighten</span><span class="p">(</span><span class="n">BufferedImage</span><span class="w"> </span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">img</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span><span class="w"> </span><span class="n">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">img</span><span class="p">.</span><span class="na">getWidth</span><span class="p">();</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">            </span><span class="n">Color</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">));</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="na">getRed</span><span class="p">()</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="na">getGreen</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="na">getBlue</span><span class="p">()</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">            </span><span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Color</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">).</span><span class="na">getRGB</span><span class="p">());</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="p">}</span>
+</code></pre></div></li>
+</ol>
+<p>13.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">brighten</span><span class="p">(</span><span class="n">BufferedImage</span><span class="w"> </span><span class="n">img</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">img</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span><span class="w"> </span><span class="n">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">img</span><span class="p">.</span><span class="na">getWidth</span><span class="p">();</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">            </span><span class="n">Color</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Color</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">));</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clamp</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">getRed</span><span class="p">()</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clamp</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">getGreen</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clamp</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">getBlue</span><span class="p">()</span><span class="w">  </span><span class="o">+</span><span class="w"> </span><span class="n">amount</span><span class="p">);</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">            </span><span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Color</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">).</span><span class="na">getRGB</span><span class="p">());</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="p">}</span>
+</code></pre></div></p>
               
             </div>
           </div><footer>
