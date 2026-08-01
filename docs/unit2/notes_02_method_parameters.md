@@ -229,3 +229,81 @@ public static void printMultiples(int n, int count) {
     }
 }
 ```
+
+---
+
+## Homework 6: Method Parameters
+
+*Assigned Class 7 · Due Class 8*
+
+### Part 1: Parameters — Copies, Not Connections
+
+1. Trace through this code. Fill in the value of `x` in `main` after each line.
+```java
+public static void main(String[] args) {
+    int x = 10;                  // x = ____
+    addFive(x);                  // prints: ________________
+    System.out.println(x);       // prints: ________________
+}
+
+public static void addFive(int n) {
+    n = n + 5;
+    System.out.println("Inside method: n = " + n);
+}
+```
+2. Why doesn't `x` change after `addFive(x)` is called? Explain in one or two sentences.
+3. Predict the output of this program:
+```java
+public static void main(String[] args) {
+    int p = 4;
+    int q = 7;
+    mystery(p, q);
+    System.out.println(p + " " + q);
+}
+
+public static void mystery(int a, int b) {
+    a = a * 2;
+    b = b + 3;
+    System.out.println(a + " " + b);
+}
+```
+
+### Part 2: Local Scope
+
+4. Will this code compile? Explain why or why not.
+```java
+public static void main(String[] args) {
+    compute();
+    System.out.println(result);
+}
+
+public static void compute() {
+    int result = 42;
+}
+```
+5. Two methods each declare a variable named `count`. Do they interfere with each other? Why or why not?
+```java
+public static void main(String[] args) {
+    methodA();
+    methodB();
+    methodA();
+}
+
+public static void methodA() {
+    int count = 0;
+    count++;
+    System.out.println("A: " + count);
+}
+
+public static void methodB() {
+    int count = 100;
+    count--;
+    System.out.println("B: " + count);
+}
+```
+
+### Part 3: Write the Method
+
+6. Write a void method called `printMultiples` that takes two `int` parameters — a number `n` and a count `k` — and prints the first `k` multiples of `n`, each on its own line. Example: `printMultiples(3, 4)` should print `3 6 9 12`, one per line.
+
+7. Write a void method called `printBox` that takes an `int size` and prints a filled square of `*` characters of that size. Example: `printBox(3)` should print a 3×3 grid of `* * *` rows.

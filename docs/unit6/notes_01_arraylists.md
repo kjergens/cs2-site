@@ -178,3 +178,40 @@ System.out.println(fruits.get(1));   // banana
 **3.** `list.length` doesn't exist on ArrayList — that's array syntax. ArrayList uses `list.size()`.
 
 **4.** `[25, 30]`. Trace: add 10→[10], add 20→[10,20], add 30→[10,20,30], remove(0)→[20,30], set(0,25)→[25,30].
+
+---
+
+## Homework 18: ArrayLists
+
+1. True or False: You can add items to an ArrayList after it has been created.
+2. How do you get the first item from an ArrayList called `list`? Write the code.
+3. What does `list.add("dog")` do? (1 sentence)
+4. What is the index of the third item in any ArrayList?
+5. What does the following code print?
+```java
+ArrayList<String> colors = new ArrayList<>();
+colors.add("green");
+colors.add("blue");
+colors.add(0, "red");
+System.out.println(colors.get(1));
+```
+6. For the ArrayList in question 5, write the line of code to remove `"blue"`.
+7. What does the following code print?
+```java
+ArrayList<String> food = new ArrayList<>();
+food.add("pizza");
+food.add("pineapple");
+food.add(1, "bread");
+System.out.println(food.get(0));
+```
+8. What does the following code print (two lines)?
+```java
+ArrayList<String> animals = new ArrayList<>();
+animals.add("cat");
+animals.add("dog");
+animals.add("fish");
+System.out.println(animals.size());
+animals.remove(1);
+System.out.println(animals.size());
+```
+9. Short answer (1 sentence): Why would a programmer choose an ArrayList instead of a regular array?

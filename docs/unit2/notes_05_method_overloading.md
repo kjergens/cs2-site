@@ -169,3 +169,122 @@ public static String describe(String s) { return "string: " + s; }
 **6.** `"string: hello"` — argument is a String.
 
 **7.** `"int: 2"` — `5 / 2` is integer division, result is `2` (int), so `describe(int)` is called.
+
+---
+
+## Homework 9: Method Overloading
+
+*Assigned Class 10 · Due Class 11*
+
+### Part 1: Valid or Not?
+
+For each pair of method headers, state whether they form a valid overload. Explain your answer in one sentence.
+
+1.
+```java
+public static int add(int a, int b)
+public static int add(int x, int y)
+```
+2.
+```java
+public static int add(int a, int b)
+public static double add(double a, double b)
+```
+3.
+```java
+public static void print(String s)
+public static void print(int n)
+public static void print(double d)
+```
+4.
+```java
+public static int multiply(int a, int b)
+public static int multiply(int a, int b, int c)
+```
+5.
+```java
+public static double area(double radius)
+public static double area(double width, double height)
+```
+
+### Part 2: Which Version Gets Called?
+
+Given these overloaded methods:
+```java
+public static String describe(int n) {
+    return "integer: " + n;
+}
+public static String describe(double d) {
+    return "double: " + d;
+}
+public static String describe(String s) {
+    return "string: " + s;
+}
+public static String describe(int a, int b) {
+    return "two ints: " + a + " and " + b;
+}
+```
+
+Write the method header that matches each call, then write what the call returns.
+
+6. `describe(42)`
+7. `describe(3.14)`
+8. `describe("hello")`
+9. `describe(1, 2)`
+10. What does this `main` print?
+```java
+public static void main(String[] args) {
+    System.out.println(describe(10));
+    System.out.println(describe(10.0));
+    System.out.println(describe(describe(5)));
+}
+```
+
+### Part 3: Write Overloaded Methods
+
+11. Write an overloaded pair of methods named `max`:
+   - `max(int a, int b)` — returns the larger of two integers
+   - `max(int a, int b, int c)` — returns the largest of three integers, by calling the two-parameter version twice (do not use if statements in the three-parameter version)
+
+12. Write three overloaded versions of a method named `area` that each return a `double`:
+   - `area(double side)` — area of a square (side²)
+   - `area(double width, double height)` — area of a rectangle
+   - `area(double base, double height, boolean isTriangle)` — area of a triangle (½ × base × height); the boolean parameter exists only to make the signature distinct from the rectangle version
+
+### Part 4: Find the Bug
+
+13.
+```java
+public static int total(int a, int b) {
+    return a + b;
+}
+public static int total(int x, int y) {
+    return x * y;
+}
+```
+
+14.
+```java
+public static double round2(double n) {
+    return Math.round(n * 100.0) / 100.0;
+}
+public static float round2(double n) {
+    return (float)(Math.round(n * 100.0) / 100.0);
+}
+```
+
+15. This code compiles and runs but the programmer is confused about the output. What is happening?
+```java
+public static String classify(int n) {
+    return "int";
+}
+public static String classify(double d) {
+    return "double";
+}
+
+public static void main(String[] args) {
+    System.out.println(classify(5));        // expected "int"
+    System.out.println(classify(5.0));      // expected "double"
+    System.out.println(classify(5 / 2));    // expected "double" — surprised to see "int"
+}
+```

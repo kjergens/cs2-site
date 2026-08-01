@@ -183,3 +183,77 @@ System.out.println(myCar.year);
 ```
 
 **4.** No. Each object has its own copy of every instance variable. Changing `d1.name` only affects `d1`.
+
+---
+
+## Homework 10: Introduction to Objects
+
+*Assigned Class 21 · Due Class 22*
+
+### Part 1: Classes and Objects
+
+1. For each item below, write *class* or *object*:
+   - a) The concept of a "Dog" in general — a description of what every dog has and can do
+   - b) A specific dog named Fido who is 3 years old and is a Labrador
+   - c) The description of what every Student has: a name, a GPA, and a grade level
+   - d) The particular student with name "Alex" and GPA 3.8
+
+2. A class has two kinds of members — **attributes** (instance variables) and **behaviors** (methods). For a `BankAccount` class, sort these into Attributes vs. Behaviors: current balance, deposit money, account holder's name, withdraw money, account number, calculate interest.
+
+3. A program can create many `Dog` objects, each with its own name, breed, and age. Does each object get its own separate copy of the instance variables, or do all objects share one copy?
+
+### Part 2: Reading a Class Definition
+
+```java
+public class Dog {
+    public String name;
+    public String breed;
+    public int age;
+
+    public void bark() {
+        System.out.println(name + " says: Woof!");
+    }
+
+    public void birthday() {
+        age = age + 1;
+        System.out.println("Happy birthday, " + name + "!");
+    }
+}
+```
+
+4. List all the instance variables of the `Dog` class. For each one, give its type.
+5. List all the methods of the `Dog` class.
+6. The `bark` method uses the variable `name` without declaring it inside the method. Where does `name` come from?
+7. The `birthday` method modifies `age`. If you call `birthday()` on a `Dog` object, does the change persist — is the object's `age` actually different afterward? Explain briefly.
+
+### Part 3: Creating and Using Objects
+
+```java
+public static void main(String[] args) {
+    Dog fido = new Dog();
+    fido.name = "Fido";
+    fido.breed = "Labrador";
+    fido.age = 3;
+
+    Dog rex = new Dog();
+    rex.name = "Rex";
+    rex.breed = "German Shepherd";
+    rex.age = 5;
+
+    fido.bark();
+    rex.bark();
+    fido.birthday();
+    System.out.println(fido.age);
+}
+```
+
+8. What does `new Dog()` do?
+9. What does `fido.name = "Fido"` do? How is this different from declaring a local variable?
+10. Trace the program. Write the output in order.
+11. After the program finishes, what is the value of `rex.age`? Explain why.
+
+### Part 4: Write a Class
+
+12. Define a class called `Rectangle` with two `double` instance variables (`width`, `height`), a void method `describe` that prints `"Rectangle: W x H"` (substituting the actual values), and a method `area` that returns `width * height` as a `double` (no printing inside).
+
+13. Write a `main` method (in a separate class, not inside `Rectangle`) that creates a `Rectangle` with width `5.0` and height `3.0`, calls `describe()` on it, stores the result of `area()` in a variable, and prints it.

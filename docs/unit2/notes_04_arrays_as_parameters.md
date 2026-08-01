@@ -214,3 +214,99 @@ public static int countAbove(int[] arr, int threshold) {
     return count;
 }
 ```
+
+---
+
+## Homework 8: Arrays as Parameters
+
+*Assigned Class 9 · Due Class 10*
+
+### Part 1: What Happens Inside the Method?
+
+1. Trace this code. What does `main` print?
+```java
+public static void doubleFirst(int[] arr) {
+    arr[0] = arr[0] * 2;
+}
+
+public static void main(String[] args) {
+    int[] nums = {5, 10, 15};
+    doubleFirst(nums);
+    System.out.println(nums[0]);
+}
+```
+
+2. Now trace this code. What does `main` print?
+```java
+public static void tryToChange(int n) {
+    n = n * 2;
+}
+
+public static void main(String[] args) {
+    int x = 5;
+    tryToChange(x);
+    System.out.println(x);
+}
+```
+
+3. Problems 1 and 2 look similar but behave differently. Explain the difference in one or two sentences. Use the terms *copy* and *reference*.
+
+4. Trace this code fully. What does `main` print after `addOne` is called?
+```java
+public static void addOne(int[] arr) {
+    for (int i = 0; i < arr.length; i++) {
+        arr[i] += 1;
+    }
+}
+
+public static void main(String[] args) {
+    int[] data = {10, 20, 30};
+    addOne(data);
+    for (int i = 0; i < data.length; i++) {
+        System.out.print(data[i] + " ");
+    }
+}
+```
+
+5. True or false — explain your answer.
+   - a) A method can permanently change the contents of an array it receives as a parameter.
+   - b) A method can permanently change an `int` variable it receives as a parameter.
+
+### Part 2: Methods That Take Arrays and Return Values
+
+All methods below should return a value — no printing inside the method.
+
+6. Write a method `sum` that takes an `int` array and returns the sum of its elements.
+7. Write a method `max` that takes an `int` array and returns the largest element.
+8. Write a method `countAbove` that takes an `int` array and an `int threshold`, and returns how many elements are strictly greater than the threshold.
+9. Write a method `average` that takes a `double` array and returns the average as a `double`.
+
+### Part 3: Putting It Together
+
+10. Using your `sum` and `average` methods from Part 2, write the `main` code (not the methods) that declares the array `{88, 72, 95, 61, 83}`, prints the sum, and prints the average.
+
+11. Write a method `normalize` that takes an `int` array and an `int divisor`, and divides every element of the array by the divisor in place (modifying the original array, no return value needed). Then write a `main` call that uses it.
+
+### Part 4: Find the Bug
+
+12.
+```java
+public static int sum(int[] arr) {
+    int total = 0;
+    for (int i = 0; i <= arr.length; i++) {
+        total += arr[i];
+    }
+    return total;
+}
+```
+
+13. Compiles and runs — but returns the wrong answer for most inputs. What is wrong?
+```java
+public static double average(int[] arr) {
+    int total = 0;
+    for (int i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+    return total / arr.length;
+}
+```

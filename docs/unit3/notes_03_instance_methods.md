@@ -246,3 +246,156 @@ public void decrementByN(int n) {
     }
 }
 ```
+
+---
+
+## Homework 12: Instance Methods
+
+*Assigned Class 23 · Due Class 24*
+
+### Part 1: Reading Instance Methods
+
+```java
+public class Student {
+    public String name;
+    public int grade;
+    public double gpa;
+
+    public Student(String name, int grade, double gpa) {
+        this.name = name;
+        this.grade = grade;
+        this.gpa = gpa;
+    }
+
+    public void promote() {
+        grade++;
+    }
+
+    public void adjustGpa(double change) {
+        gpa = gpa + change;
+    }
+
+    public boolean isHonorRoll() {
+        return gpa >= 3.5;
+    }
+
+    public String toString() {
+        return name + " (Grade " + grade + ", GPA: " + gpa + ")";
+    }
+}
+```
+
+1. Which methods are void? Which return a value — and what type?
+2. Notice that none of these methods have the keyword `static`. How does that change the way you call them?
+3. The `isHonorRoll` method uses `gpa` without declaring it or passing it as a parameter. Why does this work?
+4. `toString()` is a special method name in Java. When you pass an object to `System.out.println`, Java automatically calls its `toString()` method. What does the following line print?
+```java
+System.out.println(new Student("Jordan", 11, 3.7));
+```
+
+### Part 2: Predict the Output
+
+5.
+```java
+public static void main(String[] args) {
+    Student s = new Student("Alex", 9, 3.2);
+    System.out.println(s.isHonorRoll());
+    s.adjustGpa(0.4);
+    System.out.println(s.isHonorRoll());
+    System.out.println(s.gpa);
+}
+```
+
+6.
+```java
+public static void main(String[] args) {
+    Student s1 = new Student("Morgan", 10, 3.8);
+    Student s2 = new Student("Riley", 10, 3.1);
+    s1.promote();
+    System.out.println(s1.toString());
+    System.out.println(s2.toString());
+}
+```
+
+7.
+```java
+public static void main(String[] args) {
+    Student s = new Student("Casey", 12, 3.6);
+    System.out.println(s.isHonorRoll());
+    s.adjustGpa(-0.2);
+    System.out.println(s.isHonorRoll());
+    s.promote();
+    System.out.println(s.toString());
+}
+```
+
+### Part 3: Write Instance Methods
+
+Use this class for problems 8–10:
+```java
+public class Rectangle {
+    public double width;
+    public double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+}
+```
+
+8. Add a method `area` that returns `width * height` as a `double`.
+9. Add a method `perimeter` that returns `2 * (width + height)` as a `double`.
+10. Add a `toString` method that returns a String in this format: `"Rectangle: W x H"` (e.g. `"Rectangle: 4.0 x 3.0"`). Then write a `main` that creates a `Rectangle` with width `4.0` and height `3.0`, prints it directly with `System.out.println` (which calls `toString` automatically), and prints its area.
+
+### Part 4: Find the Bug
+
+11.
+```java
+public class Thermometer {
+    public double tempC;
+
+    public Thermometer(double tempC) {
+        this.tempC = tempC;
+    }
+
+    public static double toFahrenheit() {
+        return tempC * 9.0 / 5.0 + 32;
+    }
+}
+```
+
+12.
+```java
+public class Circle {
+    public double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double area() {
+        System.out.println(Math.PI * radius * radius);
+    }
+}
+```
+
+13.
+```java
+public class Counter {
+    public int count;
+
+    public Counter(int start) {
+        count = start;
+    }
+
+    public void increment() {
+        count++;
+    }
+}
+
+public static void main(String[] args) {
+    Counter.increment();
+    System.out.println(Counter.count);
+}
+```

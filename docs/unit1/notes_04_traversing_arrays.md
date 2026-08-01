@@ -299,3 +299,100 @@ for (int i = 1; i < vals.length; i++) {
 System.out.println("Min: " + min);   // 3
 System.out.println("Max: " + max);   // 19
 ```
+
+---
+
+## Homework 4: Arrays and Loops
+
+*Assigned Class 4 · Due Class 5*
+
+### Part 1: Traversal — Predict the Output
+
+1.
+```java
+int[] vals = {10, 20, 30, 40, 50};
+int total = 0;
+for (int i = 0; i < vals.length; i++) {
+    total += vals[i];
+}
+System.out.println(total);
+```
+
+2.
+```java
+int[] data = {5, 12, 3, 8, 15, 6};
+int count = 0;
+for (int i = 0; i < data.length; i++) {
+    if (data[i] > 7) {
+        count++;
+    }
+}
+System.out.println(count);
+```
+
+### Part 2: Write the Algorithms
+
+For each problem, write a complete for loop (or loops) that works on the given array. Do not change the array declaration.
+
+3. **Sum**
+```java
+int[] prices = {15, 42, 8, 27, 63, 11};
+// Write a loop that calculates and prints the sum of all elements.
+```
+
+4. **Maximum**
+```java
+int[] scores = {88, 72, 95, 61, 83, 97, 74};
+// Write a loop that finds and prints the largest value.
+// Hint: start by assuming the first element is the max.
+```
+
+5. **Minimum**
+```java
+int[] scores = {88, 72, 95, 61, 83, 97, 74};
+// Write a loop that finds and prints the smallest value.
+```
+
+6. **Count with condition**
+```java
+int[] grades = {55, 78, 92, 61, 88, 45, 73, 90};
+// Write a loop that counts and prints how many grades are 80 or above.
+```
+
+7. **Average**
+```java
+double[] temps = {98.6, 101.2, 99.4, 103.0, 97.8};
+// Write a loop that calculates and prints the average temperature.
+// Print the result as a double.
+```
+
+### Part 3: Find the Bug
+
+Each snippet has exactly one error. Identify the line and describe the problem.
+
+8.
+```java
+int[] nums = {4, 8, 15, 16, 23};
+for (int i = 1; i <= nums.length; i++) {
+    System.out.println(nums[i]);
+}
+```
+
+9. This compiles and runs — but gives the wrong answer for some inputs. What is the flaw?
+```java
+int[] data = {5, 3, 9, 1, 7};
+int max = 0;
+for (int i = 0; i < data.length; i++) {
+    if (data[i] > max) {
+        max = data[i];
+    }
+}
+System.out.println("Max: " + max);
+```
+
+10.
+```java
+int[] scores = new int[5];
+scores = {90, 85, 78, 92, 88};
+System.out.println(scores[0]);
+```

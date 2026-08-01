@@ -237,3 +237,124 @@ public static double hypotenuse(double a, double b) {
     return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 }
 ```
+
+---
+
+## Homework 7: Return Values
+
+*Assigned Class 8 · Due Class 9*
+
+**Rule going forward:** methods should compute and return; `main` (or the caller) decides what to do with the result — including whether to print it.
+
+### Part 1: Reading Return Types
+
+For each method header, state the return type and what the method must hand back.
+
+1. `public static int countVowels(String s)`
+2. `public static double circleArea(double radius)`
+3. `public static boolean isPrime(int n)`
+4. `public static String initials(String first, String last)`
+
+### Part 2: Predict the Output
+
+5.
+```java
+public static int square(int n) {
+    return n * n;
+}
+
+public static void main(String[] args) {
+    System.out.println(square(4));
+    System.out.println(square(3) + square(4));
+    int x = square(5);
+    System.out.println(x);
+}
+```
+
+6.
+```java
+public static int add(int a, int b) {
+    return a + b;
+}
+
+public static void main(String[] args) {
+    int result = add(add(1, 2), add(3, 4));
+    System.out.println(result);
+}
+```
+
+7.
+```java
+public static boolean isEven(int n) {
+    return n % 2 == 0;
+}
+
+public static void main(String[] args) {
+    System.out.println(isEven(6));
+    System.out.println(isEven(7));
+    if (isEven(10)) {
+        System.out.println("ten is even");
+    }
+}
+```
+
+8.
+```java
+public static int bigger(int a, int b) {
+    if (a > b) {
+        return a;
+    }
+    return b;
+}
+
+public static void main(String[] args) {
+    System.out.println(bigger(3, 7));
+    System.out.println(bigger(bigger(2, 5), bigger(8, 4)));
+}
+```
+
+### Part 3: Find the Bug
+
+9.
+```java
+public static int tripleIt(int n) {
+    int result = n * 3;
+}
+```
+
+10. Compiles and runs — but returns the wrong answer. Why?
+```java
+public static double half(int n) {
+    return n / 2;
+}
+```
+
+11.
+```java
+public static boolean isNegative(int n) {
+    if (n < 0) {
+        return true;
+    }
+}
+```
+
+12.
+```java
+public static int absolute(int n) {
+    if (n < 0) {
+        return -n;
+    } else {
+        return "positive";
+    }
+}
+```
+
+### Part 4: Write the Method
+
+For each problem, write a method that returns the result — do not print inside the method.
+
+13. Write a method `celsiusToFahrenheit` that takes a `double` Celsius temperature and returns the Fahrenheit equivalent. Formula: `F = C × 9.0 / 5.0 + 32`.
+
+14. Write a method `clamp` that takes three `int` parameters — a value, a min, and a max — and returns the value if it falls within `[min, max]`, the min if the value is too low, or the max if it is too high. Examples: `clamp(5, 0, 10)` → `5`, `clamp(-3, 0, 10)` → `0`, `clamp(15, 0, 10)` → `10`.
+
+15. Write a method `hypotenuse` that takes two `double` parameters representing the legs of a right triangle and returns the length of the hypotenuse. Use `Math.sqrt` and `Math.pow`.

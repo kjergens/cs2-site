@@ -373,3 +373,124 @@ System.out.println(count);   // 26
 **13.** `i` is incremented twice each pass — once by `i++` in the body and once by the for header. It prints `1 3 5` instead of `1 2 3 4 5`. The student intended to print every value from 1 to 5. Fix: remove `i++` from the body.
 
 **14.** No — this loop never ends. Starting at 10 and subtracting 3 each time: 10, 7, 4, 1, -2, -5... `x` skips over 0 entirely and keeps decreasing. The condition `x != 0` is never false. Fix: change the condition to `x > 0`.
+
+---
+
+## Homework 2: Loops Review
+
+*Assigned Class 2 · Due Class 3*
+
+### Part 1: Predict the Output — While Loops
+
+1.
+```java
+int n = 1;
+while (n <= 5) {
+    System.out.println(n);
+    n++;
+}
+```
+
+2. Trace each iteration, then write the final output.
+```java
+int x = 100;
+while (x > 10) {
+    x /= 2;
+}
+System.out.println(x);
+```
+
+3.
+```java
+int count = 0;
+int i = 1;
+while (i <= 20) {
+    if (i % 3 == 0) {
+        count++;
+    }
+    i++;
+}
+System.out.println(count);
+```
+
+### Part 2: Predict the Output — For Loops
+
+4.
+```java
+for (int i = 0; i < 5; i++) {
+    System.out.print(i * i + " ");
+}
+```
+
+5.
+```java
+int sum = 0;
+for (int i = 1; i <= 10; i++) {
+    sum += i;
+}
+System.out.println(sum);
+```
+
+6.
+```java
+for (int i = 1; i <= 5; i++) {
+    if (i % 2 == 0) {
+        System.out.println(i + " is even");
+    } else {
+        System.out.println(i + " is odd");
+    }
+}
+```
+
+7. What math operation does this loop compute?
+```java
+int result = 1;
+for (int i = 1; i <= 5; i++) {
+    result *= i;
+}
+System.out.println(result);
+```
+
+### Part 3: Write the Loop
+
+8. Write a `while` loop that prints every multiple of 7 from 7 to 70 (inclusive).
+
+9. Write a `for` loop that computes and prints the sum of all odd numbers from 1 to 99.
+
+10. Write a `for` loop that counts how many integers from 1 to 100 are divisible by 4 but not by 8, and prints the count.
+
+11. Write a loop (your choice of `while` or `for`) that prints the following pattern:
+```
+5
+10
+15
+20
+25
+```
+
+### Part 4: Find the Bug
+
+12.
+```java
+int i = 0;
+while (i < 10) {
+    System.out.println(i);
+}
+```
+
+13. This runs without error — but a student expected it to print the sum 1 through 10. What is wrong?
+```java
+int total = 0;
+for (int i = 1; i < 10; i++) {
+    total += i;
+}
+System.out.println(total);
+```
+
+14. This runs without error — but the output isn't what the student intended. What happens and why?
+```java
+for (int i = 0; i <= 5; i++) {
+    System.out.println(i);
+    i++;
+}
+```
