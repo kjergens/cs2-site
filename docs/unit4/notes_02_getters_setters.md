@@ -1,40 +1,10 @@
-# CS2 — Unit Notes: Getters and Setters
+# CS2 — Unit Notes: Setters
 
 ---
 
-## 1. Reading Private Fields: Getters
+## 1. Writing Private Fields: Setters
 
-When instance variables are `private`, outside code can't read them directly. A **getter** (also called an *accessor method*) is a public method that returns the value of a private field.
-
-```java
-public class BankAccount {
-    private String owner;
-    private double balance;
-
-    public String getOwner() {
-        return owner;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-}
-```
-
-Usage from outside the class:
-```java
-BankAccount acct = new BankAccount("Alice", 500.0);
-System.out.println(acct.getOwner());    // Alice
-System.out.println(acct.getBalance());  // 500.0
-```
-
-**Naming convention:** getter methods are named `get` + the field name with a capital first letter: `getOwner`, `getBalance`, `getName`, `getAge`.
-
----
-
-## 2. Writing Private Fields: Setters
-
-A **setter** (also called a *mutator method*) is a public void method that sets the value of a private field. The key advantage over direct assignment: a setter can *validate* the new value before accepting it.
+You've already seen getters (Chapter 1) as the safe way to *read* a private field from outside the class. A **setter** (also called a *mutator method*) is the equivalent for *writing* — a public void method that sets the value of a private field. The key advantage over direct assignment: a setter can *validate* the new value before accepting it.
 
 ```java
 public void setBalance(double newBalance) {
@@ -50,7 +20,7 @@ Now setting a negative balance is silently rejected. The object stays in a valid
 
 ---
 
-## 3. Validation in Setters
+## 2. Validation in Setters
 
 Setters can enforce any rule the class needs:
 
@@ -77,7 +47,7 @@ If the validation fails, the field is simply not updated. The caller gets no err
 
 ---
 
-## 4. When NOT to Write a Setter
+## 3. When NOT to Write a Setter
 
 Not every field needs a setter. If a field should never change after construction, don't write a setter for it — the constructor sets it once, and that's final.
 
@@ -96,7 +66,9 @@ The question to ask: "Should outside code ever be able to change this field?" If
 
 ---
 
-## 5. The Full Pattern
+## 4. The Full Pattern
+
+Now that you know both getters (Chapter 1) and setters, here's a complete class using both:
 
 ```java
 public class Dog {
@@ -133,14 +105,12 @@ public class Dog {
 
 ---
 
-## 6. Common Errors
+## 5. Common Errors
 
 | Error | Problem | Fix |
 |---|---|---|
-| `public double getBalance() { balance = newBalance; }` | Getter that modifies — contradicts its purpose | Getters only `return`, never assign |
 | `public void setAge(int newAge) { return newAge; }` | Setters are void — they assign, don't return | Remove `return newAge`; assign instead: `age = newAge;` |
 | Setter with no validation | Works, but misses the point | Add an `if` to reject invalid values |
-| `getBalance` vs `getbalance` | Compile error (wrong name) | Convention: capital letter after `get` |
 
 ---
 
@@ -156,16 +126,15 @@ public class Rectangle {
         this.width  = width;
         this.height = height;
     }
+
+    public double getWidth()  { return width; }
+    public double getHeight() { return height; }
 }
 ```
 
-**1.** Write a getter for `width` and a getter for `height`.
+**1.** Write a setter for `width` that rejects zero or negative values.
 
-**2.** Write a setter for `width` that rejects zero or negative values.
-
-**3.** Should `Rectangle` have a setter for `height`? Does it depend on anything?
-
-**4.** Add a non-void method `area()` that returns width × height. Is this a getter? Why or why not?
+**2.** Should `Rectangle` have a setter for `height`? Does it depend on anything?
 
 ---
 ---
@@ -174,12 +143,6 @@ public class Rectangle {
 
 **1.**
 ```java
-public double getWidth()  { return width; }
-public double getHeight() { return height; }
-```
-
-**2.**
-```java
 public void setWidth(double newWidth) {
     if (newWidth > 0) {
         width = newWidth;
@@ -187,152 +150,15 @@ public void setWidth(double newWidth) {
 }
 ```
 
-**3.** It depends on the design. If rectangles are supposed to be resizable, yes. If they're immutable (fixed at construction), no. The class designer makes this call.
-
-**4.** `area()` is not a getter — it computes a derived value rather than returning a stored field directly. It's a non-void instance method, but not an accessor in the strict sense.
+**2.** It depends on the design. If rectangles are supposed to be resizable, yes. If they're immutable (fixed at construction), no. The class designer makes this call.
 
 ---
-
-## Homework 13: Private Fields and Getters
-
-!!! attention
-
-    *Assigned Class 26 · Due Class 27*
-
-    ### Part 1: Why Private?
-
-    ```java
-    public class BankAccount {
-        public String owner;
-        public double balance;
-
-        public BankAccount(String owner, double initialBalance) {
-            this.owner = owner;
-            this.balance = initialBalance;
-        }
-    }
-    ```
-
-    1. With public fields, any code anywhere can do this:
-    ```java
-    BankAccount acct = new BankAccount("Alex", 500.0);
-    acct.balance = -9999999.0;
-    acct.owner = "";
-    ```
-    Why is this a problem? Give a specific reason for each field.
-
-    2. Now the fields are changed to `private`. Will `acct.balance = -9999999.0` still compile? Why or why not?
-
-    3. With private fields, how can code outside the class read the current balance? (You don't need to write code — just describe the approach.)
-
-    ### Part 2: Reading a Class with Getters
-
-    ```java
-    public class Student {
-        private String name;
-        private int grade;
-        private double gpa;
-
-        public Student(String name, int grade, double gpa) {
-            this.name = name;
-            this.grade = grade;
-            this.gpa = gpa;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getGrade() {
-            return grade;
-        }
-
-        public double getGpa() {
-            return gpa;
-        }
-
-        public boolean isHonorRoll() {
-            return gpa >= 3.5;
-        }
-
-        public String toString() {
-            return name + " (Grade " + grade + ", GPA: " + gpa + ")";
-        }
-    }
-    ```
-
-    4. The fields are private, yet the constructor sets them with `this.name = name`. Why doesn't this violate the private restriction?
-    5. `toString()` uses `name`, `grade`, and `gpa` directly — no getters needed. Why can it access private fields without going through `getName()`, `getGrade()`, or `getGpa()`?
-    6. Write the two lines of `main` code that read a student's name and GPA and print each one on its own line. Assume the variable is `Student s`.
-    7. True or false — explain your answer.
-       - a) `s.gpa = 4.0` will compile if `gpa` is private.
-       - b) `s.getGpa()` will compile if `getGpa` is public.
-
-    ### Part 3: Write Getters
-
-    8. The class below is missing its getter methods. Add a getter for each private field, following the naming convention `getFieldName()`.
-    ```java
-    public class Movie {
-        private String title;
-        private int year;
-        private double rating;
-
-        public Movie(String title, int year, double rating) {
-            this.title = title;
-            this.year = year;
-            this.rating = rating;
-        }
-
-        // Write the three getters here
-    }
-    ```
-
-    9. Add a `toString` method to `Movie` that returns a String in this format: `"Inception (2010) — 8.8/10"` (substituting actual values).
-
-    10. Write a `main` method that creates a `Movie` with title `"Parasite"`, year `2019`, and rating `8.6`, uses getters to print the title and year on separate lines, and prints the full object with `System.out.println` (which calls `toString` automatically).
-
-    ### Part 4: Find the Bug
-
-    11.
-    ```java
-    Student s = new Student("Morgan", 10, 3.8);
-    System.out.println(s.name);
-    System.out.println(s.gpa);
-    ```
-
-    12. This getter compiles with no errors. What is wrong with it?
-    ```java
-    public int getGrade() {
-        grade++;
-        return grade;
-    }
-    ```
-
-    13.
-    ```java
-    public class Circle {
-        private double radius;
-
-        public Circle(double radius) {
-            this.radius = radius;
-        }
-
-        private double getRadius() {
-            return radius;
-        }
-    }
-
-    public static void main(String[] args) {
-        Circle c = new Circle(5.0);
-        System.out.println(c.getRadius());
-    }
-    ```
-
-    ---
 
 ## Homework 14: Setters
 
 !!! attention
+
+    **Unit 4 · Chapter 2**
 
     *Assigned Class 27 · Due Class 28*
 

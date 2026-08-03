@@ -236,6 +236,8 @@ public static void printMultiples(int n, int count) {
 
 !!! attention
 
+    **Unit 2 · Chapter 2**
+
     *Assigned Class 7 · Due Class 8*
 
     ### Part 1: Parameters — Copies, Not Connections

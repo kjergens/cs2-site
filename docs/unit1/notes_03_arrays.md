@@ -368,6 +368,8 @@ System.out.println(min);   // 63
 
 !!! attention
 
+    **Unit 1 · Chapter 3**
+
     *Assigned Class 3 · Due Class 4*
 
     ### Part 1: Array Basics

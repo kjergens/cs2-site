@@ -261,6 +261,8 @@ public static void main(String[] args) {
 
 !!! attention
 
+    **Unit 2 · Chapter 1**
+
     *Assigned Class 6 · Due Class 7*
 
     ### Part 1: Why Methods?

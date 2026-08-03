@@ -493,6 +493,8 @@ if (answer.equals("yes")) {
 
 !!! attention
 
+    **Unit 1 · Chapter 1**
+
     *Assigned Class 1 · Due Class 2*
 
     **Rubric (100 points):** Part 1 (Q1–5) 20 pts · Part 2 (Q6–9) 60 pts · Part 3 (Q10–13) 20 pts.

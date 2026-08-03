@@ -141,6 +141,8 @@ System.out.println(c.getBlue());   // 200
 
 !!! attention
 
+    **Unit 5 · Chapter 1**
+
     The image below, `squares.jpg`, is a 7×7 grid of colored squares. Coordinates start at `(0, 0)` in the top-left corner. The x-coordinate increases to the right; the y-coordinate increases downward. Columns and rows are both numbered 0–6.
 
     ![7x7 grid of colored squares, squares.jpg](images/hw15_squares_grid.png)

@@ -244,6 +244,8 @@ public static double hypotenuse(double a, double b) {
 
 !!! attention
 
+    **Unit 2 · Chapter 3**
+
     *Assigned Class 8 · Due Class 9*
 
     **Rule going forward:** methods should compute and return; `main` (or the caller) decides what to do with the result — including whether to print it.

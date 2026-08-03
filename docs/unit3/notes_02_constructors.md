@@ -168,6 +168,8 @@ System.out.println(c2.make);
 
 !!! attention
 
+    **Unit 3 · Chapter 2**
+
     *Assigned Class 22 · Due Class 23*
 
     ### Part 1: Reading Constructors

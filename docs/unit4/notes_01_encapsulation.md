@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Encapsulation
+# CS2 — Unit Notes: Encapsulation and Getters
 
 ---
 
@@ -75,7 +75,37 @@ Only code *outside* the class is blocked from touching private fields.
 
 ---
 
-## 5. The Encapsulated BankAccount
+## 5. Reading Private Fields: Getters
+
+Making a field `private` solves the "anyone can corrupt it" problem — but now outside code can't read it either. A **getter** (also called an *accessor method*) is a public method that returns the value of a private field, so outside code has a safe, controlled way to read it back.
+
+```java
+public class BankAccount {
+    private String owner;
+    private double balance;
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+```
+
+Usage from outside the class:
+```java
+BankAccount acct = new BankAccount("Alice", 500.0);
+System.out.println(acct.getOwner());    // Alice
+System.out.println(acct.getBalance());  // 500.0
+```
+
+**Naming convention:** getter methods are named `get` + the field name with a capital first letter: `getOwner`, `getBalance`, `getName`, `getAge`.
+
+---
+
+## 6. The Encapsulated BankAccount
 
 ```java
 public class BankAccount {
@@ -109,17 +139,19 @@ public class BankAccount {
 }
 ```
 
-`getBalance()` is the only way for outside code to read the balance. There is no `setBalance()` — the balance only changes through `deposit` and `withdraw`, which enforce the rules.
+`getBalance()` is the only way for outside code to read the balance. There is no `setBalance()` — the balance only changes through `deposit` and `withdraw`, which enforce the rules. (Setters get their own dedicated treatment in the next chapter.)
 
 ---
 
-## 6. Common Errors
+## 7. Common Errors
 
 | Error | Problem | Fix |
 |---|---|---|
 | `acct.balance = 100` from outside the class | Compile error — field is private | Use a method: `acct.deposit(100)` |
 | `acct.balance` in a print statement from outside | Compile error — field is private | Call `acct.getBalance()` instead |
 | Forgetting `private` on some fields | Inconsistent encapsulation — some fields accessible, others not | Make all instance variables `private` |
+| `public double getBalance() { balance = newBalance; }` | Getter that modifies — contradicts its purpose | Getters only `return`, never assign |
+| `getBalance` vs `getbalance` | Compile error (wrong name) | Convention: capital letter after `get` |
 
 ---
 
@@ -137,6 +169,22 @@ public class BankAccount {
 
 **4.** Can a method inside `BankAccount` access `private double balance`? Why or why not?
 
+**5.** Given:
+```java
+public class Rectangle {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width  = width;
+        this.height = height;
+    }
+}
+```
+Write a getter for `width` and a getter for `height`.
+
+**6.** Add a non-void method `area()` to `Rectangle` that returns width × height. Is this a getter? Why or why not?
+
 ---
 ---
 
@@ -149,3 +197,150 @@ public class BankAccount {
 **3.** Compile error: `acct.balance = 100.0` and `System.out.println(acct.balance)`. Compiles: `acct.deposit(100.0)` and `acct.getBalance()`.
 
 **4.** Yes. The `private` restriction applies to code *outside* the class. Methods inside `BankAccount` can access `balance` freely.
+
+**5.**
+```java
+public double getWidth()  { return width; }
+public double getHeight() { return height; }
+```
+
+**6.** `area()` is not a getter — it computes a derived value rather than returning a stored field directly. It's a non-void instance method, but not an accessor in the strict sense.
+
+---
+
+## Homework 13: Private Fields and Getters
+
+!!! attention
+
+    **Unit 4 · Chapter 1**
+
+    *Assigned Class 26 · Due Class 27*
+
+    ### Part 1: Why Private?
+
+    ```java
+    public class BankAccount {
+        public String owner;
+        public double balance;
+
+        public BankAccount(String owner, double initialBalance) {
+            this.owner = owner;
+            this.balance = initialBalance;
+        }
+    }
+    ```
+
+    1. With public fields, any code anywhere can do this:
+    ```java
+    BankAccount acct = new BankAccount("Alex", 500.0);
+    acct.balance = -9999999.0;
+    acct.owner = "";
+    ```
+    Why is this a problem? Give a specific reason for each field.
+
+    2. Now the fields are changed to `private`. Will `acct.balance = -9999999.0` still compile? Why or why not?
+
+    3. With private fields, how can code outside the class read the current balance? (You don't need to write code — just describe the approach.)
+
+    ### Part 2: Reading a Class with Getters
+
+    ```java
+    public class Student {
+        private String name;
+        private int grade;
+        private double gpa;
+
+        public Student(String name, int grade, double gpa) {
+            this.name = name;
+            this.grade = grade;
+            this.gpa = gpa;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int getGrade() {
+            return grade;
+        }
+
+        public double getGpa() {
+            return gpa;
+        }
+
+        public boolean isHonorRoll() {
+            return gpa >= 3.5;
+        }
+
+        public String toString() {
+            return name + " (Grade " + grade + ", GPA: " + gpa + ")";
+        }
+    }
+    ```
+
+    4. The fields are private, yet the constructor sets them with `this.name = name`. Why doesn't this violate the private restriction?
+    5. `toString()` uses `name`, `grade`, and `gpa` directly — no getters needed. Why can it access private fields without going through `getName()`, `getGrade()`, or `getGpa()`?
+    6. Write the two lines of `main` code that read a student's name and GPA and print each one on its own line. Assume the variable is `Student s`.
+    7. True or false — explain your answer.
+       - a) `s.gpa = 4.0` will compile if `gpa` is private.
+       - b) `s.getGpa()` will compile if `getGpa` is public.
+
+    ### Part 3: Write Getters
+
+    8. The class below is missing its getter methods. Add a getter for each private field, following the naming convention `getFieldName()`.
+    ```java
+    public class Movie {
+        private String title;
+        private int year;
+        private double rating;
+
+        public Movie(String title, int year, double rating) {
+            this.title = title;
+            this.year = year;
+            this.rating = rating;
+        }
+
+        // Write the three getters here
+    }
+    ```
+
+    9. Add a `toString` method to `Movie` that returns a String in this format: `"Inception (2010) — 8.8/10"` (substituting actual values).
+
+    10. Write a `main` method that creates a `Movie` with title `"Parasite"`, year `2019`, and rating `8.6`, uses getters to print the title and year on separate lines, and prints the full object with `System.out.println` (which calls `toString` automatically).
+
+    ### Part 4: Find the Bug
+
+    11.
+    ```java
+    Student s = new Student("Morgan", 10, 3.8);
+    System.out.println(s.name);
+    System.out.println(s.gpa);
+    ```
+
+    12. This getter compiles with no errors. What is wrong with it?
+    ```java
+    public int getGrade() {
+        grade++;
+        return grade;
+    }
+    ```
+
+    13.
+    ```java
+    public class Circle {
+        private double radius;
+
+        public Circle(double radius) {
+            this.radius = radius;
+        }
+
+        private double getRadius() {
+            return radius;
+        }
+    }
+
+    public static void main(String[] args) {
+        Circle c = new Circle(5.0);
+        System.out.println(c.getRadius());
+    }
+    ```

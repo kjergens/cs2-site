@@ -150,6 +150,8 @@ double avgGreen = (double) totalGreen / numPixels;
 
 !!! attention
 
+    **Unit 5 · Chapter 2**
+
     *Assigned Class 30 · Due Class 31*
 
     ### Part 1: Traversal Structure

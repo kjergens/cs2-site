@@ -185,6 +185,8 @@ System.out.println(fruits.get(1));   // banana
 
 !!! attention
 
+    **Unit 6 · Chapter 1**
+
     1. True or False: You can add items to an ArrayList after it has been created.
     2. How do you get the first item from an ArrayList called `list`? Write the code.
     3. What does `list.add("dog")` do? (1 sentence)

@@ -36,8 +36,8 @@ nav:
     - "3.2 Constructors": unit3/notes_02_constructors.md
     - "3.3 Instance Methods": unit3/notes_03_instance_methods.md
   - Unit 4 — Objects Advanced:
-    - "4.1 Encapsulation": unit4/notes_01_encapsulation.md
-    - "4.2 Getters and Setters": unit4/notes_02_getters_setters.md
+    - "4.1 Encapsulation and Getters": unit4/notes_01_encapsulation.md
+    - "4.2 Setters": unit4/notes_02_getters_setters.md
   - Unit 5 — Images and Color:
     - "5.1 Color and BufferedImage": unit5/notes_01_color_and_bufferedimage.md
     - "5.2 Traversing Images": unit5/notes_02_traversing_images.md

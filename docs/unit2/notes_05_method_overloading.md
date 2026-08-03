@@ -176,6 +176,8 @@ public static String describe(String s) { return "string: " + s; }
 
 !!! attention
 
+    **Unit 2 · Chapter 5**
+
     *Assigned Class 10 · Due Class 11*
 
     ### Part 1: Valid or Not?

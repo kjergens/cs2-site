@@ -253,6 +253,8 @@ public void decrementByN(int n) {
 
 !!! attention
 
+    **Unit 3 · Chapter 3**
+
     *Assigned Class 23 · Due Class 24*
 
     ### Part 1: Reading Instance Methods

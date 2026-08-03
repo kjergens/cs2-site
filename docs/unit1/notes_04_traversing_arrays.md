@@ -306,6 +306,8 @@ System.out.println("Max: " + max);   // 19
 
 !!! attention
 
+    **Unit 1 · Chapter 4**
+
     *Assigned Class 4 · Due Class 5*
 
     ### Part 1: Traversal — Predict the Output

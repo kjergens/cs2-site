@@ -190,6 +190,8 @@ int newB = clamp(b - 30);
 
 !!! attention
 
+    **Unit 5 · Chapter 3**
+
     *Assigned Class 31 · Due Class 32*
 
     ### Part 1: The Read-Modify-Write Pattern

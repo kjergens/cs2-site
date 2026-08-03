@@ -380,6 +380,8 @@ System.out.println(count);   // 26
 
 !!! attention
 
+    **Unit 1 · Chapter 2**
+
     *Assigned Class 2 · Due Class 3*
 
     ### Part 1: Predict the Output — While Loops

@@ -1,8 +1,6 @@
 # CS2 — Computer Science 2 Table of Contents
 
-Welcome to CS2 at Columbia Grammar and Preparatory School.
-
-This site contains **unit notes**, **Check Your Understanding practice**, **homework**, and **project specs**. Due dates and homework submissions are in Schoology.
+Welcome to CS2 at Columbia Grammar and Preparatory School. This site contains **unit notes**, **Check Your Understanding practice**, **homework**, and **project specs**. Due dates and homework submissions are in Schoology.
 
 ---
 
@@ -25,8 +23,8 @@ This site contains **unit notes**, **Check Your Understanding practice**, **home
 | [3.2 Constructors](unit3/notes_02_constructors.md) | [CYU](unit3/notes_02_constructors.md#check-your-understanding) | [Homework](unit3/notes_02_constructors.md#homework-11-constructors) |
 | [3.3 Instance Methods](unit3/notes_03_instance_methods.md) | [CYU](unit3/notes_03_instance_methods.md#check-your-understanding) | [Homework](unit3/notes_03_instance_methods.md#homework-12-instance-methods) |
 | **Unit 4 — Objects Advanced**| | |
-| [4.1 Encapsulation](unit4/notes_01_encapsulation.md) | [CYU](unit4/notes_01_encapsulation.md#check-your-understanding) | — |
-| [4.2 Getters and Setters](unit4/notes_02_getters_setters.md) | [CYU](unit4/notes_02_getters_setters.md#check-your-understanding) | [Homework 13](unit4/notes_02_getters_setters.md#homework-13-private-fields-and-getters), [Homework 14](unit4/notes_02_getters_setters.md#homework-14-setters) |
+| [4.1 Encapsulation and Getters](unit4/notes_01_encapsulation.md) | [CYU](unit4/notes_01_encapsulation.md#check-your-understanding) | [Homework](unit4/notes_01_encapsulation.md#homework-13-private-fields-and-getters) |
+| [4.2 Setters](unit4/notes_02_getters_setters.md) | [CYU](unit4/notes_02_getters_setters.md#check-your-understanding) | [Homework](unit4/notes_02_getters_setters.md#homework-14-setters) |
 | **Unit 5 — Images and Color**| | |
 | [5.1 Color and BufferedImage](unit5/notes_01_color_and_bufferedimage.md) | [CYU](unit5/notes_01_color_and_bufferedimage.md#check-your-understanding) | [Homework](unit5/notes_01_color_and_bufferedimage.md#homework-15-color-and-images) |
 | [5.2 Traversing Images](unit5/notes_02_traversing_images.md) | [CYU](unit5/notes_02_traversing_images.md#check-your-understanding) | [Homework](unit5/notes_02_traversing_images.md#homework-16-traversing-a-bufferedimage) |

@@ -190,6 +190,8 @@ System.out.println(myCar.year);
 
 !!! attention
 
+    **Unit 3 · Chapter 1**
+
     *Assigned Class 21 · Due Class 22*
 
     ### Part 1: Classes and Objects
