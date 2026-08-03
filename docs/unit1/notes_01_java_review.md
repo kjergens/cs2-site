@@ -226,14 +226,11 @@ Use these questions to test yourself before a quiz. If you get something wrong, 
 ### Part A: Concepts
 
 **1.** What is the difference between `=` and `==` in Java?
-
 **2.** What does the `%` operator return? Give an example of when it would be useful.
-
 **3.** Why is `input == "hello"` unreliable for comparing Strings? What should you use instead?
-
 **4.** What is type casting? Write one line of code that casts an `int` variable called `total` to a `double` before dividing it by `4`.
-
-**5.** What is the difference between `&&` and `||`? Complete the table:
+**5.** What is the difference between `&&` and `||`? 
+**6.** Complete the table:
 
 | `a` | `b` | `a && b` | `a \|\| b` | `!a` |
 |---|---|---|---|---|
@@ -242,9 +239,8 @@ Use these questions to test yourself before a quiz. If you get something wrong, 
 | false | true | | | |
 | false | false | | | |
 
-**6.** Java evaluates `if / else if / else` chains from top to bottom and stops at the first true condition. Why does the order of conditions matter? Give an example where getting the order wrong would produce an incorrect result.
-
-**7.** Without running it, what does this print — and why?
+**7.** Java evaluates `if / else if / else` chains from top to bottom and stops at the first true condition. Why does the order of conditions matter? Give an example where getting the order wrong would produce an incorrect result.
+**8.** Without running it, what does this print — and why?
 ```java
 System.out.println("Result: " + 4 + 5);
 System.out.println("Result: " + (4 + 5));
@@ -254,7 +250,7 @@ System.out.println("Result: " + (4 + 5));
 
 ### Part B: Predict the Output
 
-**8.**
+**9.**
 ```java
 int x = 17;
 int y = 5;
@@ -263,7 +259,7 @@ System.out.println(x % y);
 System.out.println((double) x / y);
 ```
 
-**9.**
+**10.**
 ```java
 boolean hungry = false;
 boolean tired = true;
@@ -273,7 +269,7 @@ System.out.println(!tired);
 System.out.println(!hungry && tired);
 ```
 
-**10.**
+**11.**
 ```java
 int n = 12;
 if (n % 2 == 0 && n > 10) {
@@ -285,7 +281,7 @@ if (n % 2 == 0 && n > 10) {
 }
 ```
 
-**11.**
+**12.**
 ```java
 int a = 3;
 int b = 4;
@@ -294,24 +290,24 @@ System.out.println("Sum: " + (a + b));
 System.out.println(a + b + " is the sum");
 ```
 
-*(Question 11 has a twist — think carefully about the last line.)*
+*(Question 12 has a twist — think carefully about the last line.)*
 
 ---
 
 ### Part C: Write the Code
 
-**12.** A variable `int n` is already declared. Write code that prints:
+**13.** A variable `int n` is already declared. Write code that prints:
 - `"even"` if `n` is divisible by 2
 - `"odd"` otherwise
 
-**13.** Write code that prints `"Divisible by both"` if a variable `int n` is divisible by both 3 and 7, and `"Not divisible by both"` otherwise.
+**14.** Write code that prints `"Divisible by both"` if a variable `int n` is divisible by both 3 and 7, and `"Not divisible by both"` otherwise.
 
-**14.** Write a complete if / else if / else block for a variable `int temp` (already declared) that prints:
+**15.** Write a complete if / else if / else block for a variable `int temp` (already declared) that prints:
 - `"Cold"` if temp is below 40
 - `"Comfortable"` if temp is between 40 and 79 (inclusive)
 - `"Hot"` if temp is 80 or above
 
-**15.** What is wrong with this swap attempt? Then write the correct version.
+**16.** What is wrong with this swap attempt? Then write the correct version.
 ```java
 int x = 5;
 int y = 10;
@@ -323,7 +319,7 @@ y = x;
 
 ### Part D: Find the Bug
 
-**16.**
+**17.**
 ```java
 int score = 95;
 if (score >= 60) {
@@ -334,14 +330,14 @@ if (score >= 60) {
 ```
 This compiles and runs but produces the wrong output for a score of 95. What is the bug?
 
-**17.**
+**18.**
 ```java
 double total = 49.99;
 int rounded = total;
 System.out.println(rounded);
 ```
 
-**18.**
+**19.**
 ```java
 String answer = "yes";
 if (answer.equals = "yes") {
@@ -357,18 +353,16 @@ if (answer.equals = "yes") {
 ### Part A: Concepts
 
 **1.** `=` is the assignment operator — it stores a value into a variable (`int x = 5`). `==` is the equality operator — it compares two values and returns true or false (`if (x == 5)`). Using `=` inside an `if` condition is a compile error.
-
 **2.** `%` returns the remainder after integer division. Example: `17 % 5` returns `2` because 17 = 3×5 + 2. Useful for: checking if a number is even (`n % 2 == 0`), checking divisibility (`n % 3 == 0`), cycling through a fixed range.
-
 **3.** `==` checks whether two variables point to the same object in memory — not whether their contents are the same. Two String variables can hold identical text but be different objects, so `==` may return false even when the text matches. Use `.equals()` to compare the actual content.
-
 **4.** Type casting converts one type to another. Example:
 ```java
 System.out.println((double) total / 4);
 ```
 The `(double)` cast converts `total` to a double before the division, so the result is decimal.
 
-**5.** Truth table:
+**5.** && is "AND" (both conditions need to be true for the whole epxression to be true). || is "OR" (as long as at least one condition is true the whole expression will resolve to true)
+**6.** Truth table:
 
 | `a` | `b` | `a && b` | `a \|\| b` | `!a` |
 |---|---|---|---|---|
@@ -377,9 +371,9 @@ The `(double)` cast converts `total` to a double before the division, so the res
 | false | true | false | true | true |
 | false | false | false | false | true |
 
-**6.** Because Java stops at the first true condition, a broader condition placed before a narrower one will "catch" cases that were meant to fall through. Example: if you check `score >= 60` before `score >= 90`, every score of 90 or above matches the first condition and prints `"Passing"` — it never reaches the `"Excellent"` branch.
+**7.** Because Java stops at the first true condition, a broader condition placed before a narrower one will "catch" cases that were meant to fall through. Example: if you check `score >= 60` before `score >= 90`, every score of 90 or above matches the first condition and prints `"Passing"` — it never reaches the `"Excellent"` branch.
 
-**7.**
+**8.**
 ```
 Result: 45
 Result: 9
@@ -391,7 +385,7 @@ Second line: parentheses force `4 + 5 = 9` first, then it's appended to the Stri
 
 ### Part B: Predict the Output
 
-**8.**
+**9.**
 ```
 3
 2
@@ -399,7 +393,7 @@ Second line: parentheses force `4 + 5 = 9` first, then it's appended to the Stri
 ```
 `17 / 5 = 3` (integer division drops remainder). `17 % 5 = 2` (remainder). `(double) 17 / 5 = 3.4`.
 
-**9.**
+**10.**
 ```
 true
 false
@@ -408,13 +402,13 @@ true
 ```
 `false || true = true`. `false && true = false`. `!true = false`. `!false && true = true && true = true`.
 
-**10.**
+**11.**
 ```
 Big even
 ```
 `12 % 2 == 0` is true AND `12 > 10` is true → first condition matches, prints `"Big even"` and stops.
 
-**11.**
+**12.**
 ```
 Sum: 34
 Sum: 7
@@ -428,7 +422,7 @@ Line 3: `a + b` is evaluated first because there is no String yet on the left �
 
 ### Part C: Write the Code
 
-**12.**
+**13.**
 ```java
 if (n % 2 == 0) {
     System.out.println("even");
@@ -437,7 +431,7 @@ if (n % 2 == 0) {
 }
 ```
 
-**13.**
+**14.**
 ```java
 if (n % 3 == 0 && n % 7 == 0) {
     System.out.println("Divisible by both");
@@ -446,7 +440,7 @@ if (n % 3 == 0 && n % 7 == 0) {
 }
 ```
 
-**14.**
+**15.**
 ```java
 if (temp < 40) {
     System.out.println("Cold");
@@ -457,7 +451,7 @@ if (temp < 40) {
 }
 ```
 
-**15.** The bug: after `x = y`, x holds 10 — but then `y = x` sets y to 10 as well. The original value of x (5) is lost. You need a temporary variable:
+**16.** The bug: after `x = y`, x holds 10 — but then `y = x` sets y to 10 as well. The original value of x (5) is lost. You need a temporary variable:
 ```java
 int temp = x;
 x = y;
@@ -468,7 +462,7 @@ y = temp;
 
 ### Part D: Find the Bug
 
-**16.** The conditions are in the wrong order. `score >= 60` is checked first — a score of 95 satisfies it immediately and prints `"Passing"`. The `"Excellent"` branch is never reached. Fix: check the more restrictive condition first:
+**17.** The conditions are in the wrong order. `score >= 60` is checked first — a score of 95 satisfies it immediately and prints `"Passing"`. The `"Excellent"` branch is never reached. Fix: check the more restrictive condition first:
 ```java
 if (score >= 90) {
     System.out.println("Excellent");
@@ -477,12 +471,12 @@ if (score >= 90) {
 }
 ```
 
-**17.** You cannot assign a `double` directly to an `int` — Java will not do this automatically because information (the decimal) would be lost. Fix: use a cast or change the type:
+**18.** You cannot assign a `double` directly to an `int` — Java will not do this automatically because information (the decimal) would be lost. Fix: use a cast or change the type:
 ```java
 int rounded = (int) total;   // truncates to 49
 ```
 
-**18.** `.equals` is a method and must be called with parentheses and a dot. The `= "yes"` syntax is not valid. Fix:
+**19.** `.equals` is a method and must be called with parentheses and a dot. The `= "yes"` syntax is not valid. Fix:
 ```java
 if (answer.equals("yes")) {
     System.out.println("Confirmed");

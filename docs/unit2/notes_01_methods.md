@@ -154,9 +154,7 @@ After
 ### Part A: Concepts
 
 **1.** Name three benefits of using methods instead of copying code.
-
 **2.** What does `void` mean in a method header?
-
 **3.** What is the difference between a **parameter** and an **argument**?
 
 ---
@@ -204,7 +202,6 @@ public static void main(String[] args) {
 
 **7.** Write a `main` method that calls `printBox` with sizes 2, 4, and 2, with a blank line between each box.
 
----
 ---
 
 ## Answer Key
