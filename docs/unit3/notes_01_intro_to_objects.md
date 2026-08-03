@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Introduction to Objects
+# CS2 — Unit 3 Chapter 1: Introduction to Objects
 
 ---
 
@@ -148,43 +148,45 @@ By Class 23, the same class will have constructors and methods. The starting poi
 
 ## Check Your Understanding
 
-**Unit 3 · Chapter 1**
+!!! information
 
-**1.** What is the difference between a class and an object?
+    **Unit 3 · Chapter 1**
 
-**2.** What are the two kinds of members a class can have?
+    **1.** What is the difference between a class and an object?
 
-**3.** Given:
-```java
-public class Car {
-    String make;
-    int year;
-    double price;
-}
-```
-Write code in `main` to create a `Car` object, set all three fields, and print the year.
+    **2.** What are the two kinds of members a class can have?
 
-**4.** You create two `Dog` objects, `d1` and `d2`, and set `d1.name = "Rex"`. Does `d2.name` change? Why or why not?
+    **3.** Given:
+    ```java
+    public class Car {
+        String make;
+        int year;
+        double price;
+    }
+    ```
+    Write code in `main` to create a `Car` object, set all three fields, and print the year.
 
----
----
+    **4.** You create two `Dog` objects, `d1` and `d2`, and set `d1.name = "Rex"`. Does `d2.name` change? Why or why not?
 
-## Answer Key
+    ---
+    ---
 
-**1.** A class is a blueprint — it defines what fields and methods exist. An object is one instance built from that blueprint. You can create many objects from the same class; each holds its own data.
+    ## Answer Key
 
-**2.** Instance variables (attributes) and methods (behaviors).
+    **1.** A class is a blueprint — it defines what fields and methods exist. An object is one instance built from that blueprint. You can create many objects from the same class; each holds its own data.
 
-**3.**
-```java
-Car myCar = new Car();
-myCar.make = "Toyota";
-myCar.year = 2020;
-myCar.price = 24999.99;
-System.out.println(myCar.year);
-```
+    **2.** Instance variables (attributes) and methods (behaviors).
 
-**4.** No. Each object has its own copy of every instance variable. Changing `d1.name` only affects `d1`.
+    **3.**
+    ```java
+    Car myCar = new Car();
+    myCar.make = "Toyota";
+    myCar.year = 2020;
+    myCar.price = 24999.99;
+    System.out.println(myCar.year);
+    ```
+
+    **4.** No. Each object has its own copy of every instance variable. Changing `d1.name` only affects `d1`.
 
 ---
 

@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Introduction to Methods
+# CS2 — Unit 2 Chapter 1: Introduction to Methods
 
 A **method** is a named block of code that performs a specific task. You define it once and call it as many times as needed.
 
@@ -149,112 +149,114 @@ After
 
 ## Check Your Understanding
 
-**Unit 2 · Chapter 1**
+!!! information
 
-### Part A: Concepts
+    **Unit 2 · Chapter 1**
 
-**1.** Name three benefits of using methods instead of copying code.
+    ### Part A: Concepts
 
-**2.** What does `void` mean in a method header?
+    **1.** Name three benefits of using methods instead of copying code.
 
-**3.** What is the difference between a **parameter** and an **argument**?
+    **2.** What does `void` mean in a method header?
 
----
+    **3.** What is the difference between a **parameter** and an **argument**?
 
-### Part B: Predict the Output
+    ---
 
-**4.**
-```java
-public static void shout(String word) {
-    System.out.println(word.toUpperCase() + "!!!");
-}
+    ### Part B: Predict the Output
 
-public static void main(String[] args) {
-    shout("hello");
-    shout("java");
-}
-```
-
-**5.**
-```java
-public static void printLine(int n, String ch) {
-    for (int i = 0; i < n; i++) {
-        System.out.print(ch);
+    **4.**
+    ```java
+    public static void shout(String word) {
+        System.out.println(word.toUpperCase() + "!!!");
     }
-    System.out.println();
-}
 
-public static void main(String[] args) {
-    printLine(4, "*");
-    printLine(3, "-");
-    printLine(4, "*");
-}
-```
+    public static void main(String[] args) {
+        shout("hello");
+        shout("java");
+    }
+    ```
 
----
-
-### Part C: Write the Code
-
-**6.** Write a void method `printBox` that takes an `int size` and prints a filled square of `*` characters. `printBox(3)` should print:
-```
-* * *
-* * *
-* * *
-```
-
-**7.** Write a `main` method that calls `printBox` with sizes 2, 4, and 2, with a blank line between each box.
-
----
-
-## Answer Key
-
-### Part A
-
-**1.** DRY (write once, reuse), decomposition (break big problems into named pieces), readability (main reads like an outline).
-
-**2.** The method performs an action but does not return a value to the caller.
-
-**3.** A **parameter** is the variable declared in the method header (`int n`). An **argument** is the actual value passed when the method is called (`printStars(4)` — `4` is the argument).
-
-### Part B
-
-**4.**
-```
-HELLO!!!
-JAVA!!!
-```
-
-**5.**
-```
-****
----
-****
-```
-
-### Part C
-
-**6.**
-```java
-public static void printBox(int size) {
-    for (int row = 0; row < size; row++) {
-        for (int col = 0; col < size; col++) {
-            System.out.print("* ");
+    **5.**
+    ```java
+    public static void printLine(int n, String ch) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(ch);
         }
         System.out.println();
     }
-}
-```
 
-**7.**
-```java
-public static void main(String[] args) {
-    printBox(2);
-    System.out.println();
-    printBox(4);
-    System.out.println();
-    printBox(2);
-}
-```
+    public static void main(String[] args) {
+        printLine(4, "*");
+        printLine(3, "-");
+        printLine(4, "*");
+    }
+    ```
+
+    ---
+
+    ### Part C: Write the Code
+
+    **6.** Write a void method `printBox` that takes an `int size` and prints a filled square of `*` characters. `printBox(3)` should print:
+    ```
+    * * *
+    * * *
+    * * *
+    ```
+
+    **7.** Write a `main` method that calls `printBox` with sizes 2, 4, and 2, with a blank line between each box.
+
+    ---
+
+    ## Answer Key
+
+    ### Part A
+
+    **1.** DRY (write once, reuse), decomposition (break big problems into named pieces), readability (main reads like an outline).
+
+    **2.** The method performs an action but does not return a value to the caller.
+
+    **3.** A **parameter** is the variable declared in the method header (`int n`). An **argument** is the actual value passed when the method is called (`printStars(4)` — `4` is the argument).
+
+    ### Part B
+
+    **4.**
+    ```
+    HELLO!!!
+    JAVA!!!
+    ```
+
+    **5.**
+    ```
+    ****
+    ---
+    ****
+    ```
+
+    ### Part C
+
+    **6.**
+    ```java
+    public static void printBox(int size) {
+        for (int row = 0; row < size; row++) {
+            for (int col = 0; col < size; col++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    ```
+
+    **7.**
+    ```java
+    public static void main(String[] args) {
+        printBox(2);
+        System.out.println();
+        printBox(4);
+        System.out.println();
+        printBox(2);
+    }
+    ```
 
 ---
 

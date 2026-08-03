@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Encapsulation and Getters
+# CS2 — Unit 4 Chapter 1: Encapsulation and Getters
 
 ---
 
@@ -157,56 +157,58 @@ public class BankAccount {
 
 ## Check Your Understanding
 
-**Unit 4 · Chapter 1**
+!!! information
 
-**1.** What does `private` mean for an instance variable?
+    **Unit 4 · Chapter 1**
 
-**2.** Why is it better to make instance variables `private` rather than leaving them `public`?
+    **1.** What does `private` mean for an instance variable?
 
-**3.** Given a `private double balance` field, which of the following will compile if written *outside* the class?
-- `acct.balance = 100.0`
-- `acct.deposit(100.0)`
-- `System.out.println(acct.balance)`
-- `System.out.println(acct.getBalance())`
+    **2.** Why is it better to make instance variables `private` rather than leaving them `public`?
 
-**4.** Can a method inside `BankAccount` access `private double balance`? Why or why not?
+    **3.** Given a `private double balance` field, which of the following will compile if written *outside* the class?
+    - `acct.balance = 100.0`
+    - `acct.deposit(100.0)`
+    - `System.out.println(acct.balance)`
+    - `System.out.println(acct.getBalance())`
 
-**5.** Given:
-```java
-public class Rectangle {
-    private double width;
-    private double height;
+    **4.** Can a method inside `BankAccount` access `private double balance`? Why or why not?
 
-    public Rectangle(double width, double height) {
-        this.width  = width;
-        this.height = height;
+    **5.** Given:
+    ```java
+    public class Rectangle {
+        private double width;
+        private double height;
+
+        public Rectangle(double width, double height) {
+            this.width  = width;
+            this.height = height;
+        }
     }
-}
-```
-Write a getter for `width` and a getter for `height`.
+    ```
+    Write a getter for `width` and a getter for `height`.
 
-**6.** Add a non-void method `area()` to `Rectangle` that returns width × height. Is this a getter? Why or why not?
+    **6.** Add a non-void method `area()` to `Rectangle` that returns width × height. Is this a getter? Why or why not?
 
----
----
+    ---
+    ---
 
-## Answer Key
+    ## Answer Key
 
-**1.** `private` means only code inside the same class can access it. Code outside the class gets a compile error if it tries to read or write the field directly.
+    **1.** `private` means only code inside the same class can access it. Code outside the class gets a compile error if it tries to read or write the field directly.
 
-**2.** Private fields let the class control its own state. Methods can validate values before changing them; direct access allows any code to put the object into an invalid state.
+    **2.** Private fields let the class control its own state. Methods can validate values before changing them; direct access allows any code to put the object into an invalid state.
 
-**3.** Compile error: `acct.balance = 100.0` and `System.out.println(acct.balance)`. Compiles: `acct.deposit(100.0)` and `acct.getBalance()`.
+    **3.** Compile error: `acct.balance = 100.0` and `System.out.println(acct.balance)`. Compiles: `acct.deposit(100.0)` and `acct.getBalance()`.
 
-**4.** Yes. The `private` restriction applies to code *outside* the class. Methods inside `BankAccount` can access `balance` freely.
+    **4.** Yes. The `private` restriction applies to code *outside* the class. Methods inside `BankAccount` can access `balance` freely.
 
-**5.**
-```java
-public double getWidth()  { return width; }
-public double getHeight() { return height; }
-```
+    **5.**
+    ```java
+    public double getWidth()  { return width; }
+    public double getHeight() { return height; }
+    ```
 
-**6.** `area()` is not a getter — it computes a derived value rather than returning a stored field directly. It's a non-void instance method, but not an accessor in the strict sense.
+    **6.** `area()` is not a getter — it computes a derived value rather than returning a stored field directly. It's a non-void instance method, but not an accessor in the strict sense.
 
 ---
 

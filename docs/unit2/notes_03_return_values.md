@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Return Values
+# CS2 — Unit 2 Chapter 3: Return Values
 
 ---
 
@@ -124,121 +124,123 @@ public static void main(String[] args) {
 
 ## Check Your Understanding
 
-**Unit 2 · Chapter 3**
+!!! information
 
-### Part A: Predict the Output
+    **Unit 2 · Chapter 3**
 
-**1.**
-```java
-public static int square(int n) { return n * n; }
-public static void main(String[] args) {
-    System.out.println(square(4));
-    System.out.println(square(3) + square(4));
-    int x = square(5);
-    System.out.println(x);
-}
-```
+    ### Part A: Predict the Output
 
-**2.**
-```java
-public static int add(int a, int b) { return a + b; }
-public static void main(String[] args) {
-    int result = add(add(1, 2), add(3, 4));
-    System.out.println(result);
-}
-```
-
-**3.**
-```java
-public static boolean isEven(int n) { return n % 2 == 0; }
-public static void main(String[] args) {
-    System.out.println(isEven(6));
-    System.out.println(isEven(7));
-    if (isEven(10)) { System.out.println("ten is even"); }
-}
-```
-
----
-
-### Part B: Find the Bug
-
-**4.**
-```java
-public static int tripleIt(int n) {
-    int result = n * 3;
-}
-```
-
-**5.**
-```java
-public static double half(int n) {
-    return n / 2;
-}
-```
-
-**6.**
-```java
-public static boolean isNegative(int n) {
-    if (n < 0) {
-        return true;
+    **1.**
+    ```java
+    public static int square(int n) { return n * n; }
+    public static void main(String[] args) {
+        System.out.println(square(4));
+        System.out.println(square(3) + square(4));
+        int x = square(5);
+        System.out.println(x);
     }
-}
-```
+    ```
 
----
+    **2.**
+    ```java
+    public static int add(int a, int b) { return a + b; }
+    public static void main(String[] args) {
+        int result = add(add(1, 2), add(3, 4));
+        System.out.println(result);
+    }
+    ```
 
-### Part C: Write the Method
+    **3.**
+    ```java
+    public static boolean isEven(int n) { return n % 2 == 0; }
+    public static void main(String[] args) {
+        System.out.println(isEven(6));
+        System.out.println(isEven(7));
+        if (isEven(10)) { System.out.println("ten is even"); }
+    }
+    ```
 
-**7.** Write `celsiusToFahrenheit(double c)` — returns the Fahrenheit equivalent. Formula: F = C × 9.0 / 5.0 + 32.
+    ---
 
-**8.** Write `hypotenuse(double a, double b)` — returns the hypotenuse of a right triangle. Use `Math.sqrt` and `Math.pow`.
+    ### Part B: Find the Bug
 
----
----
+    **4.**
+    ```java
+    public static int tripleIt(int n) {
+        int result = n * 3;
+    }
+    ```
 
-## Answer Key
+    **5.**
+    ```java
+    public static double half(int n) {
+        return n / 2;
+    }
+    ```
 
-### Part A
+    **6.**
+    ```java
+    public static boolean isNegative(int n) {
+        if (n < 0) {
+            return true;
+        }
+    }
+    ```
 
-**1.**
-```
-16
-25
-25
-```
+    ---
 
-**2.** `10` — `add(1,2)` = 3, `add(3,4)` = 7, `add(3,7)` = 10.
+    ### Part C: Write the Method
 
-**3.**
-```
-true
-false
-ten is even
-```
+    **7.** Write `celsiusToFahrenheit(double c)` — returns the Fahrenheit equivalent. Formula: F = C × 9.0 / 5.0 + 32.
 
-### Part B
+    **8.** Write `hypotenuse(double a, double b)` — returns the hypotenuse of a right triangle. Use `Math.sqrt` and `Math.pow`.
 
-**4.** Missing `return` — computes `result` but never sends it back. Add `return result;`.
+    ---
+    ---
 
-**5.** Integer division: `n / 2` divides two ints and drops the decimal. Fix: `return (double) n / 2;`.
+    ## Answer Key
 
-**6.** Not all paths return a value — if `n >= 0`, the method ends without returning anything. Add `return false;` after the if block.
+    ### Part A
 
-### Part C
+    **1.**
+    ```
+    16
+    25
+    25
+    ```
 
-**7.**
-```java
-public static double celsiusToFahrenheit(double c) {
-    return c * 9.0 / 5.0 + 32;
-}
-```
+    **2.** `10` — `add(1,2)` = 3, `add(3,4)` = 7, `add(3,7)` = 10.
 
-**8.**
-```java
-public static double hypotenuse(double a, double b) {
-    return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-}
-```
+    **3.**
+    ```
+    true
+    false
+    ten is even
+    ```
+
+    ### Part B
+
+    **4.** Missing `return` — computes `result` but never sends it back. Add `return result;`.
+
+    **5.** Integer division: `n / 2` divides two ints and drops the decimal. Fix: `return (double) n / 2;`.
+
+    **6.** Not all paths return a value — if `n >= 0`, the method ends without returning anything. Add `return false;` after the if block.
+
+    ### Part C
+
+    **7.**
+    ```java
+    public static double celsiusToFahrenheit(double c) {
+        return c * 9.0 / 5.0 + 32;
+    }
+    ```
+
+    **8.**
+    ```java
+    public static double hypotenuse(double a, double b) {
+        return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+    }
+    ```
 
 ---
 

@@ -1,3 +1,4 @@
+# CS2 — Unit 1 Chapter 4: Traversing Arrays
 Traversal means visiting every element in an array, one at a time, using a loop. Traversal is how you compute results from arrays: totals, averages, finding the largest value, counting elements that match a condition.
 
 ---
@@ -188,7 +189,7 @@ If `foundAt` is still `-1` after the loop, the target wasn't in the array.
 
 ## Check Your Understanding
 
-!!! attention
+!!! information
 
     **Unit 1 · Chapter 4**
 

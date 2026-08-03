@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Method Parameters and Local Scope
+# CS2 — Unit Chapter: Method Parameters and Local Scope
 
 ---
 
@@ -125,112 +125,114 @@ public static void printBox(int size) {
 
 ## Check Your Understanding
 
-**Unit 2 · Chapter 2**
+!!! information
 
-### Part A: Concepts
+    **Unit 2 · Chapter 2**
 
-**1.** What does "passed by value" mean for primitives?
+    ### Part A: Concepts
 
-**2.** After this runs, what does `main` print for `x`?
-```java
-public static void triple(int n) { n = n * 3; }
-public static void main(String[] args) {
-    int x = 5;
-    triple(x);
-    System.out.println(x);
-}
-```
+    **1.** What does "passed by value" mean for primitives?
 
-**3.** Will this compile? Why or why not?
-```java
-public static void setup() { int total = 0; }
-public static void main(String[] args) { System.out.println(total); }
-```
-
----
-
-### Part B: Predict the Output
-
-**4.**
-```java
-public static void mystery(int a, int b) {
-    a = a * 2;
-    b = b + 3;
-    System.out.println(a + " " + b);
-}
-public static void main(String[] args) {
-    int p = 4;
-    int q = 7;
-    mystery(p, q);
-    System.out.println(p + " " + q);
-}
-```
-
-**5.**
-```java
-public static void methodA() {
-    int count = 0;
-    count++;
-    System.out.println("A: " + count);
-}
-public static void methodB() {
-    int count = 100;
-    count--;
-    System.out.println("B: " + count);
-}
-public static void main(String[] args) {
-    methodA();
-    methodB();
-    methodA();
-}
-```
-
----
-
-### Part C: Write the Code
-
-**6.** Write a void method `printMultiples(int n, int count)` that prints the first `count` multiples of `n`, one per line.
-
----
----
-
-## Answer Key
-
-### Part A
-
-**1.** The method receives its own copy of the value. Changing the copy inside the method does not affect the original variable in the caller.
-
-**2.** `5` — `triple` changes its local copy of `n`, not the original `x`.
-
-**3.** No. `total` is local to `setup()` and doesn't exist in `main`.
-
-### Part B
-
-**4.**
-```
-8 10
-4 7
-```
-Inside `mystery`: a=8, b=10 (copies of p and q modified). Back in main: p and q unchanged.
-
-**5.**
-```
-A: 1
-B: 99
-A: 1
-```
-Each call creates its own `count`. They don't accumulate.
-
-### Part C
-
-**6.**
-```java
-public static void printMultiples(int n, int count) {
-    for (int i = 1; i <= count; i++) {
-        System.out.println(n * i);
+    **2.** After this runs, what does `main` print for `x`?
+    ```java
+    public static void triple(int n) { n = n * 3; }
+    public static void main(String[] args) {
+        int x = 5;
+        triple(x);
+        System.out.println(x);
     }
-}
-```
+    ```
+
+    **3.** Will this compile? Why or why not?
+    ```java
+    public static void setup() { int total = 0; }
+    public static void main(String[] args) { System.out.println(total); }
+    ```
+
+    ---
+
+    ### Part B: Predict the Output
+
+    **4.**
+    ```java
+    public static void mystery(int a, int b) {
+        a = a * 2;
+        b = b + 3;
+        System.out.println(a + " " + b);
+    }
+    public static void main(String[] args) {
+        int p = 4;
+        int q = 7;
+        mystery(p, q);
+        System.out.println(p + " " + q);
+    }
+    ```
+
+    **5.**
+    ```java
+    public static void methodA() {
+        int count = 0;
+        count++;
+        System.out.println("A: " + count);
+    }
+    public static void methodB() {
+        int count = 100;
+        count--;
+        System.out.println("B: " + count);
+    }
+    public static void main(String[] args) {
+        methodA();
+        methodB();
+        methodA();
+    }
+    ```
+
+    ---
+
+    ### Part C: Write the Code
+
+    **6.** Write a void method `printMultiples(int n, int count)` that prints the first `count` multiples of `n`, one per line.
+
+    ---
+    ---
+
+    ## Answer Key
+
+    ### Part A
+
+    **1.** The method receives its own copy of the value. Changing the copy inside the method does not affect the original variable in the caller.
+
+    **2.** `5` — `triple` changes its local copy of `n`, not the original `x`.
+
+    **3.** No. `total` is local to `setup()` and doesn't exist in `main`.
+
+    ### Part B
+
+    **4.**
+    ```
+    8 10
+    4 7
+    ```
+    Inside `mystery`: a=8, b=10 (copies of p and q modified). Back in main: p and q unchanged.
+
+    **5.**
+    ```
+    A: 1
+    B: 99
+    A: 1
+    ```
+    Each call creates its own `count`. They don't accumulate.
+
+    ### Part C
+
+    **6.**
+    ```java
+    public static void printMultiples(int n, int count) {
+        for (int i = 1; i <= count; i++) {
+            System.out.println(n * i);
+        }
+    }
+    ```
 
 ---
 

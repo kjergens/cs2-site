@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Method Overloading
+# CS2 — Unit 2 Chapter 5: Method Overloading
 
 ---
 
@@ -109,69 +109,71 @@ The `boolean isTriangle` parameter in the third version exists only to make the 
 
 ## Check Your Understanding
 
-**Unit 2 · Chapter 4**
+!!! information
+
+    **Unit 2 · Chapter 4**
 
 
-### Part A: Valid or Not?
+    ### Part A: Valid or Not?
 
-For each pair, state whether it's a valid overload and why.
+    For each pair, state whether it's a valid overload and why.
 
-**1.**
-```java
-public static int add(int a, int b)
-public static int add(int x, int y)
-```
+    **1.**
+    ```java
+    public static int add(int a, int b)
+    public static int add(int x, int y)
+    ```
 
-**2.**
-```java
-public static int add(int a, int b)
-public static double add(double a, double b)
-```
+    **2.**
+    ```java
+    public static int add(int a, int b)
+    public static double add(double a, double b)
+    ```
 
-**3.**
-```java
-public static int multiply(int a, int b)
-public static int multiply(int a, int b, int c)
-```
+    **3.**
+    ```java
+    public static int multiply(int a, int b)
+    public static int multiply(int a, int b, int c)
+    ```
 
----
+    ---
 
-### Part B: Which Version Gets Called?
+    ### Part B: Which Version Gets Called?
 
-Given:
-```java
-public static String describe(int n)    { return "int: " + n; }
-public static String describe(double d) { return "double: " + d; }
-public static String describe(String s) { return "string: " + s; }
-```
+    Given:
+    ```java
+    public static String describe(int n)    { return "int: " + n; }
+    public static String describe(double d) { return "double: " + d; }
+    public static String describe(String s) { return "string: " + s; }
+    ```
 
-**4.** `describe(10)`  
-**5.** `describe(10.0)`  
-**6.** `describe("hello")`  
-**7.** `describe(5 / 2)` — what does this print and why?
+    **4.** `describe(10)`  
+    **5.** `describe(10.0)`  
+    **6.** `describe("hello")`  
+    **7.** `describe(5 / 2)` — what does this print and why?
 
----
----
+    ---
+    ---
 
-## Answer Key
+    ## Answer Key
 
-### Part A
+    ### Part A
 
-**1.** Not valid. Same parameter types and count — only the names differ. Names don't matter for overloading.
+    **1.** Not valid. Same parameter types and count — only the names differ. Names don't matter for overloading.
 
-**2.** Valid. Parameter types differ (`int` vs `double`).
+    **2.** Valid. Parameter types differ (`int` vs `double`).
 
-**3.** Valid. Parameter count differs (2 vs 3).
+    **3.** Valid. Parameter count differs (2 vs 3).
 
-### Part B
+    ### Part B
 
-**4.** `"int: 10"` — argument is an int literal.
+    **4.** `"int: 10"` — argument is an int literal.
 
-**5.** `"double: 10.0"` — argument is a double literal.
+    **5.** `"double: 10.0"` — argument is a double literal.
 
-**6.** `"string: hello"` — argument is a String.
+    **6.** `"string: hello"` — argument is a String.
 
-**7.** `"int: 2"` — `5 / 2` is integer division, result is `2` (int), so `describe(int)` is called.
+    **7.** `"int: 2"` — `5 / 2` is integer division, result is `2` (int), so `describe(int)` is called.
 
 ---
 

@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Altering an Image
+# CS2 — Unit 3 Chapter 3: Altering an Image
 
 ---
 
@@ -152,39 +152,41 @@ The method modifies the image in place (void) — this is the array-as-parameter
 
 ## Check Your Understanding
 
-**Unit 5 · Chapter 3**
+!!! information
 
-**1.** What does `clamp(300)` return? What does `clamp(-10)` return?
+    **Unit 5 · Chapter 3**
 
-**2.** Write the modify step for a grayscale effect using the average of R, G, B.
+    **1.** What does `clamp(300)` return? What does `clamp(-10)` return?
 
-**3.** Write the modify step for a "warm" filter that adds 30 to red and subtracts 30 from blue (clamped).
+    **2.** Write the modify step for a grayscale effect using the average of R, G, B.
 
-**4.** If a pixel has R=200, G=150, B=100, what are the new R, G, B values after a brightness increase of 80?
+    **3.** Write the modify step for a "warm" filter that adds 30 to red and subtracts 30 from blue (clamped).
 
----
----
+    **4.** If a pixel has R=200, G=150, B=100, what are the new R, G, B values after a brightness increase of 80?
 
-## Answer Key
+    ---
+    ---
 
-**1.** `clamp(300)` → 255. `clamp(-10)` → 0.
+    ## Answer Key
 
-**2.**
-```java
-int avg  = (r + g + b) / 3;
-int newR = avg;
-int newG = avg;
-int newB = avg;
-```
+    **1.** `clamp(300)` → 255. `clamp(-10)` → 0.
 
-**3.**
-```java
-int newR = clamp(r + 30);
-int newG = g;
-int newB = clamp(b - 30);
-```
+    **2.**
+    ```java
+    int avg  = (r + g + b) / 3;
+    int newR = avg;
+    int newG = avg;
+    int newB = avg;
+    ```
 
-**4.** R: clamp(200+80) = clamp(280) = 255. G: clamp(150+80) = clamp(230) = 230. B: clamp(100+80) = 180.
+    **3.**
+    ```java
+    int newR = clamp(r + 30);
+    int newG = g;
+    int newB = clamp(b - 30);
+    ```
+
+    **4.** R: clamp(200+80) = clamp(280) = 255. G: clamp(150+80) = clamp(230) = 230. B: clamp(100+80) = 180.
 
 ---
 

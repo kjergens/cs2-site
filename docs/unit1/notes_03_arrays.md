@@ -1,3 +1,4 @@
+# CS2 — Unit 1 Chapter 3: Arrays
 An **array** is a fixed-size collection of values of the same type, stored in numbered slots. Arrays are your first data structure in CS2 and the foundation for almost every algorithm you'll write this semester.
 
 ---
@@ -215,7 +216,7 @@ System.out.println(count);   // 3
 
 ## Check Your Understanding
 
-!!! attention
+!!! information
 
     **Unit 1 · Chapter 3**
 

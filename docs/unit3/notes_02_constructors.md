@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Constructors and Creating Objects
+# CS2 — Unit 3 Chapter 2: Constructors and Creating Objects
 
 ---
 
@@ -120,49 +120,51 @@ public BankAccount(String owner) {
 
 ## Check Your Understanding
 
-**Unit 3 · Chapter 2**
+!!! information
 
-**1.** What are the two things that make a constructor different from a regular method?
+    **Unit 3 · Chapter 2**
 
-**2.** What does `this` mean inside a constructor?
+    **1.** What are the two things that make a constructor different from a regular method?
 
-**3.** Write a `Car` class with instance variables `make` (String) and `year` (int). Write a constructor that takes both values as parameters and initializes the instance variables.
+    **2.** What does `this` mean inside a constructor?
 
-**4.** Given your `Car` class, write code in `main` to create two different cars and print each car's make.
+    **3.** Write a `Car` class with instance variables `make` (String) and `year` (int). Write a constructor that takes both values as parameters and initializes the instance variables.
 
-**5.** If a class has a constructor `public Dog(String name, String breed)`, will `new Dog()` compile? Explain.
+    **4.** Given your `Car` class, write code in `main` to create two different cars and print each car's make.
 
----
----
+    **5.** If a class has a constructor `public Dog(String name, String breed)`, will `new Dog()` compile? Explain.
 
-## Answer Key
+    ---
+    ---
 
-**1.** No return type (not even void); name must match the class name exactly.
+    ## Answer Key
 
-**2.** `this` refers to the current object. `this.fieldName` accesses the instance variable, distinguishing it from a parameter with the same name.
+    **1.** No return type (not even void); name must match the class name exactly.
 
-**3.**
-```java
-public class Car {
-    String make;
-    int year;
+    **2.** `this` refers to the current object. `this.fieldName` accesses the instance variable, distinguishing it from a parameter with the same name.
 
-    public Car(String make, int year) {
-        this.make = make;
-        this.year = year;
+    **3.**
+    ```java
+    public class Car {
+        String make;
+        int year;
+
+        public Car(String make, int year) {
+            this.make = make;
+            this.year = year;
+        }
     }
-}
-```
+    ```
 
-**4.**
-```java
-Car c1 = new Car("Toyota", 2020);
-Car c2 = new Car("Honda", 2018);
-System.out.println(c1.make);
-System.out.println(c2.make);
-```
+    **4.**
+    ```java
+    Car c1 = new Car("Toyota", 2020);
+    Car c2 = new Car("Honda", 2018);
+    System.out.println(c1.make);
+    System.out.println(c2.make);
+    ```
 
-**5.** No. Once you define a constructor with parameters, the no-argument default constructor disappears. `new Dog()` would cause a compile error.
+    **5.** No. Once you define a constructor with parameters, the no-argument default constructor disappears. `new Dog()` would cause a compile error.
 
 ---
 

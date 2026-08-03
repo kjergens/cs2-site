@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Traversing Images with Nested Loops
+# CS2 — Unit 5 Chapter 2: Traversing Images with Nested Loops
 
 ---
 
@@ -110,41 +110,43 @@ for (int y = y1; y < y2; y++) {
 
 ## Check Your Understanding
 
-**Unit 5 · Chapter 2**
+!!! information
 
-**1.** An image is 400 × 300 pixels. How many pixels does a complete traversal visit?
+    **Unit 5 · Chapter 2**
 
-**2.** Rewrite the total-red code so it also computes the average green channel in the same loop.
+    **1.** An image is 400 × 300 pixels. How many pixels does a complete traversal visit?
 
-**3.** If `totalR = 10000`, `totalG = 8000`, `totalB = 12000`, what does `dominantColor` return?
+    **2.** Rewrite the total-red code so it also computes the average green channel in the same loop.
 
-**4.** What loop bounds would you use to traverse only the right half of a 400-wide image?
+    **3.** If `totalR = 10000`, `totalG = 8000`, `totalB = 12000`, what does `dominantColor` return?
 
----
----
+    **4.** What loop bounds would you use to traverse only the right half of a 400-wide image?
 
-## Answer Key
+    ---
+    ---
 
-**1.** 400 × 300 = 120,000 pixels.
+    ## Answer Key
 
-**2.**
-```java
-long totalRed = 0, totalGreen = 0;
-for (int y = 0; y < image.getHeight(); y++) {
-    for (int x = 0; x < image.getWidth(); x++) {
-        Color pixel = new Color(image.getRGB(x, y));
-        totalRed   += pixel.getRed();
-        totalGreen += pixel.getGreen();
+    **1.** 400 × 300 = 120,000 pixels.
+
+    **2.**
+    ```java
+    long totalRed = 0, totalGreen = 0;
+    for (int y = 0; y < image.getHeight(); y++) {
+        for (int x = 0; x < image.getWidth(); x++) {
+            Color pixel = new Color(image.getRGB(x, y));
+            totalRed   += pixel.getRed();
+            totalGreen += pixel.getGreen();
+        }
     }
-}
-int numPixels = image.getWidth() * image.getHeight();
-double avgRed   = (double) totalRed / numPixels;
-double avgGreen = (double) totalGreen / numPixels;
-```
+    int numPixels = image.getWidth() * image.getHeight();
+    double avgRed   = (double) totalRed / numPixels;
+    double avgGreen = (double) totalGreen / numPixels;
+    ```
 
-**3.** `"blue"` — totalB (12000) is the largest.
+    **3.** `"blue"` — totalB (12000) is the largest.
 
-**4.** `for (int x = image.getWidth() / 2; x < image.getWidth(); x++)`
+    **4.** `for (int x = image.getWidth() / 2; x < image.getWidth(); x++)`
 
 ---
 

@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Passing Arrays to Methods
+# CS2 — Unit 4 Chapter 4: Passing Arrays to Methods
 
 ---
 
@@ -119,103 +119,105 @@ Use a **return type** when the method's job is to compute something from the arr
 
 ## Check Your Understanding
 
-**Unit 2 · Chapter 4**
+!!! information
 
-### Part A: Concepts
+    **Unit 2 · Chapter 4**
 
-**1.** What is the difference between passing a primitive and passing an array to a method?
+    ### Part A: Concepts
 
-**2.** A method has signature `public static void fill(int[] arr, int val)`. After calling `fill(data, 0)`, what do you expect `data` to contain?
+    **1.** What is the difference between passing a primitive and passing an array to a method?
 
----
+    **2.** A method has signature `public static void fill(int[] arr, int val)`. After calling `fill(data, 0)`, what do you expect `data` to contain?
 
-### Part B: Predict the Output
+    ---
 
-**3.**
-```java
-public static void doubleAll(int[] arr) {
-    for (int i = 0; i < arr.length; i++) {
-        arr[i] *= 2;
+    ### Part B: Predict the Output
+
+    **3.**
+    ```java
+    public static void doubleAll(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] *= 2;
+        }
     }
-}
-public static void main(String[] args) {
-    int[] nums = {3, 5, 7};
-    doubleAll(nums);
-    for (int i = 0; i < nums.length; i++) {
-        System.out.print(nums[i] + " ");
+    public static void main(String[] args) {
+        int[] nums = {3, 5, 7};
+        doubleAll(nums);
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+        }
     }
-}
-```
+    ```
 
-**4.**
-```java
-public static int sum(int[] arr) {
-    int total = 0;
-    for (int i = 0; i < arr.length; i++) {
-        total += arr[i];
+    **4.**
+    ```java
+    public static int sum(int[] arr) {
+        int total = 0;
+        for (int i = 0; i < arr.length; i++) {
+            total += arr[i];
+        }
+        return total;
     }
-    return total;
-}
-public static void main(String[] args) {
-    int[] vals = {10, 20, 30};
-    System.out.println(sum(vals));
-    System.out.println(vals[0]);
-}
-```
-
----
-
-### Part C: Write the Code
-
-**5.** Write a method `max(int[] arr)` that returns the largest element.
-
-**6.** Write a method `countAbove(int[] arr, int threshold)` that returns how many elements are strictly greater than `threshold`.
-
----
----
-
-## Answer Key
-
-### Part A
-
-**1.** Primitives are passed by value — the method gets a copy and cannot change the original. Arrays are passed by reference — the method works on the same array, so changes to elements persist after the method returns.
-
-**2.** Every element of `data` would be set to 0.
-
-### Part B
-
-**3.** `6 10 14 ` — `doubleAll` modifies the original array through the reference.
-
-**4.**
-```
-60
-10
-```
-`sum` reads the array but does not modify it. `vals[0]` is still 10.
-
-### Part C
-
-**5.**
-```java
-public static int max(int[] arr) {
-    int max = arr[0];
-    for (int i = 1; i < arr.length; i++) {
-        if (arr[i] > max) { max = arr[i]; }
+    public static void main(String[] args) {
+        int[] vals = {10, 20, 30};
+        System.out.println(sum(vals));
+        System.out.println(vals[0]);
     }
-    return max;
-}
-```
+    ```
 
-**6.**
-```java
-public static int countAbove(int[] arr, int threshold) {
-    int count = 0;
-    for (int i = 0; i < arr.length; i++) {
-        if (arr[i] > threshold) { count++; }
+    ---
+
+    ### Part C: Write the Code
+
+    **5.** Write a method `max(int[] arr)` that returns the largest element.
+
+    **6.** Write a method `countAbove(int[] arr, int threshold)` that returns how many elements are strictly greater than `threshold`.
+
+    ---
+    ---
+
+    ## Answer Key
+
+    ### Part A
+
+    **1.** Primitives are passed by value — the method gets a copy and cannot change the original. Arrays are passed by reference — the method works on the same array, so changes to elements persist after the method returns.
+
+    **2.** Every element of `data` would be set to 0.
+
+    ### Part B
+
+    **3.** `6 10 14 ` — `doubleAll` modifies the original array through the reference.
+
+    **4.**
+    ```
+    60
+    10
+    ```
+    `sum` reads the array but does not modify it. `vals[0]` is still 10.
+
+    ### Part C
+
+    **5.**
+    ```java
+    public static int max(int[] arr) {
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) { max = arr[i]; }
+        }
+        return max;
     }
-    return count;
-}
-```
+    ```
+
+    **6.**
+    ```java
+    public static int countAbove(int[] arr, int threshold) {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > threshold) { count++; }
+        }
+        return count;
+    }
+    ```
 
 ---
 

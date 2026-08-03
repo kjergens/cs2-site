@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Setters
+# CS2 — Unit 4 Chapter 2: Setters
 
 ---
 
@@ -116,43 +116,45 @@ public class Dog {
 
 ## Check Your Understanding
 
-**Unit 4 · Chapter 2**
+!!! information
 
-Given:
-```java
-public class Rectangle {
-    private double width;
-    private double height;
+    **Unit 4 · Chapter 2**
 
-    public Rectangle(double width, double height) {
-        this.width  = width;
-        this.height = height;
+    Given:
+    ```java
+    public class Rectangle {
+        private double width;
+        private double height;
+
+        public Rectangle(double width, double height) {
+            this.width  = width;
+            this.height = height;
+        }
+
+        public double getWidth()  { return width; }
+        public double getHeight() { return height; }
     }
+    ```
 
-    public double getWidth()  { return width; }
-    public double getHeight() { return height; }
-}
-```
+    **1.** Write a setter for `width` that rejects zero or negative values.
 
-**1.** Write a setter for `width` that rejects zero or negative values.
+    **2.** Should `Rectangle` have a setter for `height`? Does it depend on anything?
 
-**2.** Should `Rectangle` have a setter for `height`? Does it depend on anything?
+    ---
+    ---
 
----
----
+    ## Answer Key
 
-## Answer Key
-
-**1.**
-```java
-public void setWidth(double newWidth) {
-    if (newWidth > 0) {
-        width = newWidth;
+    **1.**
+    ```java
+    public void setWidth(double newWidth) {
+        if (newWidth > 0) {
+            width = newWidth;
+        }
     }
-}
-```
+    ```
 
-**2.** It depends on the design. If rectangles are supposed to be resizable, yes. If they're immutable (fixed at construction), no. The class designer makes this call.
+    **2.** It depends on the design. If rectangles are supposed to be resizable, yes. If they're immutable (fixed at construction), no. The class designer makes this call.
 
 ---
 

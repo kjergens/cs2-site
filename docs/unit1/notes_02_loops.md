@@ -1,3 +1,4 @@
+# CS2 — Unit 1 Chapter 2: Java Review
 These notes cover `while` and `for` loops from CS1. Both will appear constantly in CS2 — especially when working with arrays. Use these notes to review, catch up, or study for quizzes.
 
 Both loop types have the same three parts — just written in different places:
@@ -212,7 +213,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
 ## Check Your Understanding
 
-!!! attention
+!!! information
 
     **Unit 1 · Chapter 2**
 

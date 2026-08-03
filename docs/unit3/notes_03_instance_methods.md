@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Instance Methods
+# CS2 — Unit 3 Chapter 3: Instance Methods
 
 ---
 
@@ -179,75 +179,77 @@ System.out.println(bob);     // Bob: $300.0
 
 ## Check Your Understanding
 
-**Unit 3 · Chapter 3**
+!!! information
 
-Given this class:
+    **Unit 3 · Chapter 3**
 
-```java
-public class Counter {
-    int count;
+    Given this class:
 
-    public Counter() {
-        count = 0;
+    ```java
+    public class Counter {
+        int count;
+
+        public Counter() {
+            count = 0;
+        }
+
+        public void increment() {
+            count++;
+        }
+
+        public void reset() {
+            count = 0;
+        }
+
+        public int getCount() {
+            return count;
+        }
+
+        public String toString() {
+            return "Counter: " + count;
+        }
     }
+    ```
 
-    public void increment() {
-        count++;
+    **1.** What does `increment` do? What type does it return?
+
+    **2.** Trace this code and state the output:
+    ```java
+    Counter c = new Counter();
+    c.increment();
+    c.increment();
+    c.increment();
+    c.reset();
+    c.increment();
+    System.out.println(c.getCount());
+    System.out.println(c);
+    ```
+
+    **3.** Add a method `decrementByN(int n)` that subtracts `n` from `count` but never lets `count` go below 0.
+
+    ---
+    ---
+
+    ## Answer Key
+
+    **1.** `increment` adds 1 to `count`. It is a void method — it changes the object's state and returns nothing.
+
+    **2.**
+    - After three increments: `count = 3`
+    - After reset: `count = 0`
+    - After one increment: `count = 1`
+    - `getCount()` returns `1` → prints `1`
+    - `toString()` returns `"Counter: 1"` → prints `Counter: 1`
+
+    **3.**
+    ```java
+    public void decrementByN(int n) {
+        count = count - n;
+        if (count < 0) {
+            count = 0;
+        }
     }
-
-    public void reset() {
-        count = 0;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public String toString() {
-        return "Counter: " + count;
-    }
-}
-```
-
-**1.** What does `increment` do? What type does it return?
-
-**2.** Trace this code and state the output:
-```java
-Counter c = new Counter();
-c.increment();
-c.increment();
-c.increment();
-c.reset();
-c.increment();
-System.out.println(c.getCount());
-System.out.println(c);
-```
-
-**3.** Add a method `decrementByN(int n)` that subtracts `n` from `count` but never lets `count` go below 0.
-
----
----
-
-## Answer Key
-
-**1.** `increment` adds 1 to `count`. It is a void method — it changes the object's state and returns nothing.
-
-**2.**
-- After three increments: `count = 3`
-- After reset: `count = 0`
-- After one increment: `count = 1`
-- `getCount()` returns `1` → prints `1`
-- `toString()` returns `"Counter: 1"` → prints `Counter: 1`
-
-**3.**
-```java
-public void decrementByN(int n) {
-    count = count - n;
-    if (count < 0) {
-        count = 0;
-    }
-}
-```
+    ```
 
 ---
 

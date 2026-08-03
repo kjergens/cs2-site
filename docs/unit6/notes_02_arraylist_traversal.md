@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: ArrayList Traversal and Algorithms
+# CS2 — Unit 6 Chapter 2: ArrayList Traversal and Algorithms
 
 ---
 
@@ -155,45 +155,47 @@ The unit notes from Units 3–4 apply: each element in the list is an object wit
 
 ## Check Your Understanding
 
-**Unit 5 · Chapter 2**
+!!! information
 
-**1.** Write a for-each loop that prints every element in `ArrayList<Integer> scores`.
+    **Unit 5 · Chapter 2**
 
-**2.** Write a method `public static int countEvens(ArrayList<Integer> list)` that returns the number of even values.
+    **1.** Write a for-each loop that prints every element in `ArrayList<Integer> scores`.
 
-**3.** Given `["cat", "dog", "ant", "bee"]`, what does this return?
-```java
-ArrayList<String> result = namesStartingWith(list, 'a');
-```
+    **2.** Write a method `public static int countEvens(ArrayList<Integer> list)` that returns the number of even values.
 
-**4.** Why is it unsafe to remove elements from an ArrayList using a forward for loop?
+    **3.** Given `["cat", "dog", "ant", "bee"]`, what does this return?
+    ```java
+    ArrayList<String> result = namesStartingWith(list, 'a');
+    ```
 
----
----
+    **4.** Why is it unsafe to remove elements from an ArrayList using a forward for loop?
 
-## Answer Key
+    ---
+    ---
 
-**1.**
-```java
-for (int score : scores) {
-    System.out.println(score);
-}
-```
+    ## Answer Key
 
-**2.**
-```java
-public static int countEvens(ArrayList<Integer> list) {
-    int count = 0;
-    for (int val : list) {
-        if (val % 2 == 0) count++;
+    **1.**
+    ```java
+    for (int score : scores) {
+        System.out.println(score);
     }
-    return count;
-}
-```
+    ```
 
-**3.** `["ant"]` — only "ant" starts with 'a'.
+    **2.**
+    ```java
+    public static int countEvens(ArrayList<Integer> list) {
+        int count = 0;
+        for (int val : list) {
+            if (val % 2 == 0) count++;
+        }
+        return count;
+    }
+    ```
 
-**4.** When you remove an element at index `i`, the element that was at `i+1` shifts to `i`. The loop then increments `i` to `i+1`, skipping the shifted element. Elements get skipped and may not be checked.
+    **3.** `["ant"]` — only "ant" starts with 'a'.
+
+    **4.** When you remove an element at index `i`, the element that was at `i+1` shifts to `i`. The loop then increments `i` to `i+1`, skipping the shifted element. Elements get skipped and may not be checked.
 
 ---
 

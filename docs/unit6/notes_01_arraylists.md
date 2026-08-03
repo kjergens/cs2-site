@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: ArrayLists
+# CS2 — Unit 6 Chapter 1: ArrayLists
 
 ---
 
@@ -142,44 +142,46 @@ System.out.println(scores);          // [92, 95, 90]
 
 ## Check Your Understanding
 
-**Unit 6 · Chapter 1**
+!!! information
 
-**1.** What import statement do you need to use ArrayList?
+    **Unit 6 · Chapter 1**
 
-**2.** Create an `ArrayList<String>` called `fruits`, add "apple", "banana", and "cherry" to it, then print the second element.
+    **1.** What import statement do you need to use ArrayList?
 
-**3.** What is the difference between `list.length` and `list.size()`?
+    **2.** Create an `ArrayList<String>` called `fruits`, add "apple", "banana", and "cherry" to it, then print the second element.
 
-**4.** After these operations, what does `list` contain?
-```java
-ArrayList<Integer> list = new ArrayList<>();
-list.add(10);
-list.add(20);
-list.add(30);
-list.remove(0);
-list.set(0, 25);
-System.out.println(list);
-```
+    **3.** What is the difference between `list.length` and `list.size()`?
 
----
----
+    **4.** After these operations, what does `list` contain?
+    ```java
+    ArrayList<Integer> list = new ArrayList<>();
+    list.add(10);
+    list.add(20);
+    list.add(30);
+    list.remove(0);
+    list.set(0, 25);
+    System.out.println(list);
+    ```
 
-## Answer Key
+    ---
+    ---
 
-**1.** `import java.util.ArrayList;` (or `import java.util.*;`)
+    ## Answer Key
 
-**2.**
-```java
-ArrayList<String> fruits = new ArrayList<>();
-fruits.add("apple");
-fruits.add("banana");
-fruits.add("cherry");
-System.out.println(fruits.get(1));   // banana
-```
+    **1.** `import java.util.ArrayList;` (or `import java.util.*;`)
 
-**3.** `list.length` doesn't exist on ArrayList — that's array syntax. ArrayList uses `list.size()`.
+    **2.**
+    ```java
+    ArrayList<String> fruits = new ArrayList<>();
+    fruits.add("apple");
+    fruits.add("banana");
+    fruits.add("cherry");
+    System.out.println(fruits.get(1));   // banana
+    ```
 
-**4.** `[25, 30]`. Trace: add 10→[10], add 20→[10,20], add 30→[10,20,30], remove(0)→[20,30], set(0,25)→[25,30].
+    **3.** `list.length` doesn't exist on ArrayList — that's array syntax. ArrayList uses `list.size()`.
+
+    **4.** `[25, 30]`. Trace: add 10→[10], add 20→[10,20], add 30→[10,20,30], remove(0)→[20,30], set(0,25)→[25,30].
 
 ---
 

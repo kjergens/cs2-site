@@ -1,4 +1,4 @@
-# CS2 — Unit Notes: Color and Images
+# CS2 — Unit 5 Chapter 1: Color and Images
 
 ---
 
@@ -108,34 +108,36 @@ System.out.println("B: " + pixel.getBlue());
 
 ## Check Your Understanding
 
-**Unit 5 · Chapter 1**
+!!! information
 
-**1.** What RGB values produce pure blue?
+    **Unit 5 · Chapter 1**
 
-**2.** What does a pixel with equal R, G, and B values look like?
+    **1.** What RGB values produce pure blue?
 
-**3.** Write code to create a `Color` with R=50, G=100, B=200, then print each channel.
+    **2.** What does a pixel with equal R, G, and B values look like?
 
-**4.** An image is 800 pixels wide and 600 pixels tall. What are the x and y coordinates of the bottom-right corner pixel?
+    **3.** Write code to create a `Color` with R=50, G=100, B=200, then print each channel.
 
----
----
+    **4.** An image is 800 pixels wide and 600 pixels tall. What are the x and y coordinates of the bottom-right corner pixel?
 
-## Answer Key
+    ---
+    ---
 
-**1.** R=0, G=0, B=255.
+    ## Answer Key
 
-**2.** A shade of gray. The specific shade depends on the value (0=black, 128=mid-gray, 255=white).
+    **1.** R=0, G=0, B=255.
 
-**3.**
-```java
-Color c = new Color(50, 100, 200);
-System.out.println(c.getRed());    // 50
-System.out.println(c.getGreen());  // 100
-System.out.println(c.getBlue());   // 200
-```
+    **2.** A shade of gray. The specific shade depends on the value (0=black, 128=mid-gray, 255=white).
 
-**4.** x=799, y=599 (0-indexed: width-1, height-1).
+    **3.**
+    ```java
+    Color c = new Color(50, 100, 200);
+    System.out.println(c.getRed());    // 50
+    System.out.println(c.getGreen());  // 100
+    System.out.println(c.getBlue());   // 200
+    ```
+
+    **4.** x=799, y=599 (0-indexed: width-1, height-1).
 
 ---
 
