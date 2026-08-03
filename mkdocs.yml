@@ -5,6 +5,9 @@ docs_dir: docs
 theme:
   name: readthedocs
 
+extra_javascript:
+  - js/nav_scroll_fix.js
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
