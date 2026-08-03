@@ -15,7 +15,7 @@ markdown_extensions:
   - attr_list
 
 nav:
-  - Home: index.md
+  - Table of Contents: index.md
   - Unit 1 — Java Review and Arrays:
     - "1.1 Java Review": unit1/notes_01_java_review.md
     - "1.2 Loops": unit1/notes_02_loops.md
