@@ -262,7 +262,7 @@ The `boolean isTriangle` parameter in the third version exists only to make the 
 
     ### Part 4: Find the Bug
 
-    13.
+    13. Find the bug. 
     ```java
     public static int total(int a, int b) {
         return a + b;
@@ -272,7 +272,7 @@ The `boolean isTriangle` parameter in the third version exists only to make the 
     }
     ```
 
-    14.
+    14. Find the bug. 
     ```java
     public static double round2(double n) {
         return Math.round(n * 100.0) / 100.0;

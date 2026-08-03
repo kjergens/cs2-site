@@ -389,7 +389,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     ### Part 1: Predict the Output — While Loops
 
-    1.
+    1. Predict the output.
     ```java
     int n = 1;
     while (n <= 5) {
@@ -406,8 +406,8 @@ Fix: declare `i` before the loop if you need it afterward.
     }
     System.out.println(x);
     ```
-
-    3.
+     
+    3. Predict the output.
     ```java
     int count = 0;
     int i = 1;
@@ -422,14 +422,14 @@ Fix: declare `i` before the loop if you need it afterward.
 
     ### Part 2: Predict the Output — For Loops
 
-    4.
+    4. Predict the output.
     ```java
     for (int i = 0; i < 5; i++) {
         System.out.print(i * i + " ");
     }
     ```
 
-    5.
+    5. Predict the output.
     ```java
     int sum = 0;
     for (int i = 1; i <= 10; i++) {
@@ -438,7 +438,7 @@ Fix: declare `i` before the loop if you need it afterward.
     System.out.println(sum);
     ```
 
-    6.
+    6. Predict the output.
     ```java
     for (int i = 1; i <= 5; i++) {
         if (i % 2 == 0) {
@@ -477,7 +477,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     ### Part 4: Find the Bug
 
-    12.
+    12. Find the bug.
     ```java
     int i = 0;
     while (i < 10) {

@@ -153,7 +153,7 @@ public static void printBox(int size) {
 
     ### Part B: Predict the Output
 
-    **4.**
+    **4.** Predict the output.
     ```java
     public static void mystery(int a, int b) {
         a = a * 2;
@@ -168,7 +168,7 @@ public static void printBox(int size) {
     }
     ```
 
-    **5.**
+    **5.** Predict the output.
     ```java
     public static void methodA() {
         int count = 0;

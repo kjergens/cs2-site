@@ -315,7 +315,7 @@ If `foundAt` is still `-1` after the loop, the target wasn't in the array.
 
     ### Part 1: Traversal — Predict the Output
 
-    1.
+    1. Predict the output.
     ```java
     int[] vals = {10, 20, 30, 40, 50};
     int total = 0;
@@ -325,7 +325,7 @@ If `foundAt` is still `-1` after the loop, the target wasn't in the array.
     System.out.println(total);
     ```
 
-    2.
+    2. Predict the output.
     ```java
     int[] data = {5, 12, 3, 8, 15, 6};
     int count = 0;
@@ -377,7 +377,7 @@ If `foundAt` is still `-1` after the loop, the target wasn't in the array.
 
     Each snippet has exactly one error. Identify the line and describe the problem.
 
-    8.
+    8. Find the bug.
     ```java
     int[] nums = {4, 8, 15, 16, 23};
     for (int i = 1; i <= nums.length; i++) {
@@ -397,7 +397,7 @@ If `foundAt` is still `-1` after the loop, the target wasn't in the array.
     System.out.println("Max: " + max);
     ```
 
-    10.
+    10. Find the bug.
     ```java
     int[] scores = new int[5];
     scores = {90, 85, 78, 92, 88};

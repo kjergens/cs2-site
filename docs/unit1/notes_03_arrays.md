@@ -396,7 +396,7 @@ System.out.println(count);   // 3
 
     ### Part 2: Traversal — Predict the Output
 
-    5.
+    5. Predict the output.
     ```java
     int[] nums = {3, 7, 1, 9, 4};
     for (int i = 0; i < nums.length; i++) {
@@ -404,7 +404,7 @@ System.out.println(count);   // 3
     }
     ```
 
-    6.
+    6. Predict the output.
     ```java
     int[] nums = {3, 7, 1, 9, 4};
     for (int i = nums.length - 1; i >= 0; i--) {

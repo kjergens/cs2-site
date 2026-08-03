@@ -297,7 +297,7 @@ Use a **return type** when the method's job is to compute something from the arr
 
     ### Part 4: Find the Bug
 
-    12.
+    12. Find the bug. 
     ```java
     public static int sum(int[] arr) {
         int total = 0;

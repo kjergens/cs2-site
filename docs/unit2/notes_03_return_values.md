@@ -265,7 +265,7 @@ public static void main(String[] args) {
 
     ### Part 2: Predict the Output
 
-    5.
+    5. Predict the output.
     ```java
     public static int square(int n) {
         return n * n;
@@ -279,7 +279,7 @@ public static void main(String[] args) {
     }
     ```
 
-    6.
+    6. Predict the output.
     ```java
     public static int add(int a, int b) {
         return a + b;
@@ -291,7 +291,7 @@ public static void main(String[] args) {
     }
     ```
 
-    7.
+    7. Predict the output.
     ```java
     public static boolean isEven(int n) {
         return n % 2 == 0;
@@ -306,7 +306,7 @@ public static void main(String[] args) {
     }
     ```
 
-    8.
+    8. Predict the output.
     ```java
     public static int bigger(int a, int b) {
         if (a > b) {
@@ -323,7 +323,7 @@ public static void main(String[] args) {
 
     ### Part 3: Find the Bug
 
-    9.
+    9. Find the bug
     ```java
     public static int tripleIt(int n) {
         int result = n * 3;
@@ -337,7 +337,7 @@ public static void main(String[] args) {
     }
     ```
 
-    11.
+    11. Find the bug.
     ```java
     public static boolean isNegative(int n) {
         if (n < 0) {
@@ -346,7 +346,7 @@ public static void main(String[] args) {
     }
     ```
 
-    12.
+    12. Find the bug. 
     ```java
     public static int absolute(int n) {
         if (n < 0) {

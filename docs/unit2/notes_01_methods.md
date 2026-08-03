@@ -165,7 +165,7 @@ After
 
     ### Part B: Predict the Output
 
-    **4.**
+    **4.** Predict the output.
     ```java
     public static void shout(String word) {
         System.out.println(word.toUpperCase() + "!!!");
@@ -177,7 +177,7 @@ After
     }
     ```
 
-    **5.**
+    **5.** Predict the output.
     ```java
     public static void printLine(int n, String ch) {
         for (int i = 0; i < n; i++) {
