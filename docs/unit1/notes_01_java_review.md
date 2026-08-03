@@ -230,10 +230,15 @@ if (sunny && weekend) {
     ### Part A: Concepts
 
     **1.** What is the difference between `=` and `==` in Java?
+
     **2.** What does the `%` operator return? Give an example of when it would be useful.
+
     **3.** Why is `input == "hello"` unreliable for comparing Strings? What should you use instead?
+
     **4.** What is type casting? Write one line of code that casts an `int` variable called `total` to a `double` before dividing it by `4`.
+
     **5.** What is the difference between `&&` and `||`? 
+
     **6.** Complete the table:
 
     | `a` | `b` | `a && b` | `a \|\| b` | `!a` |
@@ -244,6 +249,7 @@ if (sunny && weekend) {
     | false | false | | | |
 
     **7.** Java evaluates `if / else if / else` chains from top to bottom and stops at the first true condition. Why does the order of conditions matter? Give an example where getting the order wrong would produce an incorrect result.
+
     **8.** Without running it, what does this print — and why?
     ```java
     System.out.println("Result: " + 4 + 5);
@@ -254,7 +260,7 @@ if (sunny && weekend) {
 
     ### Part B: Predict the Output
 
-    **9.**
+    **9.** Predict the output:
     ```java
     int x = 17;
     int y = 5;
@@ -263,7 +269,7 @@ if (sunny && weekend) {
     System.out.println((double) x / y);
     ```
 
-    **10.**
+    **10.** Predict the output:
     ```java
     boolean hungry = false;
     boolean tired = true;
@@ -273,7 +279,7 @@ if (sunny && weekend) {
     System.out.println(!hungry && tired);
     ```
 
-    **11.**
+    **11.** Predict the output:
     ```java
     int n = 12;
     if (n % 2 == 0 && n > 10) {
@@ -285,7 +291,7 @@ if (sunny && weekend) {
     }
     ```
 
-    **12.**
+    **12.** Predict the output:
     ```java
     int a = 3;
     int b = 4;
@@ -323,7 +329,7 @@ if (sunny && weekend) {
 
     ### Part D: Find the Bug
 
-    **17.**
+    **17.** Find the bug:
     ```java
     int score = 95;
     if (score >= 60) {
@@ -334,14 +340,14 @@ if (sunny && weekend) {
     ```
     This compiles and runs but produces the wrong output for a score of 95. What is the bug?
 
-    **18.**
+    **18.** Find the bug:
     ```java
     double total = 49.99;
     int rounded = total;
     System.out.println(rounded);
     ```
 
-    **19.**
+    **19.** Find the bug:
     ```java
     String answer = "yes";
     if (answer.equals = "yes") {
