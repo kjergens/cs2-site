@@ -101,114 +101,14 @@ System.out.println(nums[nums.length - 1]);   // 23 — the last element
 
 Common trap: `nums.length` is 5, but `nums[5]` doesn't exist. The last valid index is always `length - 1`.
 
----
-
-## 5. Traversing an Array
-
-The standard pattern for visiting every element:
-
-```java
-int[] scores = {88, 72, 95, 61, 83};
-
-for (int i = 0; i < scores.length; i++) {
-    System.out.println(scores[i]);
-}
-```
-
-Why `i < scores.length` and not `i <= scores.length`? Because `scores.length` is 5, and `scores[5]` doesn't exist. Use `<`, not `<=`.
-
-### Traversing in reverse
-
-```java
-for (int i = scores.length - 1; i >= 0; i--) {
-    System.out.print(scores[i] + " ");
-}
-// prints: 83 61 95 72 88
-```
+*Traversing every element of an array — visiting each one with a loop — gets its own dedicated treatment in the next chapter.*
 
 ---
 
-## 6. Common Array Algorithms
-
-These four patterns appear constantly — in HW, on quizzes, and in real programs. Memorize their shapes.
-
-### Sum
-
-```java
-int[] prices = {15, 42, 8, 27, 63};
-int sum = 0;
-for (int i = 0; i < prices.length; i++) {
-    sum += prices[i];
-}
-System.out.println(sum);   // 155
-```
-
-### Maximum
-
-Initialize with the first element — never with `0`:
-
-```java
-int[] scores = {88, 72, 95, 61, 83};
-int max = scores[0];
-for (int i = 1; i < scores.length; i++) {
-    if (scores[i] > max) {
-        max = scores[i];
-    }
-}
-System.out.println(max);   // 95
-```
-
-Why not `max = 0`? If every value in the array were negative, `0` would be returned as the max even though it's not in the array. Starting with `scores[0]` guarantees the answer is always a real element.
-
-### Minimum
-
-Same pattern as max, flip the comparison:
-
-```java
-int min = scores[0];
-for (int i = 1; i < scores.length; i++) {
-    if (scores[i] < min) {
-        min = scores[i];
-    }
-}
-System.out.println(min);   // 61
-```
-
-### Average
-
-Sum first, then divide — and watch the type:
-
-```java
-double[] temps = {98.6, 101.2, 99.4, 103.0, 97.8};
-double sum = 0;
-for (int i = 0; i < temps.length; i++) {
-    sum += temps[i];
-}
-System.out.println(sum / temps.length);   // 100.0
-```
-
-### Count with condition
-
-```java
-int[] grades = {55, 78, 92, 61, 88, 45, 73, 90};
-int count = 0;
-for (int i = 0; i < grades.length; i++) {
-    if (grades[i] >= 80) {
-        count++;
-    }
-}
-System.out.println(count);   // 3
-```
-
----
-
-## 7. Common Errors
+## 5. Common Errors
 
 | Error | Example | Problem | Fix |
 |---|---|---|---|
-| Off-by-one (upper bound) | `i <= arr.length` | `arr[arr.length]` doesn't exist | Use `i < arr.length` |
-| Off-by-one (lower bound) | `i = 1` | Skips the first element | Start at `i = 0` |
-| Bad max initialization | `int max = 0` | Fails for all-negative arrays | Use `max = arr[0]` |
 | Post-declaration initializer | `scores = {90, 85};` | `{...}` only works at declaration | Combine into one statement or assign individually |
 | Out of bounds access | `arr[arr.length]` | Last valid index is `length - 1` | Use `arr[arr.length - 1]` |
 
@@ -226,11 +126,9 @@ System.out.println(count);   // 3
 
     **2.** What is the difference between `arr.length` and `arr.length()`?
 
-    **3.** Why should you initialize `max` with `arr[0]` instead of `0`?
+    **3.** You need to store 10 student names but you don't know them yet. Write a declaration that creates the array with room for 10 Strings.
 
-    **4.** You need to store 10 student names but you don't know them yet. Write a declaration that creates the array with room for 10 Strings.
-
-    **5.** True or false — explain in one sentence:
+    **4.** True or false — explain in one sentence:
     - a) You can change a value in an array after it is created.
     - b) You can add a new slot to an array after it is created.
 
@@ -238,62 +136,12 @@ System.out.println(count);   // 3
 
     ### Part B: Predict the Output
 
-    **6.**
+    **5.**
     ```java
     int[] nums = {4, 8, 15, 16, 23};
     System.out.println(nums[0]);
     System.out.println(nums[nums.length - 1]);
     System.out.println(nums.length);
-    ```
-
-    **7.**
-    ```java
-    int[] vals = {3, 7, 2, 9};
-    int total = 0;
-    for (int i = 0; i < vals.length; i++) {
-        total += vals[i];
-    }
-    System.out.println(total);
-    ```
-
-    **8.**
-    ```java
-    String[] words = {"cat", "dog", "bird"};
-    for (int i = words.length - 1; i >= 0; i--) {
-        System.out.print(words[i] + " ");
-    }
-    ```
-
-    ---
-
-    ### Part C: Write the Code
-
-    **9.** Given `int[] data = {12, 5, 8, 19, 3, 14}`, write a loop that prints only the values greater than 10.
-
-    **10.** Given `int[] scores = {74, 88, 91, 63, 85}`, write a loop that finds and prints the minimum value.
-
-    ---
-
-    ### Part D: Find the Bug
-
-    **11.**
-    ```java
-    int[] nums = {10, 20, 30, 40, 50};
-    for (int i = 0; i <= nums.length; i++) {
-        System.out.println(nums[i]);
-    }
-    ```
-
-    **12.**
-    ```java
-    int[] temps = {-5, -12, -3, -8};
-    int max = 0;
-    for (int i = 0; i < temps.length; i++) {
-        if (temps[i] > max) {
-            max = temps[i];
-        }
-    }
-    System.out.println("Max: " + max);
     ```
 
     ---
@@ -307,63 +155,20 @@ System.out.println(count);   // 3
 
     **2.** `arr.length` is a property — no parentheses, used for arrays. `arr.length()` is a method call — used for Strings. Using `()` on an array is a compile error.
 
-    **3.** If all values in the array are negative, `max = 0` will never be updated by the loop (no element is greater than 0), and the result will be `0` — which isn't in the array. Starting with `arr[0]` guarantees the answer is always a real element.
+    **3.** `String[] names = new String[10];`
 
-    **4.** `String[] names = new String[10];`
-
-    **5.**
+    **4.**
     - a) **True** — you can assign a new value to any index at any time.
     - b) **False** — array size is fixed at creation. Use `ArrayList` for a resizable collection.
 
     ### Part B
 
-    **6.**
+    **5.**
     ```
     4
     23
     5
     ```
-
-    **7.**
-    ```
-    21
-    ```
-    3 + 7 + 2 + 9 = 21.
-
-    **8.**
-    ```
-    bird dog cat 
-    ```
-    Loop runs from index 2 down to 0, printing in reverse.
-
-    ### Part C
-
-    **9.**
-    ```java
-    for (int i = 0; i < data.length; i++) {
-        if (data[i] > 10) {
-            System.out.println(data[i]);
-        }
-    }
-    // prints: 12, 19, 14
-    ```
-
-    **10.**
-    ```java
-    int min = scores[0];
-    for (int i = 1; i < scores.length; i++) {
-        if (scores[i] < min) {
-            min = scores[i];
-        }
-    }
-    System.out.println(min);   // 63
-    ```
-
-    ### Part D
-
-    **11.** The condition `i <= nums.length` allows `i` to reach `5`, but `nums[5]` doesn't exist (valid indices: 0–4). Throws `ArrayIndexOutOfBoundsException`. Fix: `i < nums.length`.
-
-    **12.** `max = 0` is the wrong initialization for an all-negative array. Every element is less than 0, so the loop never updates `max`, and the result is `0` — not in the array. Fix: `int max = temps[0]` and start the loop at `i = 1`.
 
 ---
 
@@ -374,8 +179,6 @@ System.out.println(count);   // 3
     **Unit 1 · Chapter 3**
 
     *Assigned Class 3 · Due Class 4*
-
-    ### Part 1: Array Basics
 
     1. Write a single statement to declare and initialize an `int` array called `temps` containing the values `72, 68, 85, 90, 77`.
 
@@ -393,21 +196,3 @@ System.out.println(count);   // 3
     4. True or false — explain your answer in one sentence.
        - a) You can change the value at `arr[2]` after the array is created.
        - b) You can change the size of an array after it is created.
-
-    ### Part 2: Traversal — Predict the Output
-
-    5. Predict the output.
-    ```java
-    int[] nums = {3, 7, 1, 9, 4};
-    for (int i = 0; i < nums.length; i++) {
-        System.out.println(nums[i]);
-    }
-    ```
-
-    6. Predict the output.
-    ```java
-    int[] nums = {3, 7, 1, 9, 4};
-    for (int i = nums.length - 1; i >= 0; i--) {
-        System.out.print(nums[i] + " ");
-    }
-    ```
