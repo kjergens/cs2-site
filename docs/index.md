@@ -4,7 +4,7 @@ Welcome to CS2 at Columbia Grammar and Preparatory School. This site contains **
 
 ---
 
-| Unit/Chapter | Chapter Homework | Chapter Check Your Understanding 
+| Unit/Chapter | Homework | Check Your Understanding 
 |---|---|---|
 | **Unit 1 — Java Review and Arrays**| | |
 | [1.1 Java Review Pt 1](unit1/notes_01_java_review.md) | [Homework](unit1/notes_01_java_review.md#homework-1-java-review) | [Check Your Understanding](unit1/notes_01_java_review.md#check-your-understanding) |
