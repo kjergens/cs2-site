@@ -53,6 +53,68 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">1.4 Traversing Arrays</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-the-traversal-template">1. The Traversal Template</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-the-five-core-algorithms">2. The Five Core Algorithms</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-sum">2.1 Sum</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-maximum">2.2 Maximum</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#23-minimum">2.3 Minimum</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#24-average">2.4 Average</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#25-count-with-condition">2.5 Count with Condition</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-combining-algorithms">3. Combining Algorithms</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-variations">4. Variations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sum-of-elements-that-meet-a-condition">Sum of elements that meet a condition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reverse-traversal">Reverse traversal</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#finding-an-elements-index">Finding an element's index</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-common-errors">5. Common Errors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#check-your-understanding">Check Your Understanding</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#part-a-concepts">Part A: Concepts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-b-predict-the-output">Part B: Predict the Output</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-c-write-the-code">Part C: Write the Code</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#-">---</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#answer-key">Answer Key</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#part-a">Part A</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-b">Part B</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-c">Part C</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homework-4-arrays-and-loops">Homework 4: Arrays and Loops</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#part-1-traversal-predict-the-output">Part 1: Traversal — Predict the Output</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-2-write-the-algorithms">Part 2: Write the Algorithms</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-3-find-the-bug">Part 3: Find the Bug</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -129,7 +191,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p>Traversal means visiting every element in an array, one at a time, using a loop. Traversal is how you compute results from arrays: totals, averages, finding the largest value, counting elements that match a condition.</p>
+                <h1 id="cs2-unit-1-chapter-4-traversing-arrays">CS2 — Unit 1 Chapter 4: Traversing Arrays</h1>
+<p>Traversal means visiting every element in an array, one at a time, using a loop. Traversal is how you compute results from arrays: totals, averages, finding the largest value, counting elements that match a condition.</p>
 <hr />
 <h2 id="1-the-traversal-template">1. The Traversal Template</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -283,8 +346,8 @@
 </table>
 <hr />
 <h2 id="check-your-understanding">Check Your Understanding</h2>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
+<div class="admonition information">
+<p class="admonition-title">Information</p>
 <p><strong>Unit 1 · Chapter 4</strong></p>
 <h3 id="part-a-concepts">Part A: Concepts</h3>
 <p><strong>1.</strong> Why must the accumulator (<code>sum</code>, <code>max</code>, etc.) be declared before the loop, not inside it?</p>

@@ -49,6 +49,72 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">1.2 Loops</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-the-while-loop">1. The While Loop</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-the-for-loop">2. The For Loop</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-while-vs-for-when-to-use-which">3. While vs. For — When to Use Which</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-common-loop-patterns">4. Common Loop Patterns</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#counter">Counter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#accumulator">Accumulator</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stepping-by-values-other-than-1">Stepping by values other than 1</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-common-errors">5. Common Errors</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#infinite-loop-forgetting-to-update">Infinite loop — forgetting to update</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#off-by-one-wrong-boundary">Off-by-one — wrong boundary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#double-increment-updating-i-twice">Double increment — updating i twice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#using-loop-variable-after-it-expires">Using loop variable after it expires</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#check-your-understanding">Check Your Understanding</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#part-a-concepts">Part A: Concepts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-b-predict-the-output">Part B: Predict the Output</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-c-write-the-loop">Part C: Write the Loop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-d-find-the-bug">Part D: Find the Bug</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#-">---</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#answer-key">Answer Key</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#part-a-concepts_1">Part A: Concepts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-b-predict-the-output_1">Part B: Predict the Output</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-c-write-the-loop_1">Part C: Write the Loop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-d-find-the-bug_1">Part D: Find the Bug</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#homework-2-loops-review">Homework 2: Loops Review</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#part-1-predict-the-output-while-loops">Part 1: Predict the Output — While Loops</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-2-predict-the-output-for-loops">Part 2: Predict the Output — For Loops</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-3-write-the-loop">Part 3: Write the Loop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-4-find-the-bug">Part 4: Find the Bug</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../notes_03_arrays/">1.3 Introduction to Arrays</a>
@@ -129,7 +195,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p>These notes cover <code>while</code> and <code>for</code> loops from CS1. Both will appear constantly in CS2 — especially when working with arrays. Use these notes to review, catch up, or study for quizzes.</p>
+                <h1 id="cs2-unit-1-chapter-2-java-review">CS2 — Unit 1 Chapter 2: Java Review</h1>
+<p>These notes cover <code>while</code> and <code>for</code> loops from CS1. Both will appear constantly in CS2 — especially when working with arrays. Use these notes to review, catch up, or study for quizzes.</p>
 <p>Both loop types have the same three parts — just written in different places:</p>
 <p><img alt="While and For Loop Anatomy" src="../../images/loops.png" /></p>
 <hr />
@@ -407,8 +474,8 @@ Fix: change <code>i &lt; 10</code> to <code>i &lt;= 10</code>. Rule of thumb: us
 Fix: declare <code>i</code> before the loop if you need it afterward.</p>
 <hr />
 <h2 id="check-your-understanding">Check Your Understanding</h2>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
+<div class="admonition information">
+<p class="admonition-title">Information</p>
 <p><strong>Unit 1 · Chapter 2</strong></p>
 <h3 id="part-a-concepts">Part A: Concepts</h3>
 <p><strong>1.</strong> What are the three things every loop needs to avoid running forever?</p>
