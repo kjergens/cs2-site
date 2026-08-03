@@ -217,6 +217,8 @@ if (sunny && weekend) {
 
 ## Check Your Understanding
 
+**Unit 1 · Chapter 1**
+
 Use these questions to test yourself before a quiz. If you get something wrong, go back to the section in these notes that covers it.
 
 ---

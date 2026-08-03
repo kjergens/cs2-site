@@ -179,6 +179,8 @@ System.out.println(bob);     // Bob: $300.0
 
 ## Check Your Understanding
 
+**Unit 3 · Chapter 3**
+
 Given this class:
 
 ```java

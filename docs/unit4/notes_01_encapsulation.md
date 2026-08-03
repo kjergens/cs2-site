@@ -157,6 +157,8 @@ public class BankAccount {
 
 ## Check Your Understanding
 
+**Unit 4 · Chapter 1**
+
 **1.** What does `private` mean for an instance variable?
 
 **2.** Why is it better to make instance variables `private` rather than leaving them `public`?

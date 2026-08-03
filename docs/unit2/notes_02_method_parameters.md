@@ -125,6 +125,8 @@ public static void printBox(int size) {
 
 ## Check Your Understanding
 
+**Unit 2 · Chapter 2**
+
 ### Part A: Concepts
 
 **1.** What does "passed by value" mean for primitives?

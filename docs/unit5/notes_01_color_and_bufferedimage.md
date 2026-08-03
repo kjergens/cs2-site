@@ -108,6 +108,8 @@ System.out.println("B: " + pixel.getBlue());
 
 ## Check Your Understanding
 
+**Unit 5 · Chapter 1**
+
 **1.** What RGB values produce pure blue?
 
 **2.** What does a pixel with equal R, G, and B values look like?

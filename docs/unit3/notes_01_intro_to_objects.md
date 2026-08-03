@@ -148,6 +148,8 @@ By Class 23, the same class will have constructors and methods. The starting poi
 
 ## Check Your Understanding
 
+**Unit 3 · Chapter 1**
+
 **1.** What is the difference between a class and an object?
 
 **2.** What are the two kinds of members a class can have?

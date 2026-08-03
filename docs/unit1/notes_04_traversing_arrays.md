@@ -190,6 +190,8 @@ If `foundAt` is still `-1` after the loop, the target wasn't in the array.
 
 ## Check Your Understanding
 
+**Unit 1 · Chapter 4**
+
 ### Part A: Concepts
 
 **1.** Why must the accumulator (`sum`, `max`, etc.) be declared before the loop, not inside it?

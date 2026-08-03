@@ -119,6 +119,8 @@ Use a **return type** when the method's job is to compute something from the arr
 
 ## Check Your Understanding
 
+**Unit 2 · Chapter 4**
+
 ### Part A: Concepts
 
 **1.** What is the difference between passing a primitive and passing an array to a method?

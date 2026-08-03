@@ -152,6 +152,8 @@ The method modifies the image in place (void) — this is the array-as-parameter
 
 ## Check Your Understanding
 
+**Unit 5 · Chapter 3**
+
 **1.** What does `clamp(300)` return? What does `clamp(-10)` return?
 
 **2.** Write the modify step for a grayscale effect using the average of R, G, B.

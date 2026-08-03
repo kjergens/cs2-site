@@ -110,6 +110,8 @@ for (int y = y1; y < y2; y++) {
 
 ## Check Your Understanding
 
+**Unit 5 · Chapter 2**
+
 **1.** An image is 400 × 300 pixels. How many pixels does a complete traversal visit?
 
 **2.** Rewrite the total-red code so it also computes the average green channel in the same loop.

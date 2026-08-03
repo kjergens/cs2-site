@@ -116,6 +116,8 @@ public class Dog {
 
 ## Check Your Understanding
 
+**Unit 4 · Chapter 2**
+
 Given:
 ```java
 public class Rectangle {

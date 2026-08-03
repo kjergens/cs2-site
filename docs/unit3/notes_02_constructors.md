@@ -120,6 +120,8 @@ public BankAccount(String owner) {
 
 ## Check Your Understanding
 
+**Unit 3 · Chapter 2**
+
 **1.** What are the two things that make a constructor different from a regular method?
 
 **2.** What does `this` mean inside a constructor?

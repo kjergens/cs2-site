@@ -214,6 +214,8 @@ Fix: declare `i` before the loop if you need it afterward.
 
 ## Check Your Understanding
 
+**Unit 1 · Chapter 2**
+
 ### Part A: Concepts
 
 **1.** What are the three things every loop needs to avoid running forever?

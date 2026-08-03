@@ -142,6 +142,8 @@ System.out.println(scores);          // [92, 95, 90]
 
 ## Check Your Understanding
 
+**Unit 6 · Chapter 1**
+
 **1.** What import statement do you need to use ArrayList?
 
 **2.** Create an `ArrayList<String>` called `fruits`, add "apple", "banana", and "cherry" to it, then print the second element.

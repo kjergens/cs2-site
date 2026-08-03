@@ -149,6 +149,8 @@ After
 
 ## Check Your Understanding
 
+**Unit 2 · Chapter 1**
+
 ### Part A: Concepts
 
 **1.** Name three benefits of using methods instead of copying code.

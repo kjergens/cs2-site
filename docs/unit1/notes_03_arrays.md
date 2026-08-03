@@ -217,6 +217,8 @@ System.out.println(count);   // 3
 
 ## Check Your Understanding
 
+**Unit 1 · Chapter 3**
+
 ### Part A: Concepts
 
 **1.** What is the index of the first element of any array? What is the index of the last element of an array with 8 elements?

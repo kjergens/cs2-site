@@ -124,6 +124,8 @@ public static void main(String[] args) {
 
 ## Check Your Understanding
 
+**Unit 2 · Chapter 3**
+
 ### Part A: Predict the Output
 
 **1.**
