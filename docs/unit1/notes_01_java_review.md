@@ -353,8 +353,11 @@ if (answer.equals = "yes") {
 ### Part A: Concepts
 
 **1.** `=` is the assignment operator — it stores a value into a variable (`int x = 5`). `==` is the equality operator — it compares two values and returns true or false (`if (x == 5)`). Using `=` inside an `if` condition is a compile error.
+
 **2.** `%` returns the remainder after integer division. Example: `17 % 5` returns `2` because 17 = 3×5 + 2. Useful for: checking if a number is even (`n % 2 == 0`), checking divisibility (`n % 3 == 0`), cycling through a fixed range.
+
 **3.** `==` checks whether two variables point to the same object in memory — not whether their contents are the same. Two String variables can hold identical text but be different objects, so `==` may return false even when the text matches. Use `.equals()` to compare the actual content.
+
 **4.** Type casting converts one type to another. Example:
 ```java
 System.out.println((double) total / 4);
@@ -362,6 +365,7 @@ System.out.println((double) total / 4);
 The `(double)` cast converts `total` to a double before the division, so the result is decimal.
 
 **5.** && is "AND" (both conditions need to be true for the whole epxression to be true). || is "OR" (as long as at least one condition is true the whole expression will resolve to true)
+
 **6.** Truth table:
 
 | `a` | `b` | `a && b` | `a \|\| b` | `!a` |

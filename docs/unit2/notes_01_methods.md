@@ -154,7 +154,9 @@ After
 ### Part A: Concepts
 
 **1.** Name three benefits of using methods instead of copying code.
+
 **2.** What does `void` mean in a method header?
+
 **3.** What is the difference between a **parameter** and an **argument**?
 
 ---
