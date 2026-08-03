@@ -1,5 +1,3 @@
-# CS2 — Unit Notes: Loops Review
-
 These notes cover `while` and `for` loops from CS1. Both will appear constantly in CS2 — especially when working with arrays. Use these notes to review, catch up, or study for quizzes.
 
 Both loop types have the same three parts — just written in different places:
@@ -214,167 +212,169 @@ Fix: declare `i` before the loop if you need it afterward.
 
 ## Check Your Understanding
 
-**Unit 1 · Chapter 2**
+!!! attention
 
-### Part A: Concepts
+    **Unit 1 · Chapter 2**
 
-**1.** What are the three things every loop needs to avoid running forever?
+    ### Part A: Concepts
 
-**2.** What is the difference between `i < 10` and `i <= 10` as a loop condition? When does it matter?
+    **1.** What are the three things every loop needs to avoid running forever?
 
-**3.** When is a `for` loop more appropriate than a `while` loop? Give an example of a situation where you would choose `while`.
+    **2.** What is the difference between `i < 10` and `i <= 10` as a loop condition? When does it matter?
 
-**4.** What is an accumulator pattern? Write one sentence describing it and give the variable name you would typically use.
+    **3.** When is a `for` loop more appropriate than a `while` loop? Give an example of a situation where you would choose `while`.
 
-**5.** What happens if you forget to increment `i` inside a `while` loop?
+    **4.** What is an accumulator pattern? Write one sentence describing it and give the variable name you would typically use.
 
----
+    **5.** What happens if you forget to increment `i` inside a `while` loop?
 
-### Part B: Predict the Output
+    ---
 
-**6.**
-```java
-int n = 5;
-while (n > 0) {
-    System.out.print(n + " ");
-    n--;
-}
-```
+    ### Part B: Predict the Output
 
-**7.**
-```java
-int total = 0;
-for (int i = 1; i <= 4; i++) {
-    total += i * 2;
-}
-System.out.println(total);
-```
-
-**8.**
-```java
-int i = 1;
-while (i < 10) {
-    i *= 3;
-}
-System.out.println(i);
-```
-
-**9.**
-```java
-for (int i = 10; i >= 1; i -= 3) {
-    System.out.print(i + " ");
-}
-```
-
----
-
-### Part C: Write the Loop
-
-**10.** Write a `for` loop that prints every even number from 2 to 20.
-
-**11.** Write a `while` loop that starts at 1 and keeps doubling until the value exceeds 100. Print the final value.
-
-**12.** Write a loop that counts how many numbers from 1 to 50 are divisible by 3 or by 5, and prints the count.
-
----
-
-### Part D: Find the Bug
-
-**13.**
-```java
-for (int i = 1; i <= 5; i++) {
-    System.out.println(i);
-    i++;
-}
-```
-What does this actually print? What did the student probably intend?
-
-**14.**
-```java
-int x = 10;
-while (x != 0) {
-    x -= 3;
-}
-System.out.println(x);
-```
-Will this loop ever end? Explain.
-
----
----
-
-## Answer Key
-
-### Part A: Concepts
-
-**1.** Initialize the variable before the loop; check the condition; update the variable inside the loop body (or in the for header).
-
-**2.** `i < 10` stops before 10 (last value is 9). `i <= 10` includes 10 (last value is 10). It matters any time the last value in a range is meaningful — e.g. summing 1 through 10 requires `i <= 10`.
-
-**3.** Use `for` when you know the number of iterations in advance (e.g. looping 10 times, iterating through an array). Use `while` when the number of iterations depends on a runtime condition (e.g. keep asking for input until the user enters a valid number).
-
-**4.** An accumulator pattern builds up a running total by adding to a variable each iteration. The variable is usually called `sum`, `total`, or `count`.
-
-**5.** The condition never becomes false, so the loop runs forever — an infinite loop. The program appears to freeze.
-
-### Part B: Predict the Output
-
-**6.**
-```
-5 4 3 2 1 
-```
-
-**7.**
-```
-20
-```
-`total` accumulates 2 + 4 + 6 + 8 = 20.
-
-**8.**
-```
-27
-```
-Trace: i starts at 1. 1×3=3, 3×3=9, 9×3=27. Now 27 < 10 is false, loop exits. Prints 27.
-
-**9.**
-```
-10 7 4 1 
-```
-i steps: 10, 7, 4, 1, then 1-3 = -2 which is not >= 1, so loop exits.
-
-### Part C: Write the Loop
-
-**10.**
-```java
-for (int i = 2; i <= 20; i += 2) {
-    System.out.println(i);
-}
-```
-
-**11.**
-```java
-int n = 1;
-while (n <= 100) {
-    n *= 2;
-}
-System.out.println(n);   // prints 128
-```
-
-**12.**
-```java
-int count = 0;
-for (int i = 1; i <= 50; i++) {
-    if (i % 3 == 0 || i % 5 == 0) {
-        count++;
+    **6.**
+    ```java
+    int n = 5;
+    while (n > 0) {
+        System.out.print(n + " ");
+        n--;
     }
-}
-System.out.println(count);   // 26
-```
+    ```
 
-### Part D: Find the Bug
+    **7.**
+    ```java
+    int total = 0;
+    for (int i = 1; i <= 4; i++) {
+        total += i * 2;
+    }
+    System.out.println(total);
+    ```
 
-**13.** `i` is incremented twice each pass — once by `i++` in the body and once by the for header. It prints `1 3 5` instead of `1 2 3 4 5`. The student intended to print every value from 1 to 5. Fix: remove `i++` from the body.
+    **8.**
+    ```java
+    int i = 1;
+    while (i < 10) {
+        i *= 3;
+    }
+    System.out.println(i);
+    ```
 
-**14.** No — this loop never ends. Starting at 10 and subtracting 3 each time: 10, 7, 4, 1, -2, -5... `x` skips over 0 entirely and keeps decreasing. The condition `x != 0` is never false. Fix: change the condition to `x > 0`.
+    **9.**
+    ```java
+    for (int i = 10; i >= 1; i -= 3) {
+        System.out.print(i + " ");
+    }
+    ```
+
+    ---
+
+    ### Part C: Write the Loop
+
+    **10.** Write a `for` loop that prints every even number from 2 to 20.
+
+    **11.** Write a `while` loop that starts at 1 and keeps doubling until the value exceeds 100. Print the final value.
+
+    **12.** Write a loop that counts how many numbers from 1 to 50 are divisible by 3 or by 5, and prints the count.
+
+    ---
+
+    ### Part D: Find the Bug
+
+    **13.**
+    ```java
+    for (int i = 1; i <= 5; i++) {
+        System.out.println(i);
+        i++;
+    }
+    ```
+    What does this actually print? What did the student probably intend?
+
+    **14.**
+    ```java
+    int x = 10;
+    while (x != 0) {
+        x -= 3;
+    }
+    System.out.println(x);
+    ```
+    Will this loop ever end? Explain.
+
+    ---
+    ---
+
+    ## Answer Key
+
+    ### Part A: Concepts
+
+    **1.** Initialize the variable before the loop; check the condition; update the variable inside the loop body (or in the for header).
+
+    **2.** `i < 10` stops before 10 (last value is 9). `i <= 10` includes 10 (last value is 10). It matters any time the last value in a range is meaningful — e.g. summing 1 through 10 requires `i <= 10`.
+
+    **3.** Use `for` when you know the number of iterations in advance (e.g. looping 10 times, iterating through an array). Use `while` when the number of iterations depends on a runtime condition (e.g. keep asking for input until the user enters a valid number).
+
+    **4.** An accumulator pattern builds up a running total by adding to a variable each iteration. The variable is usually called `sum`, `total`, or `count`.
+
+    **5.** The condition never becomes false, so the loop runs forever — an infinite loop. The program appears to freeze.
+
+    ### Part B: Predict the Output
+
+    **6.**
+    ```
+    5 4 3 2 1 
+    ```
+
+    **7.**
+    ```
+    20
+    ```
+    `total` accumulates 2 + 4 + 6 + 8 = 20.
+
+    **8.**
+    ```
+    27
+    ```
+    Trace: i starts at 1. 1×3=3, 3×3=9, 9×3=27. Now 27 < 10 is false, loop exits. Prints 27.
+
+    **9.**
+    ```
+    10 7 4 1 
+    ```
+    i steps: 10, 7, 4, 1, then 1-3 = -2 which is not >= 1, so loop exits.
+
+    ### Part C: Write the Loop
+
+    **10.**
+    ```java
+    for (int i = 2; i <= 20; i += 2) {
+        System.out.println(i);
+    }
+    ```
+
+    **11.**
+    ```java
+    int n = 1;
+    while (n <= 100) {
+        n *= 2;
+    }
+    System.out.println(n);   // prints 128
+    ```
+
+    **12.**
+    ```java
+    int count = 0;
+    for (int i = 1; i <= 50; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+            count++;
+        }
+    }
+    System.out.println(count);   // 26
+    ```
+
+    ### Part D: Find the Bug
+
+    **13.** `i` is incremented twice each pass — once by `i++` in the body and once by the for header. It prints `1 3 5` instead of `1 2 3 4 5`. The student intended to print every value from 1 to 5. Fix: remove `i++` from the body.
+
+    **14.** No — this loop never ends. Starting at 10 and subtracting 3 each time: 10, 7, 4, 1, -2, -5... `x` skips over 0 entirely and keeps decreasing. The condition `x != 0` is never false. Fix: change the condition to `x > 0`.
 
 ---
 

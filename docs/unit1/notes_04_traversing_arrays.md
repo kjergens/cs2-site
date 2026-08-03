@@ -1,5 +1,3 @@
-# CS2 — Unit Notes: Traversing Arrays
-
 Traversal means visiting every element in an array, one at a time, using a loop. Traversal is how you compute results from arrays: totals, averages, finding the largest value, counting elements that match a condition.
 
 ---
@@ -190,117 +188,119 @@ If `foundAt` is still `-1` after the loop, the target wasn't in the array.
 
 ## Check Your Understanding
 
-**Unit 1 · Chapter 4**
+!!! attention
 
-### Part A: Concepts
+    **Unit 1 · Chapter 4**
 
-**1.** Why must the accumulator (`sum`, `max`, etc.) be declared before the loop, not inside it?
+    ### Part A: Concepts
 
-**2.** What is wrong with initializing `min = 0` for a minimum-finding algorithm?
+    **1.** Why must the accumulator (`sum`, `max`, etc.) be declared before the loop, not inside it?
 
-**3.** You have `int[] data` and want to compute the average as a decimal. Write the one line that performs the division correctly.
+    **2.** What is wrong with initializing `min = 0` for a minimum-finding algorithm?
 
----
+    **3.** You have `int[] data` and want to compute the average as a decimal. Write the one line that performs the division correctly.
 
-### Part B: Predict the Output
+    ---
 
-**4.**
-```java
-int[] nums = {4, 9, 2, 7, 1, 6};
-int sum = 0;
-for (int i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 == 0) {
-        sum += nums[i];
+    ### Part B: Predict the Output
+
+    **4.**
+    ```java
+    int[] nums = {4, 9, 2, 7, 1, 6};
+    int sum = 0;
+    for (int i = 0; i < nums.length; i++) {
+        if (nums[i] % 2 == 0) {
+            sum += nums[i];
+        }
     }
-}
-System.out.println(sum);
-```
+    System.out.println(sum);
+    ```
 
-**5.**
-```java
-int[] vals = {10, 30, 20, 50, 40};
-int max = vals[0];
-for (int i = 1; i < vals.length; i++) {
-    if (vals[i] > max) {
-        max = vals[i];
+    **5.**
+    ```java
+    int[] vals = {10, 30, 20, 50, 40};
+    int max = vals[0];
+    for (int i = 1; i < vals.length; i++) {
+        if (vals[i] > max) {
+            max = vals[i];
+        }
     }
-}
-System.out.println(max);
-```
+    System.out.println(max);
+    ```
 
-**6.**
-```java
-int[] scores = {70, 80, 90};
-int sum = 0;
-for (int i = 0; i < scores.length; i++) {
-    sum += scores[i];
-}
-System.out.println(sum / scores.length);
-System.out.println((double) sum / scores.length);
-```
-
----
-
-### Part C: Write the Code
-
-**7.** Given `int[] temps = {64, 71, 58, 82, 76, 55, 69}`, write a loop that counts and prints how many temperatures are below 70.
-
-**8.** Given `int[] vals = {12, 5, 8, 19, 3, 14}`, write a loop that finds and prints both the minimum AND the maximum in a single pass.
-
----
----
-
-## Answer Key
-
-### Part A
-
-**1.** If declared inside the loop, the variable is re-created and reset to its starting value every iteration. The accumulated result is lost each time.
-
-**2.** If every element is positive, it happens to work — but only by accident. If all values were negative (e.g., temperatures in Celsius), `0` would be returned as the minimum even though it's not in the array. Always start with `arr[0]`.
-
-**3.** `System.out.println((double) sum / data.length);`
-
-### Part B
-
-**4.** `12` — even numbers in the array: 4, 2, 6 → 4 + 2 + 6 = 12.
-
-**5.** `50` — max starts at 10, gets updated to 30, then 50. 40 doesn't beat 50.
-
-**6.**
-```
-80
-80.0
-```
-First line: `240 / 3 = 80` (integer division, happens to be exact here). Second line: `(double) 240 / 3 = 80.0`.
-
-### Part C
-
-**7.**
-```java
-int count = 0;
-for (int i = 0; i < temps.length; i++) {
-    if (temps[i] < 70) {
-        count++;
+    **6.**
+    ```java
+    int[] scores = {70, 80, 90};
+    int sum = 0;
+    for (int i = 0; i < scores.length; i++) {
+        sum += scores[i];
     }
-}
-System.out.println(count);   // 4 (64, 58, 55, 69)
-```
+    System.out.println(sum / scores.length);
+    System.out.println((double) sum / scores.length);
+    ```
 
-**8.**
-```java
-int min = vals[0];
-int max = vals[0];
-for (int i = 1; i < vals.length; i++) {
-    if (vals[i] < min) {
-        min = vals[i];
+    ---
+
+    ### Part C: Write the Code
+
+    **7.** Given `int[] temps = {64, 71, 58, 82, 76, 55, 69}`, write a loop that counts and prints how many temperatures are below 70.
+
+    **8.** Given `int[] vals = {12, 5, 8, 19, 3, 14}`, write a loop that finds and prints both the minimum AND the maximum in a single pass.
+
+    ---
+    ---
+
+    ## Answer Key
+
+    ### Part A
+
+    **1.** If declared inside the loop, the variable is re-created and reset to its starting value every iteration. The accumulated result is lost each time.
+
+    **2.** If every element is positive, it happens to work — but only by accident. If all values were negative (e.g., temperatures in Celsius), `0` would be returned as the minimum even though it's not in the array. Always start with `arr[0]`.
+
+    **3.** `System.out.println((double) sum / data.length);`
+
+    ### Part B
+
+    **4.** `12` — even numbers in the array: 4, 2, 6 → 4 + 2 + 6 = 12.
+
+    **5.** `50` — max starts at 10, gets updated to 30, then 50. 40 doesn't beat 50.
+
+    **6.**
+    ```
+    80
+    80.0
+    ```
+    First line: `240 / 3 = 80` (integer division, happens to be exact here). Second line: `(double) 240 / 3 = 80.0`.
+
+    ### Part C
+
+    **7.**
+    ```java
+    int count = 0;
+    for (int i = 0; i < temps.length; i++) {
+        if (temps[i] < 70) {
+            count++;
+        }
     }
-    if (vals[i] > max) {
-        max = vals[i];
+    System.out.println(count);   // 4 (64, 58, 55, 69)
+    ```
+
+    **8.**
+    ```java
+    int min = vals[0];
+    int max = vals[0];
+    for (int i = 1; i < vals.length; i++) {
+        if (vals[i] < min) {
+            min = vals[i];
+        }
+        if (vals[i] > max) {
+            max = vals[i];
+        }
     }
-}
-System.out.println("Min: " + min);   // 3
-System.out.println("Max: " + max);   // 19
-```
+    System.out.println("Min: " + min);   // 3
+    System.out.println("Max: " + max);   // 19
+    ```
 
 ---
 
