@@ -259,71 +259,73 @@ public static void main(String[] args) {
 
 ## Homework 5: Introduction to Methods
 
-*Assigned Class 6 · Due Class 7*
+!!! attention
 
-### Part 1: Why Methods?
+    *Assigned Class 6 · Due Class 7*
 
-Read the two versions of the same program, then answer the questions.
+    ### Part 1: Why Methods?
 
-**Version A — no methods:**
-```java
-public static void main(String[] args) {
-    System.out.println("==========");
-    System.out.println("Welcome!");
-    System.out.println("==========");
-    System.out.println("Round 1 starting...");
-    System.out.println("==========");
-    System.out.println("Welcome!");
-    System.out.println("==========");
-    System.out.println("Round 2 starting...");
-    System.out.println("==========");
-    System.out.println("Welcome!");
-    System.out.println("==========");
-}
-```
+    Read the two versions of the same program, then answer the questions.
 
-**Version B — with a method:**
-```java
-public static void main(String[] args) {
-    printBanner();
-    System.out.println("Round 1 starting...");
-    printBanner();
-    System.out.println("Round 2 starting...");
-    printBanner();
-}
-
-public static void printBanner() {
-    System.out.println("==========");
-    System.out.println("Welcome!");
-    System.out.println("==========");
-}
-```
-
-1. Both versions produce identical output. If you needed to change `"Welcome!"` to `"Welcome back!"`, how many lines would you edit in Version A? How many in Version B?
-2. Version B uses a method to avoid repeating code. What is the programming term for this benefit?
-3. A large program might have a `main` like this:
-```java
-public static void main(String[] args) {
-    getUserInput();
-    validateInput();
-    processData();
-    displayResults();
-}
-```
-You don't need to know what each method does to understand the program's structure. What is the term for breaking a problem into smaller named pieces like this?
-
-### Part 2: Reading Void Methods
-
-A void method performs an action but does not return a value.
-
-4. What does the following method do? Describe it in one sentence without using the words "print" or "output."
-```java
-public static void printStars(int n) {
-    for (int i = 0; i < n; i++) {
-        System.out.print("* ");
+    **Version A — no methods:**
+    ```java
+    public static void main(String[] args) {
+        System.out.println("==========");
+        System.out.println("Welcome!");
+        System.out.println("==========");
+        System.out.println("Round 1 starting...");
+        System.out.println("==========");
+        System.out.println("Welcome!");
+        System.out.println("==========");
+        System.out.println("Round 2 starting...");
+        System.out.println("==========");
+        System.out.println("Welcome!");
+        System.out.println("==========");
     }
-    System.out.println();
-}
-```
-5. What would `printStars(4)` display?
-6. Write a method call (not the method itself) that would display a row of 7 stars.
+    ```
+
+    **Version B — with a method:**
+    ```java
+    public static void main(String[] args) {
+        printBanner();
+        System.out.println("Round 1 starting...");
+        printBanner();
+        System.out.println("Round 2 starting...");
+        printBanner();
+    }
+
+    public static void printBanner() {
+        System.out.println("==========");
+        System.out.println("Welcome!");
+        System.out.println("==========");
+    }
+    ```
+
+    1. Both versions produce identical output. If you needed to change `"Welcome!"` to `"Welcome back!"`, how many lines would you edit in Version A? How many in Version B?
+    2. Version B uses a method to avoid repeating code. What is the programming term for this benefit?
+    3. A large program might have a `main` like this:
+    ```java
+    public static void main(String[] args) {
+        getUserInput();
+        validateInput();
+        processData();
+        displayResults();
+    }
+    ```
+    You don't need to know what each method does to understand the program's structure. What is the term for breaking a problem into smaller named pieces like this?
+
+    ### Part 2: Reading Void Methods
+
+    A void method performs an action but does not return a value.
+
+    4. What does the following method do? Describe it in one sentence without using the words "print" or "output."
+    ```java
+    public static void printStars(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print("* ");
+        }
+        System.out.println();
+    }
+    ```
+    5. What would `printStars(4)` display?
+    6. Write a method call (not the method itself) that would display a row of 7 stars.

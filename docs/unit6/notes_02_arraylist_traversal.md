@@ -197,145 +197,147 @@ public static int countEvens(ArrayList<Integer> list) {
 
 ## Homework 19: ArrayLists and Loops
 
-*Assigned Class 38 · Due Class 39*
+!!! attention
 
-An ArrayList becomes much more powerful once you combine it with loops — you can search, count, filter, and compute across every element. This homework uses an ArrayList of a custom object type, so you'll also practice calling methods on objects you retrieve from the list.
+    *Assigned Class 38 · Due Class 39*
 
-The following `Student` class is used throughout:
-```java
-public class Student {
-    private String name;
-    private double gpa;
+    An ArrayList becomes much more powerful once you combine it with loops — you can search, count, filter, and compute across every element. This homework uses an ArrayList of a custom object type, so you'll also practice calling methods on objects you retrieve from the list.
 
-    public Student(String name, double gpa) {
-        this.name = name;
-        this.gpa = gpa;
+    The following `Student` class is used throughout:
+    ```java
+    public class Student {
+        private String name;
+        private double gpa;
+
+        public Student(String name, double gpa) {
+            this.name = name;
+            this.gpa = gpa;
+        }
+
+        public String getName() { return name; }
+        public double getGpa()  { return gpa; }
+
+        public String toString() {
+            return name + " (GPA: " + gpa + ")";
+        }
+    }
+    ```
+
+    ### Part 1: Iterating an ArrayList
+
+    Two ways to loop through an `ArrayList<Student>`:
+    ```java
+    // Index-based
+    for (int i = 0; i < roster.size(); i++) {
+        Student s = roster.get(i);
+        System.out.println(s.getName());
     }
 
-    public String getName() { return name; }
-    public double getGpa()  { return gpa; }
-
-    public String toString() {
-        return name + " (GPA: " + gpa + ")";
+    // For-each
+    for (Student s : roster) {
+        System.out.println(s.getName());
     }
-}
-```
+    ```
 
-### Part 1: Iterating an ArrayList
+    1. An ArrayList uses `.size()` to get its length and `.get(i)` to retrieve an element. How are these different from what you use with a regular array?
+    2. Both loops above produce identical output. Name one thing you can do with the index-based loop that you cannot do with the for-each loop.
+    3. Describe step by step what `roster.get(1).getGpa()` does.
+    4. `roster` contains 5 students. What is the last valid index? What happens if you call `roster.get(5)`?
 
-Two ways to loop through an `ArrayList<Student>`:
-```java
-// Index-based
-for (int i = 0; i < roster.size(); i++) {
-    Student s = roster.get(i);
-    System.out.println(s.getName());
-}
+    ### Part 2: Predict the Output
 
-// For-each
-for (Student s : roster) {
-    System.out.println(s.getName());
-}
-```
+    5.
+    ```java
+    ArrayList<Student> roster = new ArrayList<>();
+    roster.add(new Student("Alex",   3.8));
+    roster.add(new Student("Jordan", 2.9));
+    roster.add(new Student("Casey",  3.5));
 
-1. An ArrayList uses `.size()` to get its length and `.get(i)` to retrieve an element. How are these different from what you use with a regular array?
-2. Both loops above produce identical output. Name one thing you can do with the index-based loop that you cannot do with the for-each loop.
-3. Describe step by step what `roster.get(1).getGpa()` does.
-4. `roster` contains 5 students. What is the last valid index? What happens if you call `roster.get(5)`?
-
-### Part 2: Predict the Output
-
-5.
-```java
-ArrayList<Student> roster = new ArrayList<>();
-roster.add(new Student("Alex",   3.8));
-roster.add(new Student("Jordan", 2.9));
-roster.add(new Student("Casey",  3.5));
-
-for (Student s : roster) {
-    System.out.println(s);
-}
-System.out.println("Size: " + roster.size());
-```
-
-6.
-```java
-ArrayList<Student> roster = new ArrayList<>();
-roster.add(new Student("Alex",   3.8));
-roster.add(new Student("Jordan", 2.9));
-roster.add(new Student("Casey",  3.5));
-roster.add(new Student("Morgan", 3.1));
-
-int count = 0;
-for (Student s : roster) {
-    if (s.getGpa() >= 3.5) {
-        count++;
+    for (Student s : roster) {
+        System.out.println(s);
     }
-}
-System.out.println(count);
-```
+    System.out.println("Size: " + roster.size());
+    ```
 
-7.
-```java
-ArrayList<Student> roster = new ArrayList<>();
-roster.add(new Student("Alex",   3.8));
-roster.add(new Student("Jordan", 2.9));
-roster.add(new Student("Casey",  3.5));
+    6.
+    ```java
+    ArrayList<Student> roster = new ArrayList<>();
+    roster.add(new Student("Alex",   3.8));
+    roster.add(new Student("Jordan", 2.9));
+    roster.add(new Student("Casey",  3.5));
+    roster.add(new Student("Morgan", 3.1));
 
-Student best = roster.get(0);
-for (int i = 1; i < roster.size(); i++) {
-    if (roster.get(i).getGpa() > best.getGpa()) {
-        best = roster.get(i);
-    }
-}
-System.out.println(best.getName());
-```
-
-### Part 3: Write Methods
-
-8. Write a method `countHonorRoll` that takes an `ArrayList<Student>` and returns how many students have a GPA of 3.5 or higher.
-
-9. Write a method `topStudent` that takes an `ArrayList<Student>` and returns the `Student` with the highest GPA. Assume the list has at least one element.
-
-10. Write a method `getNames` that takes an `ArrayList<Student>` and returns a new `ArrayList<String>` containing each student's name, in the same order.
-
-### Part 4: Find the Bug
-
-11.
-```java
-public static void printAll(ArrayList<Student> roster) {
-    for (int i = 0; i <= roster.size(); i++) {
-        System.out.println(roster.get(i));
-    }
-}
-```
-
-12.
-```java
-public static int countHonorRoll(ArrayList<Student> roster) {
     int count = 0;
     for (Student s : roster) {
         if (s.getGpa() >= 3.5) {
             count++;
         }
     }
-    return count;
-}
+    System.out.println(count);
+    ```
 
-public static void main(String[] args) {
+    7.
+    ```java
     ArrayList<Student> roster = new ArrayList<>();
-    roster.add(new Student("Alex", 3.8));
-    System.out.println(roster.length);
-}
-```
+    roster.add(new Student("Alex",   3.8));
+    roster.add(new Student("Jordan", 2.9));
+    roster.add(new Student("Casey",  3.5));
 
-13. Compiles and runs — but may return the wrong answer. What is the problem?
-```java
-public static boolean contains(ArrayList<Student> roster, String targetName) {
-    for (Student s : roster) {
-        if (s.getName() == targetName) {
-            return true;
+    Student best = roster.get(0);
+    for (int i = 1; i < roster.size(); i++) {
+        if (roster.get(i).getGpa() > best.getGpa()) {
+            best = roster.get(i);
         }
     }
-    return false;
-}
-```
+    System.out.println(best.getName());
+    ```
+
+    ### Part 3: Write Methods
+
+    8. Write a method `countHonorRoll` that takes an `ArrayList<Student>` and returns how many students have a GPA of 3.5 or higher.
+
+    9. Write a method `topStudent` that takes an `ArrayList<Student>` and returns the `Student` with the highest GPA. Assume the list has at least one element.
+
+    10. Write a method `getNames` that takes an `ArrayList<Student>` and returns a new `ArrayList<String>` containing each student's name, in the same order.
+
+    ### Part 4: Find the Bug
+
+    11.
+    ```java
+    public static void printAll(ArrayList<Student> roster) {
+        for (int i = 0; i <= roster.size(); i++) {
+            System.out.println(roster.get(i));
+        }
+    }
+    ```
+
+    12.
+    ```java
+    public static int countHonorRoll(ArrayList<Student> roster) {
+        int count = 0;
+        for (Student s : roster) {
+            if (s.getGpa() >= 3.5) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Student> roster = new ArrayList<>();
+        roster.add(new Student("Alex", 3.8));
+        System.out.println(roster.length);
+    }
+    ```
+
+    13. Compiles and runs — but may return the wrong answer. What is the problem?
+    ```java
+    public static boolean contains(ArrayList<Student> roster, String targetName) {
+        for (Student s : roster) {
+            if (s.getName() == targetName) {
+                return true;
+            }
+        }
+        return false;
+    }
+    ```

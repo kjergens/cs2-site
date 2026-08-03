@@ -139,60 +139,62 @@ System.out.println(c.getBlue());   // 200
 
 ## Homework 15: Color and Images
 
-The image below, `squares.jpg`, is a 7×7 grid of colored squares. Coordinates start at `(0, 0)` in the top-left corner. The x-coordinate increases to the right; the y-coordinate increases downward. Columns and rows are both numbered 0–6.
+!!! attention
 
-![7x7 grid of colored squares, squares.jpg](images/hw15_squares_grid.png)
+    The image below, `squares.jpg`, is a 7×7 grid of colored squares. Coordinates start at `(0, 0)` in the top-left corner. The x-coordinate increases to the right; the y-coordinate increases downward. Columns and rows are both numbered 0–6.
 
-### Part A: Understanding Coordinates in the Image
+    ![7x7 grid of colored squares, squares.jpg](images/hw15_squares_grid.png)
 
-Using the coordinate system above, answer:
+    ### Part A: Understanding Coordinates in the Image
 
-1. What color is at x = 0, y = 0?
-2. What color is at x = 3, y = 0?
-3. What color is at x = 4, y = 6?
-4. Using (x, y) notation, what color is at (2, 1)?
-5. What color is at (0, 5)?
-6. What color is at (3, 5)?
+    Using the coordinate system above, answer:
 
-### Part B: Image Files in Java
+    1. What color is at x = 0, y = 0?
+    2. What color is at x = 3, y = 0?
+    3. What color is at x = 4, y = 6?
+    4. Using (x, y) notation, what color is at (2, 1)?
+    5. What color is at (0, 5)?
+    6. What color is at (3, 5)?
 
-In Java, we can load an image file, such as a `.jpg`, into a `BufferedImage`. This puts the contents of the file into your code so you can access each square — each square is a pixel.
+    ### Part B: Image Files in Java
 
-```java
-BufferedImage img = ImageIO.read(new File("squares.jpg"));
-```
+    In Java, we can load an image file, such as a `.jpg`, into a `BufferedImage`. This puts the contents of the file into your code so you can access each square — each square is a pixel.
 
-We can use `img.getRGB(x, y)` to get the color of the pixel at a specific `(x, y)` location, just like Part A.
+    ```java
+    BufferedImage img = ImageIO.read(new File("squares.jpg"));
+    ```
 
-7. What color is at `img.getRGB(0, 0)`?
-8. What color is at `img.getRGB(3, 0)`?
-9. What color is at `img.getRGB(4, 6)`?
-10. Fill in the blanks to get the red square in the lower right corner: `img.getRGB(___, ___)`
-11. Write the full expression to get the brown-ish square in the center.
+    We can use `img.getRGB(x, y)` to get the color of the pixel at a specific `(x, y)` location, just like Part A.
 
-### Part C: Understanding Color Numbers
+    7. What color is at `img.getRGB(0, 0)`?
+    8. What color is at `img.getRGB(3, 0)`?
+    9. What color is at `img.getRGB(4, 6)`?
+    10. Fill in the blanks to get the red square in the lower right corner: `img.getRGB(___, ___)`
+    11. Write the full expression to get the brown-ish square in the center.
 
-`img.getRGB(x, y)` returns a single integer that represents the color of a pixel — hard to read on its own (e.g. red might be `-3012602`). To make colors easier to work with, wrap it in a `Color` object:
+    ### Part C: Understanding Color Numbers
 
-```java
-Color c = new Color(img.getRGB(x, y));
-```
+    `img.getRGB(x, y)` returns a single integer that represents the color of a pixel — hard to read on its own (e.g. red might be `-3012602`). To make colors easier to work with, wrap it in a `Color` object:
 
-Then read the channels individually with `c.getRed()`, `c.getGreen()`, `c.getBlue()` — each on a 0–255 scale.
+    ```java
+    Color c = new Color(img.getRGB(x, y));
+    ```
 
-12. Fill in the blanks to get the `Color` object for the pixel at (3, 6): `Color c = new Color(img.______(__, __));`
-13. Using that `Color` variable, fill in the blank to get the red value: `int red = c.get__();`
-14. Considering the red value is on a scale of 0–255, guess what that expression would return for this pixel.
-15. Look at the pixel at (5, 0). a) Do you expect the green value to be high, medium, or low? b) What about the blue value?
-16. Complete the code below to get the green value for the pixel at (0, 0):
-```java
-Color c = new Color(______________); // get color at (0, 0)
-int green = _____________;           // get green value 0-255
-```
-17. If the red, green, and blue values are all 0 for a pixel, what color would you expect the square to look like?
-18. If the red, green, and blue values are all 255 for a pixel, what color would you expect, and why?
-19. For a pure red square, what values would you expect for `getRed()`, `getGreen()`, `getBlue()`?
-20. For a pure green square, what values would you expect for the same three?
-21. The center brown(ish) square is at (3, 3). Predict whether its red, green, and blue values will all be the same, or if some will be higher than others. Explain your reasoning.
+    Then read the channels individually with `c.getRed()`, `c.getGreen()`, `c.getBlue()` — each on a 0–255 scale.
 
-**Quick reference — common pure colors (0–255 scale):** Pure Red `(255, 0, 0)` · Pure Green `(0, 255, 0)` · Pure Blue `(0, 0, 255)` · Pure Yellow `(255, 255, 0)` · Black `(0, 0, 0)` · White `(255, 255, 255)`
+    12. Fill in the blanks to get the `Color` object for the pixel at (3, 6): `Color c = new Color(img.______(__, __));`
+    13. Using that `Color` variable, fill in the blank to get the red value: `int red = c.get__();`
+    14. Considering the red value is on a scale of 0–255, guess what that expression would return for this pixel.
+    15. Look at the pixel at (5, 0). a) Do you expect the green value to be high, medium, or low? b) What about the blue value?
+    16. Complete the code below to get the green value for the pixel at (0, 0):
+    ```java
+    Color c = new Color(______________); // get color at (0, 0)
+    int green = _____________;           // get green value 0-255
+    ```
+    17. If the red, green, and blue values are all 0 for a pixel, what color would you expect the square to look like?
+    18. If the red, green, and blue values are all 255 for a pixel, what color would you expect, and why?
+    19. For a pure red square, what values would you expect for `getRed()`, `getGreen()`, `getBlue()`?
+    20. For a pure green square, what values would you expect for the same three?
+    21. The center brown(ish) square is at (3, 3). Predict whether its red, green, and blue values will all be the same, or if some will be higher than others. Explain your reasoning.
+
+    **Quick reference — common pure colors (0–255 scale):** Pure Red `(255, 0, 0)` · Pure Green `(0, 255, 0)` · Pure Blue `(0, 0, 255)` · Pure Yellow `(255, 255, 0)` · Black `(0, 0, 0)` · White `(255, 255, 255)`

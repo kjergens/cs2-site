@@ -366,41 +366,43 @@ System.out.println(min);   // 63
 
 ## Homework 3: Arrays
 
-*Assigned Class 3 · Due Class 4*
+!!! attention
 
-### Part 1: Array Basics
+    *Assigned Class 3 · Due Class 4*
 
-1. Write a single statement to declare and initialize an `int` array called `temps` containing the values `72, 68, 85, 90, 77`.
+    ### Part 1: Array Basics
 
-2. Write two statements: first declare an `int` array called `scores` that can hold 6 values; then assign `100` to the last slot.
+    1. Write a single statement to declare and initialize an `int` array called `temps` containing the values `72, 68, 85, 90, 77`.
 
-3. Given:
-```java
-String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri"};
-```
-Answer each without running the code:
-   - a) What does `days[0]` return?
-   - b) What does `days[days.length - 1]` return?
-   - c) What happens if you access `days[5]`?
+    2. Write two statements: first declare an `int` array called `scores` that can hold 6 values; then assign `100` to the last slot.
 
-4. True or false — explain your answer in one sentence.
-   - a) You can change the value at `arr[2]` after the array is created.
-   - b) You can change the size of an array after it is created.
+    3. Given:
+    ```java
+    String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri"};
+    ```
+    Answer each without running the code:
+       - a) What does `days[0]` return?
+       - b) What does `days[days.length - 1]` return?
+       - c) What happens if you access `days[5]`?
 
-### Part 2: Traversal — Predict the Output
+    4. True or false — explain your answer in one sentence.
+       - a) You can change the value at `arr[2]` after the array is created.
+       - b) You can change the size of an array after it is created.
 
-5.
-```java
-int[] nums = {3, 7, 1, 9, 4};
-for (int i = 0; i < nums.length; i++) {
-    System.out.println(nums[i]);
-}
-```
+    ### Part 2: Traversal — Predict the Output
 
-6.
-```java
-int[] nums = {3, 7, 1, 9, 4};
-for (int i = nums.length - 1; i >= 0; i--) {
-    System.out.print(nums[i] + " ");
-}
-```
+    5.
+    ```java
+    int[] nums = {3, 7, 1, 9, 4};
+    for (int i = 0; i < nums.length; i++) {
+        System.out.println(nums[i]);
+    }
+    ```
+
+    6.
+    ```java
+    int[] nums = {3, 7, 1, 9, 4};
+    for (int i = nums.length - 1; i >= 0; i--) {
+        System.out.print(nums[i] + " ");
+    }
+    ```

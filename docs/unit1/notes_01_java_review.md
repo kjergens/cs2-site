@@ -491,120 +491,122 @@ if (answer.equals("yes")) {
 
 ## Homework 1: Java Review
 
-*Assigned Class 1 · Due Class 2*
+!!! attention
 
-**Rubric (100 points):** Part 1 (Q1–5) 20 pts · Part 2 (Q6–9) 60 pts · Part 3 (Q10–13) 20 pts.
+    *Assigned Class 1 · Due Class 2*
 
-### Part 1: Predict the Output
+    **Rubric (100 points):** Part 1 (Q1–5) 20 pts · Part 2 (Q6–9) 60 pts · Part 3 (Q10–13) 20 pts.
 
-Write exactly what each program prints. If a line produces no output, skip it.
+    ### Part 1: Predict the Output
 
-1.
-```java
-int a = 7;
-int b = 2;
-System.out.println(a / b);
-System.out.println(a % b);
-System.out.println((double) a / b);
-```
+    Write exactly what each program prints. If a line produces no output, skip it.
 
-2.
-```java
-int x = 10;
-String label = "score";
-System.out.println("Your " + label + ": " + x);
-System.out.println("Your " + label + ": " + (x + 5));
-System.out.println("Your " + label + ": " + x + 5);
-```
+    1.
+    ```java
+    int a = 7;
+    int b = 2;
+    System.out.println(a / b);
+    System.out.println(a % b);
+    System.out.println((double) a / b);
+    ```
 
-3.
-```java
-int score = 82;
-if (score >= 90) {
-    System.out.println("A");
-} else if (score >= 80) {
-    System.out.println("B");
-} else if (score >= 70) {
-    System.out.println("C");
-} else {
-    System.out.println("Below C");
-}
-```
+    2.
+    ```java
+    int x = 10;
+    String label = "score";
+    System.out.println("Your " + label + ": " + x);
+    System.out.println("Your " + label + ": " + (x + 5));
+    System.out.println("Your " + label + ": " + x + 5);
+    ```
 
-4.
-```java
-int n = 15;
-if (n % 3 == 0 && n % 5 == 0) {
-    System.out.println("FizzBuzz");
-} else if (n % 3 == 0) {
-    System.out.println("Fizz");
-} else if (n % 5 == 0) {
-    System.out.println("Buzz");
-} else {
-    System.out.println(n);
-}
-```
+    3.
+    ```java
+    int score = 82;
+    if (score >= 90) {
+        System.out.println("A");
+    } else if (score >= 80) {
+        System.out.println("B");
+    } else if (score >= 70) {
+        System.out.println("C");
+    } else {
+        System.out.println("Below C");
+    }
+    ```
 
-5.
-```java
-boolean raining = true;
-boolean cold = false;
-System.out.println(raining && cold);
-System.out.println(raining || cold);
-System.out.println(!raining);
-System.out.println(!raining || cold);
-```
+    4.
+    ```java
+    int n = 15;
+    if (n % 3 == 0 && n % 5 == 0) {
+        System.out.println("FizzBuzz");
+    } else if (n % 3 == 0) {
+        System.out.println("Fizz");
+    } else if (n % 5 == 0) {
+        System.out.println("Buzz");
+    } else {
+        System.out.println(n);
+    }
+    ```
 
-### Part 2: Write the Code
+    5.
+    ```java
+    boolean raining = true;
+    boolean cold = false;
+    System.out.println(raining && cold);
+    System.out.println(raining || cold);
+    System.out.println(!raining);
+    System.out.println(!raining || cold);
+    ```
 
-6. Write a complete if/else if/else block that prints a letter grade based on an `int score` (already declared): 90+ → `"A"`, 80–89 → `"B"`, 70–79 → `"C"`, 60–69 → `"D"`, below 60 → `"F"`.
+    ### Part 2: Write the Code
 
-7. Write code to swap the values of two `int` variables `x` and `y` without changing either variable's name. After your code, `x` should hold the original value of `y` and vice versa. (Hint: you need a third variable.)
+    6. Write a complete if/else if/else block that prints a letter grade based on an `int score` (already declared): 90+ → `"A"`, 80–89 → `"B"`, 70–79 → `"C"`, 60–69 → `"D"`, below 60 → `"F"`.
 
-8. A variable `int temperature` is already declared. Write a single `if` statement (no `else`) that prints `"Stay inside"` only if the temperature is below 20 or above 95.
+    7. Write code to swap the values of two `int` variables `x` and `y` without changing either variable's name. After your code, `x` should hold the original value of `y` and vice versa. (Hint: you need a third variable.)
 
-9. Write a complete Java program that declares a `String name` and an `int age` (any values), then uses if/else to print `"Welcome, [name]!"` if age is 13 or older, or `"Sorry, you must be at least 13."` otherwise.
+    8. A variable `int temperature` is already declared. Write a single `if` statement (no `else`) that prints `"Stay inside"` only if the temperature is below 20 or above 95.
 
-### Part 3: Find the Bug
+    9. Write a complete Java program that declares a `String name` and an `int age` (any values), then uses if/else to print `"Welcome, [name]!"` if age is 13 or older, or `"Sorry, you must be at least 13."` otherwise.
 
-Each snippet has exactly one error. Identify the line and describe the problem.
+    ### Part 3: Find the Bug
 
-10.
-```java
-String password = "java123";
-String input = "java123";
-if (input == password) {
-    System.out.println("Access granted");
-} else {
-    System.out.println("Wrong password");
-}
-```
+    Each snippet has exactly one error. Identify the line and describe the problem.
 
-11.
-```java
-int x = 5;
-if (x = 5) {
-    System.out.println("x is five");
-}
-```
+    10.
+    ```java
+    String password = "java123";
+    String input = "java123";
+    if (input == password) {
+        System.out.println("Access granted");
+    } else {
+        System.out.println("Wrong password");
+    }
+    ```
 
-12.
-```java
-int age = 20;
-if (age >= 18) {
-    System.out.println("Adult");
-    else {
-    System.out.println("Minor");
-}
-```
+    11.
+    ```java
+    int x = 5;
+    if (x = 5) {
+        System.out.println("x is five");
+    }
+    ```
 
-13.
-```java
-double price = 9.99;
-int quantity = 3;
-double total = price * quantity;
-System.out.println("Total: $" + total);
+    12.
+    ```java
+    int age = 20;
+    if (age >= 18) {
+        System.out.println("Adult");
+        else {
+        System.out.println("Minor");
+    }
+    ```
 
-int discount = total * 0.1;
-System.out.println("Discount: $" + discount);
-```
+    13.
+    ```java
+    double price = 9.99;
+    int quantity = 3;
+    double total = price * quantity;
+    System.out.println("Total: $" + total);
+
+    int discount = total * 0.1;
+    System.out.println("Discount: $" + discount);
+    ```

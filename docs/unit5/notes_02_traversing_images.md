@@ -148,99 +148,101 @@ double avgGreen = (double) totalGreen / numPixels;
 
 ## Homework 16: Traversing a BufferedImage
 
-*Assigned Class 30 · Due Class 31*
+!!! attention
 
-### Part 1: Traversal Structure
+    *Assigned Class 30 · Due Class 31*
 
-```java
-for (int y = 0; y < img.getHeight(); y++) {
-    for (int x = 0; x < img.getWidth(); x++) {
-        Color c = new Color(img.getRGB(x, y));
-        // do something with c
-    }
-}
-```
+    ### Part 1: Traversal Structure
 
-1. For an image that is 800 pixels wide and 600 pixels tall, how many total times does the inner loop body run?
-2. What does one execution of the inner loop body represent — what "thing" in the image does it correspond to?
-3. In what order are the pixels visited? Describe it in plain English (e.g. "left to right across the first row, then left to right across the second row...").
-4. The line `Color c = new Color(img.getRGB(x, y))` appears inside both loops. What would go wrong if you moved it to just before the outer loop (outside both loops)?
-
-### Part 2: Tracing a Small Image
-
-The table below represents a 2×3 image (2 columns, 3 rows). Each cell shows the (red, green, blue) values of that pixel.
-
-| | x = 0 | x = 1 |
-|---|---|---|
-| **y = 0** | (200, 50, 30) | (180, 60, 20) |
-| **y = 1** | (150, 80, 40) | (190, 70, 35) |
-| **y = 2** | (160, 90, 25) | (170, 55, 30) |
-
-5. Trace this nested loop on the image above. Fill in the value of `totalRed` after each iteration of the inner loop (iterations 1–6, visiting `(0,0)`, `(1,0)`, `(0,1)`, `(1,1)`, `(0,2)`, `(1,2)` in order).
-```java
-int totalRed = 0;
-for (int y = 0; y < img.getHeight(); y++) {
-    for (int x = 0; x < img.getWidth(); x++) {
-        Color c = new Color(img.getRGB(x, y));
-        totalRed += c.getRed();
-    }
-}
-```
-6. Using the same image, compute `totalGreen` and `totalBlue` after the full traversal.
-7. Based on your totals from problems 5 and 6, which color is dominant in this image?
-
-### Part 3: Write the Method
-
-8. Write a method `totalRed` that takes a `BufferedImage` and returns the sum of all pixels' red values as an `int`.
-
-9. Write a method `dominantColor` that takes a `BufferedImage` and returns `"red"`, `"green"`, or `"blue"` — whichever channel has the highest total across all pixels. If there's a tie, either answer is acceptable.
-
-10. Write a method `hasFullyRedPixel` that takes a `BufferedImage` and returns `true` if any pixel has red = 255, green = 0, and blue = 0 exactly, `false` otherwise. (Hint: return `true` as soon as you find one — you don't need to keep looping.)
-
-### Part 4: Find the Bug
-
-11.
-```java
-public static String dominantColor(BufferedImage img) {
-    int totalRed = 0, totalGreen = 0, totalBlue = 0;
-    for (int y = 0; y < img.getWidth(); y++) {
-        for (int x = 0; x < img.getWidth(); x++) {
-            Color c = new Color(img.getRGB(x, y));
-            totalRed   += c.getRed();
-            totalGreen += c.getGreen();
-            totalBlue  += c.getBlue();
-        }
-    }
-    // ... compare totals
-}
-```
-
-12.
-```java
-public static int totalGreen(BufferedImage img) {
-    for (int y = 0; y < img.getHeight(); y++) {
-        int total = 0;
-        for (int x = 0; x < img.getWidth(); x++) {
-            Color c = new Color(img.getRGB(x, y));
-            total += c.getGreen();
-        }
-    }
-    return total;
-}
-```
-
-13. Correct result — but there's a performance problem. What is it, and how do you fix it?
-```java
-public static boolean hasFullyRedPixel(BufferedImage img) {
-    boolean found = false;
+    ```java
     for (int y = 0; y < img.getHeight(); y++) {
         for (int x = 0; x < img.getWidth(); x++) {
             Color c = new Color(img.getRGB(x, y));
-            if (c.getRed() == 255 && c.getGreen() == 0 && c.getBlue() == 0) {
-                found = true;
+            // do something with c
+        }
+    }
+    ```
+
+    1. For an image that is 800 pixels wide and 600 pixels tall, how many total times does the inner loop body run?
+    2. What does one execution of the inner loop body represent — what "thing" in the image does it correspond to?
+    3. In what order are the pixels visited? Describe it in plain English (e.g. "left to right across the first row, then left to right across the second row...").
+    4. The line `Color c = new Color(img.getRGB(x, y))` appears inside both loops. What would go wrong if you moved it to just before the outer loop (outside both loops)?
+
+    ### Part 2: Tracing a Small Image
+
+    The table below represents a 2×3 image (2 columns, 3 rows). Each cell shows the (red, green, blue) values of that pixel.
+
+    | | x = 0 | x = 1 |
+    |---|---|---|
+    | **y = 0** | (200, 50, 30) | (180, 60, 20) |
+    | **y = 1** | (150, 80, 40) | (190, 70, 35) |
+    | **y = 2** | (160, 90, 25) | (170, 55, 30) |
+
+    5. Trace this nested loop on the image above. Fill in the value of `totalRed` after each iteration of the inner loop (iterations 1–6, visiting `(0,0)`, `(1,0)`, `(0,1)`, `(1,1)`, `(0,2)`, `(1,2)` in order).
+    ```java
+    int totalRed = 0;
+    for (int y = 0; y < img.getHeight(); y++) {
+        for (int x = 0; x < img.getWidth(); x++) {
+            Color c = new Color(img.getRGB(x, y));
+            totalRed += c.getRed();
+        }
+    }
+    ```
+    6. Using the same image, compute `totalGreen` and `totalBlue` after the full traversal.
+    7. Based on your totals from problems 5 and 6, which color is dominant in this image?
+
+    ### Part 3: Write the Method
+
+    8. Write a method `totalRed` that takes a `BufferedImage` and returns the sum of all pixels' red values as an `int`.
+
+    9. Write a method `dominantColor` that takes a `BufferedImage` and returns `"red"`, `"green"`, or `"blue"` — whichever channel has the highest total across all pixels. If there's a tie, either answer is acceptable.
+
+    10. Write a method `hasFullyRedPixel` that takes a `BufferedImage` and returns `true` if any pixel has red = 255, green = 0, and blue = 0 exactly, `false` otherwise. (Hint: return `true` as soon as you find one — you don't need to keep looping.)
+
+    ### Part 4: Find the Bug
+
+    11.
+    ```java
+    public static String dominantColor(BufferedImage img) {
+        int totalRed = 0, totalGreen = 0, totalBlue = 0;
+        for (int y = 0; y < img.getWidth(); y++) {
+            for (int x = 0; x < img.getWidth(); x++) {
+                Color c = new Color(img.getRGB(x, y));
+                totalRed   += c.getRed();
+                totalGreen += c.getGreen();
+                totalBlue  += c.getBlue();
             }
         }
+        // ... compare totals
     }
-    return found;
-}
-```
+    ```
+
+    12.
+    ```java
+    public static int totalGreen(BufferedImage img) {
+        for (int y = 0; y < img.getHeight(); y++) {
+            int total = 0;
+            for (int x = 0; x < img.getWidth(); x++) {
+                Color c = new Color(img.getRGB(x, y));
+                total += c.getGreen();
+            }
+        }
+        return total;
+    }
+    ```
+
+    13. Correct result — but there's a performance problem. What is it, and how do you fix it?
+    ```java
+    public static boolean hasFullyRedPixel(BufferedImage img) {
+        boolean found = false;
+        for (int y = 0; y < img.getHeight(); y++) {
+            for (int x = 0; x < img.getWidth(); x++) {
+                Color c = new Color(img.getRGB(x, y));
+                if (c.getRed() == 255 && c.getGreen() == 0 && c.getBlue() == 0) {
+                    found = true;
+                }
+            }
+        }
+        return found;
+    }
+    ```

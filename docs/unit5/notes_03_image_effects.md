@@ -188,93 +188,95 @@ int newB = clamp(b - 30);
 
 ## Homework 17: Image Transformation — Brightness
 
-*Assigned Class 31 · Due Class 32*
+!!! attention
 
-### Part 1: The Read-Modify-Write Pattern
+    *Assigned Class 31 · Due Class 32*
 
-Here is a method that sets every pixel to pure red, ignoring the original colors:
+    ### Part 1: The Read-Modify-Write Pattern
 
-```java
-public static void makeRed(BufferedImage img) {
-    for (int y = 0; y < img.getHeight(); y++) {
-        for (int x = 0; x < img.getWidth(); x++) {
-            Color newColor = new Color(255, 0, 0);
-            img.setRGB(x, y, newColor.getRGB());
+    Here is a method that sets every pixel to pure red, ignoring the original colors:
+
+    ```java
+    public static void makeRed(BufferedImage img) {
+        for (int y = 0; y < img.getHeight(); y++) {
+            for (int x = 0; x < img.getWidth(); x++) {
+                Color newColor = new Color(255, 0, 0);
+                img.setRGB(x, y, newColor.getRGB());
+            }
         }
     }
-}
-```
+    ```
 
-1. What does `img.setRGB(x, y, newColor.getRGB())` do? Why do we call `.getRGB()` on the `Color` object instead of passing `newColor` directly?
-2. `makeRed` ignores the original pixel entirely. Rewrite the inner loop body so it reads the original pixel, keeps its green and blue values, but replaces the red channel with 255.
-3. `makeRed` is void — it returns nothing. Yet after calling `makeRed(img)`, the image is permanently changed. Why? (Think back to HW 7.)
-4. You have a pixel at (3, 5) with color (80, 120, 200). Write the single line of code that sets that pixel to (80, 120, 255) — same red and green, but full blue.
+    1. What does `img.setRGB(x, y, newColor.getRGB())` do? Why do we call `.getRGB()` on the `Color` object instead of passing `newColor` directly?
+    2. `makeRed` ignores the original pixel entirely. Rewrite the inner loop body so it reads the original pixel, keeps its green and blue values, but replaces the red channel with 255.
+    3. `makeRed` is void — it returns nothing. Yet after calling `makeRed(img)`, the image is permanently changed. Why? (Think back to HW 7.)
+    4. You have a pixel at (3, 5) with color (80, 120, 200). Write the single line of code that sets that pixel to (80, 120, 255) — same red and green, but full blue.
 
-### Part 2: Clamping
+    ### Part 2: Clamping
 
-Each RGB channel must stay in the range [0, 255]. Adding or subtracting a fixed amount can push a value outside that range, so you must clamp the result.
+    Each RGB channel must stay in the range [0, 255]. Adding or subtracting a fixed amount can push a value outside that range, so you must clamp the result.
 
-5. A pixel has red = 220. You add 50 to brighten it. a) What is 220 + 50? b) Is that a valid channel value? What should be stored instead?
-6. A pixel has blue = 20. You subtract 50 to darken it. a) What is 20 − 50? b) Is that valid? What should be stored instead?
-7. Write a helper method `clamp(int value)` that returns `value` clamped to [0, 255]: if below 0, return 0; if above 255, return 255; otherwise return the value unchanged.
+    5. A pixel has red = 220. You add 50 to brighten it. a) What is 220 + 50? b) Is that a valid channel value? What should be stored instead?
+    6. A pixel has blue = 20. You subtract 50 to darken it. a) What is 20 − 50? b) Is that valid? What should be stored instead?
+    7. Write a helper method `clamp(int value)` that returns `value` clamped to [0, 255]: if below 0, return 0; if above 255, return 255; otherwise return the value unchanged.
 
-### Part 3: Write the Transformation
+    ### Part 3: Write the Transformation
 
-8. Using your `clamp` method, write `brighten(BufferedImage img, int amount)`. It should add `amount` to each channel (red, green, blue) of every pixel, clamping each result to [0, 255]. The method modifies the image in place.
+    8. Using your `clamp` method, write `brighten(BufferedImage img, int amount)`. It should add `amount` to each channel (red, green, blue) of every pixel, clamping each result to [0, 255]. The method modifies the image in place.
 
-9. Trace `brighten` on this 3-pixel image (1 row, 3 columns) with `amount = 40`. Fill in the new RGB values after brightening.
+    9. Trace `brighten` on this 3-pixel image (1 row, 3 columns) with `amount = 40`. Fill in the new RGB values after brightening.
 
-| Pixel | Original (R, G, B) | New (R, G, B) |
-|---|---|---|
-| (0, 0) | (100, 150, 200) | |
-| (1, 0) | (220, 30, 180) | |
-| (2, 0) | (50, 80, 10) | |
+    | Pixel | Original (R, G, B) | New (R, G, B) |
+    |---|---|---|
+    | (0, 0) | (100, 150, 200) | |
+    | (1, 0) | (220, 30, 180) | |
+    | (2, 0) | (50, 80, 10) | |
 
-10. What happens when you call `brighten(img, -30)`? What visual effect does that produce, and does `clamp` still protect against invalid values?
+    10. What happens when you call `brighten(img, -30)`? What visual effect does that produce, and does `clamp` still protect against invalid values?
 
-### Part 4: Find the Bug
+    ### Part 4: Find the Bug
 
-11.
-```java
-public static void brighten(BufferedImage img, int amount) {
-    for (int y = 0; y < img.getHeight(); y++) {
-        for (int x = 0; x < img.getWidth(); x++) {
-            Color c = new Color(img.getRGB(x, y));
-            int r = clamp(c.getRed()   + amount);
-            int g = clamp(c.getGreen() + amount);
-            int b = clamp(c.getBlue()  + amount);
-            Color newColor = new Color(r, g, b);
+    11.
+    ```java
+    public static void brighten(BufferedImage img, int amount) {
+        for (int y = 0; y < img.getHeight(); y++) {
+            for (int x = 0; x < img.getWidth(); x++) {
+                Color c = new Color(img.getRGB(x, y));
+                int r = clamp(c.getRed()   + amount);
+                int g = clamp(c.getGreen() + amount);
+                int b = clamp(c.getBlue()  + amount);
+                Color newColor = new Color(r, g, b);
+            }
         }
     }
-}
-```
+    ```
 
-12. What goes wrong when `amount` is large enough to push a channel past 255, or negative enough to push it below 0?
-```java
-public static void brighten(BufferedImage img, int amount) {
-    for (int y = 0; y < img.getHeight(); y++) {
-        for (int x = 0; x < img.getWidth(); x++) {
-            Color c = new Color(img.getRGB(x, y));
-            int r = c.getRed()   + amount;
-            int g = c.getGreen() + amount;
-            int b = c.getBlue()  + amount;
-            img.setRGB(x, y, new Color(r, g, b).getRGB());
+    12. What goes wrong when `amount` is large enough to push a channel past 255, or negative enough to push it below 0?
+    ```java
+    public static void brighten(BufferedImage img, int amount) {
+        for (int y = 0; y < img.getHeight(); y++) {
+            for (int x = 0; x < img.getWidth(); x++) {
+                Color c = new Color(img.getRGB(x, y));
+                int r = c.getRed()   + amount;
+                int g = c.getGreen() + amount;
+                int b = c.getBlue()  + amount;
+                img.setRGB(x, y, new Color(r, g, b).getRGB());
+            }
         }
     }
-}
-```
+    ```
 
-13.
-```java
-public static void brighten(BufferedImage img, int amount) {
-    for (int y = 0; y < img.getHeight(); y++) {
-        for (int x = 0; x < img.getWidth(); x++) {
-            Color c = new Color(img.getRGB(x, y));
-            int r = clamp(c.getRed()   + amount);
-            int g = clamp(c.getGreen() + amount);
-            int b = clamp(c.getBlue()  + amount);
-            img.setRGB(y, x, new Color(r, g, b).getRGB());
+    13.
+    ```java
+    public static void brighten(BufferedImage img, int amount) {
+        for (int y = 0; y < img.getHeight(); y++) {
+            for (int x = 0; x < img.getWidth(); x++) {
+                Color c = new Color(img.getRGB(x, y));
+                int r = clamp(c.getRed()   + amount);
+                int g = clamp(c.getGreen() + amount);
+                int b = clamp(c.getBlue()  + amount);
+                img.setRGB(y, x, new Color(r, g, b).getRGB());
+            }
         }
     }
-}
-```
+    ```

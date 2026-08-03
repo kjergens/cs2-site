@@ -166,178 +166,180 @@ System.out.println(c2.make);
 
 ## Homework 11: Constructors
 
-*Assigned Class 22 · Due Class 23*
+!!! attention
 
-### Part 1: Reading Constructors
+    *Assigned Class 22 · Due Class 23*
 
-```java
-public class Dog {
-    public String name;
-    public String breed;
-    public int age;
+    ### Part 1: Reading Constructors
 
-    public Dog(String name, String breed, int age) {
-        this.name = name;
-        this.breed = breed;
-        this.age = age;
+    ```java
+    public class Dog {
+        public String name;
+        public String breed;
+        public int age;
+
+        public Dog(String name, String breed, int age) {
+            this.name = name;
+            this.breed = breed;
+            this.age = age;
+        }
+
+        public void bark() {
+            System.out.println(name + " says: Woof!");
+        }
+
+        public void birthday() {
+            age = age + 1;
+            System.out.println("Happy birthday, " + name + "!");
+        }
+    }
+    ```
+
+    1. List two ways a constructor is different from a regular method.
+    2. What does `this.name` refer to? What does the parameter `name` refer to? Why do we need `this` here?
+    3. With the old version (no constructor), you created a Dog like this:
+    ```java
+    Dog fido = new Dog();
+    fido.name = "Fido";
+    fido.breed = "Labrador";
+    fido.age = 3;
+    ```
+    Write the equivalent single line using the new constructor.
+    4. The constructor requires three arguments. What happens if you write `new Dog("Rex", "Poodle")` — only two?
+
+    ### Part 2: Predict the Output
+
+    5.
+    ```java
+    public class Point {
+        public int x;
+        public int y;
+
+        public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        public void print() {
+            System.out.println("(" + x + ", " + y + ")");
+        }
     }
 
-    public void bark() {
-        System.out.println(name + " says: Woof!");
+    public static void main(String[] args) {
+        Point p1 = new Point(3, 4);
+        Point p2 = new Point(0, 0);
+        p1.print();
+        p2.print();
+        p1.x = 10;
+        p1.print();
+    }
+    ```
+
+    6.
+    ```java
+    public class Counter {
+        public int count;
+
+        public Counter(int start) {
+            count = start;
+        }
+
+        public void increment() {
+            count++;
+        }
     }
 
-    public void birthday() {
-        age = age + 1;
-        System.out.println("Happy birthday, " + name + "!");
+    public static void main(String[] args) {
+        Counter c = new Counter(5);
+        c.increment();
+        c.increment();
+        System.out.println(c.count);
     }
-}
-```
+    ```
 
-1. List two ways a constructor is different from a regular method.
-2. What does `this.name` refer to? What does the parameter `name` refer to? Why do we need `this` here?
-3. With the old version (no constructor), you created a Dog like this:
-```java
-Dog fido = new Dog();
-fido.name = "Fido";
-fido.breed = "Labrador";
-fido.age = 3;
-```
-Write the equivalent single line using the new constructor.
-4. The constructor requires three arguments. What happens if you write `new Dog("Rex", "Poodle")` — only two?
+    7.
+    ```java
+    public class Box {
+        public double width;
+        public double height;
+        public double depth;
 
-### Part 2: Predict the Output
+        public Box(double width, double height, double depth) {
+            this.width = width;
+            this.height = height;
+            this.depth = depth;
+        }
 
-5.
-```java
-public class Point {
-    public int x;
-    public int y;
-
-    public Point(int x, int y) {
-        this.x = x;
-        this.y = y;
+        public double volume() {
+            return width * height * depth;
+        }
     }
 
-    public void print() {
-        System.out.println("(" + x + ", " + y + ")");
+    public static void main(String[] args) {
+        Box b1 = new Box(2.0, 3.0, 4.0);
+        Box b2 = new Box(1.0, 1.0, 1.0);
+        System.out.println(b1.volume());
+        System.out.println(b2.volume());
+        System.out.println(b1.volume() + b2.volume());
     }
-}
+    ```
 
-public static void main(String[] args) {
-    Point p1 = new Point(3, 4);
-    Point p2 = new Point(0, 0);
-    p1.print();
-    p2.print();
-    p1.x = 10;
-    p1.print();
-}
-```
+    ### Part 3: Write a Constructor
 
-6.
-```java
-public class Counter {
-    public int count;
+    8. Add a constructor to the class below. The constructor should take `title` and `year` as parameters and initialize both instance variables.
+    ```java
+    public class Movie {
+        public String title;
+        public int year;
 
-    public Counter(int start) {
-        count = start;
+        // Write your constructor here
+    }
+    ```
+
+    9. Write a complete class called `Circle` with a `double radius` instance variable, a constructor that takes `radius` and initializes it, a method `area` that returns `Math.PI * radius * radius` (no printing inside), and a void method `describe` that prints `"Circle with radius R"` (substituting the actual value).
+
+    10. Write a `main` method (not inside `Circle`) that creates two `Circle` objects — one with radius `5.0` and one with radius `3.0` — and prints the area of each.
+
+    ### Part 4: Find the Bug
+
+    11.
+    ```java
+    public class Car {
+        public String make;
+        public int year;
+
+        public void Car(String make, int year) {
+            this.make = make;
+            this.year = year;
+        }
+    }
+    ```
+
+    12. Compiles with no errors — but something is wrong. What?
+    ```java
+    public class Student {
+        public String name;
+        public double gpa;
+
+        public Student(String name, double gpa) {
+            name = name;
+            gpa = gpa;
+        }
+    }
+    ```
+
+    13.
+    ```java
+    public class Coin {
+        public String side;
+
+        public Coin(String s) {
+            side = s;
+        }
     }
 
-    public void increment() {
-        count++;
+    public static void main(String[] args) {
+        Coin c = new Coin();
+        System.out.println(c.side);
     }
-}
-
-public static void main(String[] args) {
-    Counter c = new Counter(5);
-    c.increment();
-    c.increment();
-    System.out.println(c.count);
-}
-```
-
-7.
-```java
-public class Box {
-    public double width;
-    public double height;
-    public double depth;
-
-    public Box(double width, double height, double depth) {
-        this.width = width;
-        this.height = height;
-        this.depth = depth;
-    }
-
-    public double volume() {
-        return width * height * depth;
-    }
-}
-
-public static void main(String[] args) {
-    Box b1 = new Box(2.0, 3.0, 4.0);
-    Box b2 = new Box(1.0, 1.0, 1.0);
-    System.out.println(b1.volume());
-    System.out.println(b2.volume());
-    System.out.println(b1.volume() + b2.volume());
-}
-```
-
-### Part 3: Write a Constructor
-
-8. Add a constructor to the class below. The constructor should take `title` and `year` as parameters and initialize both instance variables.
-```java
-public class Movie {
-    public String title;
-    public int year;
-
-    // Write your constructor here
-}
-```
-
-9. Write a complete class called `Circle` with a `double radius` instance variable, a constructor that takes `radius` and initializes it, a method `area` that returns `Math.PI * radius * radius` (no printing inside), and a void method `describe` that prints `"Circle with radius R"` (substituting the actual value).
-
-10. Write a `main` method (not inside `Circle`) that creates two `Circle` objects — one with radius `5.0` and one with radius `3.0` — and prints the area of each.
-
-### Part 4: Find the Bug
-
-11.
-```java
-public class Car {
-    public String make;
-    public int year;
-
-    public void Car(String make, int year) {
-        this.make = make;
-        this.year = year;
-    }
-}
-```
-
-12. Compiles with no errors — but something is wrong. What?
-```java
-public class Student {
-    public String name;
-    public double gpa;
-
-    public Student(String name, double gpa) {
-        name = name;
-        gpa = gpa;
-    }
-}
-```
-
-13.
-```java
-public class Coin {
-    public String side;
-
-    public Coin(String s) {
-        side = s;
-    }
-}
-
-public static void main(String[] args) {
-    Coin c = new Coin();
-    System.out.println(c.side);
-}
-```
+    ```
