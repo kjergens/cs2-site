@@ -7,8 +7,8 @@ Welcome to CS2 at Columbia Grammar and Preparatory School. This site contains **
 | Unit/Chapter | Chapter Homework | Chapter Check Your Understanding 
 |---|---|---|
 | **Unit 1 — Java Review and Arrays**| | |
-| [1.1 Java Review](unit1/notes_01_java_review.md) | [Homework](unit1/notes_01_java_review.md#homework-1-java-review) | [Check Your Understanding](unit1/notes_01_java_review.md#check-your-understanding) |
-| [1.2 Loops](unit1/notes_02_loops.md) | [Homework](unit1/notes_02_loops.md#homework-2-loops-review) | [Check Your Understanding](unit1/notes_02_loops.md#check-your-understanding) |
+| [1.1 Java Review Pt 1](unit1/notes_01_java_review.md) | [Homework](unit1/notes_01_java_review.md#homework-1-java-review) | [Check Your Understanding](unit1/notes_01_java_review.md#check-your-understanding) |
+| [1.2 Java Review Pt 2: Loops](unit1/notes_02_loops.md) | [Homework](unit1/notes_02_loops.md#homework-2-loops-review) | [Check Your Understanding](unit1/notes_02_loops.md#check-your-understanding) |
 | [1.3 Introduction to Arrays](unit1/notes_03_arrays.md) | [Homework](unit1/notes_03_arrays.md#homework-3-arrays) | [Check Your Understanding](unit1/notes_03_arrays.md#check-your-understanding) |
 | [1.4 Traversing Arrays](unit1/notes_04_traversing_arrays.md) | [Homework](unit1/notes_04_traversing_arrays.md#homework-4-arrays-and-loops) | [Check Your Understanding](unit1/notes_04_traversing_arrays.md#check-your-understanding) |
 | **Unit 2 — Methods** | | |
