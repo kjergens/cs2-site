@@ -248,10 +248,18 @@
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">   </span><span class="c1">// 3.5  ← type casting</span>
 </code></pre></div></p>
 <h3 id="the-modulo-operator">The Modulo Operator <code>%</code></h3>
-<p><code>%</code> gives the <strong>remainder</strong> after division. It's useful for:
-- Checking if a number is even: <code>n % 2 == 0</code>
-- Checking divisibility: <code>n % 5 == 0</code>
-- Cycling through a range</p>
+<p><code>%</code> gives the <strong>remainder</strong> after division. It's useful for:</p>
+<ul>
+<li>
+<p>Checking if a number is even: <code>n % 2 == 0</code></p>
+</li>
+<li>
+<p>Checking divisibility: <code>n % 5 == 0</code></p>
+</li>
+<li>
+<p>Cycling through a range</p>
+</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">   </span><span class="c1">// 1  (7 = 3×2 + 1)</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="mi">9</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w">   </span><span class="c1">// 0  (9 = 3×3 + 0)</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w">  </span><span class="c1">// 3  (15 = 3×4 + 3)</span>
@@ -354,9 +362,9 @@
 <td><code>false</code></td>
 </tr>
 <tr>
-<td><code>\|\|</code></td>
+<td><code>||</code></td>
 <td>OR — at least one must be true</td>
-<td><code>true \|\| false</code></td>
+<td><code>true || false</code></td>
 <td><code>true</code></td>
 </tr>
 <tr>
