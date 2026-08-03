@@ -1,3 +1,4 @@
+# CS2 — Unit 1 Notes 1: Java Review
 These notes cover the CS1 concepts you are expected to know coming into CS2. Use them to refresh your memory, fill in gaps, or catch up if you missed a class. Every topic here will appear in homework, quizzes, and tests this semester.
 
 ---
