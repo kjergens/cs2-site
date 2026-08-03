@@ -87,8 +87,11 @@ System.out.println((double) 7 / 2);   // 3.5  ← type casting
 ### The Modulo Operator `%`
 
 `%` gives the **remainder** after division. It's useful for:
+
 - Checking if a number is even: `n % 2 == 0`
+
 - Checking divisibility: `n % 5 == 0`
+
 - Cycling through a range
 
 ```java
@@ -175,7 +178,7 @@ A `boolean` variable holds either `true` or `false`. You can combine conditions 
 | Operator | Meaning | Example | Result |
 |---|---|---|---|
 | `&&` | AND — both must be true | `true && false` | `false` |
-| `\|\|` | OR — at least one must be true | `true \|\| false` | `true` |
+| `||` | OR — at least one must be true | `true || false` | `true` |
 | `!` | NOT — flips the value | `!true` | `false` |
 
 ```java
