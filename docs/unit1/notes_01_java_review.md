@@ -513,7 +513,7 @@ if (sunny && weekend) {
 
     Write exactly what each program prints. If a line produces no output, skip it.
 
-    1.
+    1. Predict the output:
     ```java
     int a = 7;
     int b = 2;
@@ -522,7 +522,7 @@ if (sunny && weekend) {
     System.out.println((double) a / b);
     ```
 
-    2.
+    2. Predict the output:
     ```java
     int x = 10;
     String label = "score";
@@ -531,7 +531,7 @@ if (sunny && weekend) {
     System.out.println("Your " + label + ": " + x + 5);
     ```
 
-    3.
+    3. Predict the output:
     ```java
     int score = 82;
     if (score >= 90) {
@@ -545,7 +545,7 @@ if (sunny && weekend) {
     }
     ```
 
-    4.
+    4. Predict the output:
     ```java
     int n = 15;
     if (n % 3 == 0 && n % 5 == 0) {
@@ -559,7 +559,7 @@ if (sunny && weekend) {
     }
     ```
 
-    5.
+    5. Predict the output:
     ```java
     boolean raining = true;
     boolean cold = false;
@@ -583,7 +583,7 @@ if (sunny && weekend) {
 
     Each snippet has exactly one error. Identify the line and describe the problem.
 
-    10.
+    10. Find the bug:
     ```java
     String password = "java123";
     String input = "java123";
@@ -594,7 +594,7 @@ if (sunny && weekend) {
     }
     ```
 
-    11.
+    11. Find the bug:
     ```java
     int x = 5;
     if (x = 5) {
@@ -602,7 +602,7 @@ if (sunny && weekend) {
     }
     ```
 
-    12.
+    12. Find the bug:
     ```java
     int age = 20;
     if (age >= 18) {
@@ -612,7 +612,7 @@ if (sunny && weekend) {
     }
     ```
 
-    13.
+    13. Find the bug:
     ```java
     double price = 9.99;
     int quantity = 3;
