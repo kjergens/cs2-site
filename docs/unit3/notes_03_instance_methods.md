@@ -303,7 +303,7 @@ System.out.println(bob);     // Bob: $300.0
 
     ### Part 2: Predict the Output
 
-    5.
+    5. Predict the output.
     ```java
     public static void main(String[] args) {
         Student s = new Student("Alex", 9, 3.2);
@@ -314,7 +314,7 @@ System.out.println(bob);     // Bob: $300.0
     }
     ```
 
-    6.
+    6. Predict the output.
     ```java
     public static void main(String[] args) {
         Student s1 = new Student("Morgan", 10, 3.8);
@@ -325,7 +325,7 @@ System.out.println(bob);     // Bob: $300.0
     }
     ```
 
-    7.
+    7. Predict the output.
     ```java
     public static void main(String[] args) {
         Student s = new Student("Casey", 12, 3.6);
@@ -358,7 +358,7 @@ System.out.println(bob);     // Bob: $300.0
 
     ### Part 4: Find the Bug
 
-    11.
+    11. Find the bug.
     ```java
     public class Thermometer {
         public double tempC;
@@ -373,7 +373,7 @@ System.out.println(bob);     // Bob: $300.0
     }
     ```
 
-    12.
+    12. Find the bug.
     ```java
     public class Circle {
         public double radius;
@@ -388,7 +388,7 @@ System.out.println(bob);     // Bob: $300.0
     }
     ```
 
-    13.
+    13. Find the bug. 
     ```java
     public class Counter {
         public int count;

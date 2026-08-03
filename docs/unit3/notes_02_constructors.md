@@ -215,7 +215,7 @@ public BankAccount(String owner) {
 
     ### Part 2: Predict the Output
 
-    5.
+    5. Predict the output.
     ```java
     public class Point {
         public int x;
@@ -241,7 +241,7 @@ public BankAccount(String owner) {
     }
     ```
 
-    6.
+    6. Predict the output.
     ```java
     public class Counter {
         public int count;
@@ -263,7 +263,7 @@ public BankAccount(String owner) {
     }
     ```
 
-    7.
+    7. Predict the output.
     ```java
     public class Box {
         public double width;
@@ -308,7 +308,7 @@ public BankAccount(String owner) {
 
     ### Part 4: Find the Bug
 
-    11.
+    11. Find the bug.
     ```java
     public class Car {
         public String make;
@@ -334,7 +334,7 @@ public BankAccount(String owner) {
     }
     ```
 
-    13.
+    13. Find the bug.
     ```java
     public class Coin {
         public String side;

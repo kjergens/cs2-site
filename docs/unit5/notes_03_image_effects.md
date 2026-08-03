@@ -242,7 +242,7 @@ The method modifies the image in place (void) — this is the array-as-parameter
 
     ### Part 4: Find the Bug
 
-    11.
+    11. Find the bug.
     ```java
     public static void brighten(BufferedImage img, int amount) {
         for (int y = 0; y < img.getHeight(); y++) {
@@ -272,7 +272,7 @@ The method modifies the image in place (void) — this is the array-as-parameter
     }
     ```
 
-    13.
+    13. Find the bug.
     ```java
     public static void brighten(BufferedImage img, int amount) {
         for (int y = 0; y < img.getHeight(); y++) {

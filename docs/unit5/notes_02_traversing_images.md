@@ -207,7 +207,7 @@ for (int y = y1; y < y2; y++) {
 
     ### Part 4: Find the Bug
 
-    11.
+    11. Find the bug.
     ```java
     public static String dominantColor(BufferedImage img) {
         int totalRed = 0, totalGreen = 0, totalBlue = 0;
@@ -223,7 +223,7 @@ for (int y = y1; y < y2; y++) {
     }
     ```
 
-    12.
+    12. Find the bug.
     ```java
     public static int totalGreen(BufferedImage img) {
         for (int y = 0; y < img.getHeight(); y++) {

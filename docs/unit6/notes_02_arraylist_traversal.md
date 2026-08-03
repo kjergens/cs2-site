@@ -252,7 +252,7 @@ The unit notes from Units 3–4 apply: each element in the list is an object wit
 
     ### Part 2: Predict the Output
 
-    5.
+    5. Predict the output.
     ```java
     ArrayList<Student> roster = new ArrayList<>();
     roster.add(new Student("Alex",   3.8));
@@ -265,7 +265,7 @@ The unit notes from Units 3–4 apply: each element in the list is an object wit
     System.out.println("Size: " + roster.size());
     ```
 
-    6.
+    6. Predict the output.
     ```java
     ArrayList<Student> roster = new ArrayList<>();
     roster.add(new Student("Alex",   3.8));
@@ -282,7 +282,7 @@ The unit notes from Units 3–4 apply: each element in the list is an object wit
     System.out.println(count);
     ```
 
-    7.
+    7. Predict the output.
     ```java
     ArrayList<Student> roster = new ArrayList<>();
     roster.add(new Student("Alex",   3.8));
@@ -308,7 +308,7 @@ The unit notes from Units 3–4 apply: each element in the list is an object wit
 
     ### Part 4: Find the Bug
 
-    11.
+    11. Find the bug.
     ```java
     public static void printAll(ArrayList<Student> roster) {
         for (int i = 0; i <= roster.size(); i++) {
@@ -317,7 +317,7 @@ The unit notes from Units 3–4 apply: each element in the list is an object wit
     }
     ```
 
-    12.
+    12. Find the bug.
     ```java
     public static int countHonorRoll(ArrayList<Student> roster) {
         int count = 0;

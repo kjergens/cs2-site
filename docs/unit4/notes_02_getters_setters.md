@@ -213,7 +213,7 @@ public class Dog {
 
     ### Part 2: Predict the Output
 
-    5.
+    5. Predict the output.
     ```java
     public static void main(String[] args) {
         Student s = new Student("Alex", 10, 3.2);
@@ -223,7 +223,7 @@ public class Dog {
     }
     ```
 
-    6.
+    6. Predict the output.
     ```java
     public static void main(String[] args) {
         Student s = new Student("Jordan", 11, 3.6);
@@ -234,7 +234,7 @@ public class Dog {
     }
     ```
 
-    7.
+    7. Predict the output.
     ```java
     public static void main(String[] args) {
         Student s = new Student("Casey", 9, 2.9);
@@ -286,7 +286,7 @@ public class Dog {
 
     ### Part 4: Find the Bug
 
-    11.
+    11. Find the bug.
     ```java
     public double setRating(double rating) {
         if (rating >= 0.0 && rating <= 10.0) {
