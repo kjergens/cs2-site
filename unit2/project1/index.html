@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Katie Jergens" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Project 1: TextAnalyzer - CS2 — Columbia Grammar and Preparatory School</title>
+    <title>Project 1: Arrays & Methods - CS2 — Columbia Grammar and Preparatory School</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Project 1: TextAnalyzer";
+        var mkdocs_page_name = "Project 1: Arrays \u0026 Methods";
         var mkdocs_page_input_path = "unit2/project1.md";
         var mkdocs_page_url = null;
       </script>
@@ -66,8 +66,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../notes_05_method_overloading/">2.5 Method Overloading</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Project 1: TextAnalyzer</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Project 1: Arrays & Methods</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#option-a-text-analyzer">Option A: Text Analyzer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#option-b-choose-your-own-adventure">Option B: Choose Your Own Adventure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#grading-rubric">Grading Rubric</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#written-reflection-10-pts">Written Reflection (10 pts)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#timeline">Timeline</a>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -120,7 +132,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Unit 2 — Methods</li>
-      <li class="breadcrumb-item active">Project 1: TextAnalyzer</li>
+      <li class="breadcrumb-item active">Project 1: Arrays & Methods</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -129,8 +141,134 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="cs2-project-1-textanalyzer">CS2 — Project 1: TextAnalyzer</h1>
-<p><em>Content coming soon.</em></p>
+                <h1 id="project-1-arrays-methods">Project 1: Arrays &amp; Methods</h1>
+<p><strong>CS2 — Ms. Jergens</strong></p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>For this project you will choose one of the two options below. Both options require you to use arrays and methods — the two main topics of this unit. Choose the option that interests you more; your project will be better if you're engaged with the content.</p>
+<hr />
+<h2 id="option-a-text-analyzer">Option A: Text Analyzer</h2>
+<p>Pick a song, poem, or short passage that means something to you. You will write a Java program that stores the text and analyzes it in several ways.</p>
+<p><strong>Requirements:</strong>
+- Store the text as a <code>String</code> array. Each element should be one line (or one word, your choice — just be consistent).
+- Write at least 4 methods, of which at least 3 must return a value. Suggested methods:
+    - Count how many lines/words contain a specific word or character (returns <code>int</code>)
+    - Find and return the longest line or word (returns <code>String</code>)
+    - Count and return the total number of words across all lines (returns <code>int</code>)
+    - Print a formatted version of the text (can be void)
+- Call all your methods from <code>main</code> and print the results with clear labels.
+- Use a loop to traverse the array in at least two of your methods.</p>
+<p><strong>Example output:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Text: &quot;Bohemian Rhapsody&quot; by Queen
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Total lines: 12
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Total words: 87
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Longest line: &quot;Is this the real life? Is this just fantasy?&quot;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Lines containing &quot;me&quot;: 4
+</code></pre></div></p>
+<hr />
+<h2 id="option-b-choose-your-own-adventure">Option B: Choose Your Own Adventure</h2>
+<p>Write a text-based adventure game where the player makes choices that affect the story. The story should be original and personal — set it somewhere you know, use characters you invent, make it yours.</p>
+<p><strong>Requirements:</strong>
+- Store at least one set of options or story elements in a <code>String</code> array (e.g., room descriptions, item names, or choice menus).
+- Write at least 4 methods, of which at least 2 must return a value. Suggested methods:
+    - A method that displays a scene and returns the player's choice (returns <code>String</code> or <code>int</code>)
+    - A method that checks whether a choice is valid (returns <code>boolean</code>)
+    - A method that prints a formatted header or menu (can be void)
+    - A method for at least one major scene in your story
+- The game must have at least 3 scenes and at least 2 decision points where the player's input changes what happens next.
+- Use a loop somewhere in your program (e.g., to re-prompt the player for a valid input, or to display a menu).</p>
+<p><strong>Example interaction:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Welcome to the Haunted Dorm.
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>You are standing in the hallway.
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>What do you do?
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>1. Open the door on the left
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>2. Open the door on the right
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>3. Run back outside
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Enter 1, 2, or 3:
+</code></pre></div></p>
+<hr />
+<h2 id="grading-rubric">Grading Rubric</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Program runs without errors</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Array is used correctly (declared, initialized, accessed with a loop)</td>
+<td>15</td>
+</tr>
+<tr>
+<td>At least 4 methods written; at least 2–3 return a value</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Methods are called from <code>main</code> and results are used/printed</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Personal content — your own song, story, or characters</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Code is readable: meaningful variable/method names, consistent indentation</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Written reflection (see below)</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="written-reflection-10-pts">Written Reflection (10 pts)</h2>
+<p>At the top of your code as a comment block, answer the following:</p>
+<ul>
+<li>Which option did you choose, and why?</li>
+<li>What was the hardest part of this project?</li>
+<li>What would you add if you had more time?</li>
+</ul>
+<hr />
+<h2 id="timeline">Timeline</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Choose your option. Plan your array and method list on paper. Start coding.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Methods drafted. Array working.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>All requirements met. Testing and debugging.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Final polish. Submit.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Submission:</strong> Upload your <code>.java</code> file to Schoology by the end of Class 4.</p>
               
             </div>
           </div><footer>

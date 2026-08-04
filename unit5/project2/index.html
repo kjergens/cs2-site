@@ -66,7 +66,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../unit2/notes_05_method_overloading/">2.5 Method Overloading</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../unit2/project1/">Project 1: TextAnalyzer</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../unit2/project1/">Project 1: Arrays & Methods</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Unit 3 — Introduction to Objects</span></p>
@@ -95,6 +95,24 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Project 2: FotoFun</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-fotofun-class">The FotoFun Class</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-1-analyze-required">Method 1: analyze (required)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-2-drawpattern-pick-one">Method 2: drawPattern (pick one)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-3-4-transform1-and-transform2-both-required">Method 3 &amp; 4: transform1 and transform2 (both required)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#method-5-myeffect-your-choice">Method 5: myEffect (your choice)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#grading-rubric">Grading Rubric</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#written-reflection">Written Reflection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#timeline">Timeline</a>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -129,8 +147,210 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="cs2-project-2-fotofun">CS2 — Project 2: FotoFun</h1>
-<p><em>Content coming soon.</em></p>
+                <h1 id="project-2-fotofun-object-oriented-image-effects">Project 2: FotoFun — Object-Oriented Image Effects</h1>
+<p><strong>CS2 — Ms. Jergens</strong></p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>In this project you will write a Java class called <code>FotoFun</code> that analyzes an image, draws a pattern on it, and applies visual effects. You will practice designing a class with private attributes and a constructor — and apply what you know about RGB color values and pixel manipulation.</p>
+<p>Starter code is provided that loads your image and displays the result. Your job is to complete the <code>FotoFun</code> class.</p>
+<hr />
+<h2 id="the-fotofun-class">The FotoFun Class</h2>
+<p>Your class must have:</p>
+<ul>
+<li>Two private attributes: one to hold the image, one to hold the image's title (a <code>String</code> of your choice)</li>
+<li>A constructor that takes the image and a title as parameters and sets both attributes</li>
+<li>A getter for the title</li>
+<li>Five methods (see below)</li>
+</ul>
+<p><strong>Example usage</strong> (in the provided starter code):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">FotoFun</span><span class="w"> </span><span class="n">foto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FotoFun</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;My Cat Mochi&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">foto</span><span class="p">.</span><span class="na">analyze</span><span class="p">();</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">foto</span><span class="p">.</span><span class="na">drawPattern</span><span class="p">();</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">foto</span><span class="p">.</span><span class="na">transform1</span><span class="p">();</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">foto</span><span class="p">.</span><span class="na">transform2</span><span class="p">();</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">foto</span><span class="p">.</span><span class="na">myEffect</span><span class="p">();</span>
+</code></pre></div></p>
+<hr />
+<h2 id="method-1-analyze-required">Method 1: <code>analyze</code> (required)</h2>
+<p><strong>Signature:</strong> <code>public void analyze()</code></p>
+<p>Loop through every pixel in the image. Calculate and print the percentage of red, green, and blue across all pixels.</p>
+<p><strong>Example output:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Title: My Cat Mochi
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Red:   38.2%
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Green: 29.7%
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Blue:  32.1%
+</code></pre></div></p>
+<hr />
+<h2 id="method-2-drawpattern-pick-one">Method 2: <code>drawPattern</code> (pick one)</h2>
+<p><strong>Signature:</strong> <code>public void drawPattern()</code></p>
+<p>Draw a pattern directly on top of the image by setting certain pixels to a color of your choice. Pick one of the following:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checkerboard</td>
+<td>Divide the image into squares (e.g., 20×20 px). Color alternating squares.</td>
+</tr>
+<tr>
+<td>Stripes</td>
+<td>Draw evenly spaced horizontal or vertical stripes across the image.</td>
+</tr>
+<tr>
+<td>Border</td>
+<td>Draw a solid-color border around the edges of the image.</td>
+</tr>
+<tr>
+<td>Starburst</td>
+<td>Draw lines radiating outward from the center of the image.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="method-3-4-transform1-and-transform2-both-required">Method 3 &amp; 4: <code>transform1</code> and <code>transform2</code> (both required)</h2>
+<p><strong>Signatures:</strong> <code>public void transform1()</code> and <code>public void transform2()</code></p>
+<p>Implement both of the following. Each method modifies every pixel based on its original RGB values.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grayscale</td>
+<td>Set R, G, B all to their average: <code>(r + g + b) / 3</code></td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Each channel becomes <code>255 − original</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="method-5-myeffect-your-choice">Method 5: <code>myEffect</code> (your choice)</h2>
+<p><strong>Signature:</strong> <code>public void myEffect()</code></p>
+<p>Implement one effect of your choice. Pick from the list below, or propose your own (ask first).</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brighten</td>
+<td>Increase each RGB value by a fixed amount (cap at 255)</td>
+</tr>
+<tr>
+<td>Shift Colors</td>
+<td>Cycle the channels: R→G, G→B, B→R</td>
+</tr>
+<tr>
+<td>Black &amp; White</td>
+<td>Each pixel becomes pure black or pure white based on brightness</td>
+</tr>
+<tr>
+<td>Sepia</td>
+<td>Apply a warm orange-brown tint for an old-fashioned look</td>
+</tr>
+<tr>
+<td>Mirror</td>
+<td>Copy the left half of the image onto the right half (flipped)</td>
+</tr>
+<tr>
+<td>Shrink</td>
+<td>Output a version at half the width and height</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="grading-rubric">Grading Rubric</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Program runs without errors</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Class design: private attributes, constructor, getter</td>
+<td>20</td>
+</tr>
+<tr>
+<td><code>analyze()</code> correctly calculates and prints RGB percentages</td>
+<td>15</td>
+</tr>
+<tr>
+<td><code>drawPattern()</code> draws a visible, correct pattern</td>
+<td>15</td>
+</tr>
+<tr>
+<td><code>transform1()</code> and <code>transform2()</code> both work correctly</td>
+<td>25</td>
+</tr>
+<tr>
+<td><code>myEffect()</code> works correctly and is visibly distinct</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Code quality: meaningful names, consistent indentation</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="written-reflection">Written Reflection</h2>
+<p>At the top of your <code>FotoFun.java</code> file, in a comment block, answer:</p>
+<ul>
+<li>Which pattern and custom effect did you choose, and why?</li>
+<li>What was the hardest part of this project?</li>
+<li>What would you add if you had more time?</li>
+</ul>
+<hr />
+<h2 id="timeline">Timeline</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Constructor and <code>analyze()</code> working. Pattern chosen and started.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>drawPattern()</code> done. Both transforms working.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>myEffect()</code> done. All five methods complete.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Testing, debugging, reflection written. Submit.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Submission:</strong> Upload <code>FotoFun.java</code> to Schoology by the end of Class 4.</p>
               
             </div>
           </div><footer>
