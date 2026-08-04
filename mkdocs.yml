@@ -4,6 +4,7 @@ docs_dir: docs
 
 theme:
   name: readthedocs
+  sticky_navigation: false
 
 extra_javascript:
   - js/nav_scroll_fix.js
