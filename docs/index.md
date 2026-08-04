@@ -17,7 +17,7 @@ Welcome to CS2 at Columbia Grammar and Preparatory School. This site contains **
 | [2.3 Return Values](unit2/notes_03_return_values.md) | [Homework](unit2/notes_03_return_values.md#homework-7-return-values) | [Check Your Understanding](unit2/notes_03_return_values.md#check-your-understanding) |
 | [2.4 Arrays as Parameters](unit2/notes_04_arrays_as_parameters.md) | [Homework](unit2/notes_04_arrays_as_parameters.md#homework-8-arrays-as-parameters) | [Check Your Understanding](unit2/notes_04_arrays_as_parameters.md#check-your-understanding) |
 | [2.5 Method Overloading](unit2/notes_05_method_overloading.md) | [Homework](unit2/notes_05_method_overloading.md#homework-9-method-overloading) | [Check Your Understanding](unit2/notes_05_method_overloading.md#check-your-understanding)  |
-| [Project 1: TextAnalyzer](unit2/project1.md) | | |
+| [Project 1: Arrays & Methods](unit2/project1.md) | | |
 | **Unit 3 — Introduction to Objects**| | |
 | [3.1 Introduction to Objects](unit3/notes_01_intro_to_objects.md) | [Homework](unit3/notes_01_intro_to_objects.md#homework-10-introduction-to-objects) | [Check Your Understanding](unit3/notes_01_intro_to_objects.md#check-your-understanding) |
 | [3.2 Constructors](unit3/notes_02_constructors.md) | [Homework](unit3/notes_02_constructors.md#homework-11-constructors) | [Check Your Understanding](unit3/notes_02_constructors.md#check-your-understanding) |
