@@ -2,6 +2,8 @@
 
 Welcome to CS2 at Columbia Grammar and Preparatory School. This site contains **unit notes**, **Check Your Understanding practice**, **homework**, and **project specs**. Due dates and homework submissions are in Schoology.
 
+📋 **[Syllabus, Policies & Contract](syllabus.md)** — course overview, grading breakdown, academic integrity, and make-up work policy
+
 ---
 
 | Unit/Chapter | Homework | Check Your Understanding 

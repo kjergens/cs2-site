@@ -19,6 +19,7 @@ markdown_extensions:
 
 nav:
   - Table of Contents: index.md
+  - Syllabus, Policies & Contract: syllabus.md
   - Unit 1 — Java Review and Arrays:
     - "1.1 Java Review Pt 1": unit1/notes_01_java_review.md
     - "1.2 Java Review Pt 2 Loops": unit1/notes_02_loops.md
