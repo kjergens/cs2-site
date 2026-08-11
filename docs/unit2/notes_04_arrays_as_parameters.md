@@ -1,4 +1,4 @@
-# CS2 — Unit 4 Chapter 4: Passing Arrays to Methods
+# CS2 — Unit 2 Chapter 4: Passing Arrays to Methods
 
 ---
 
@@ -173,6 +173,8 @@ Use a **return type** when the method's job is to compute something from the arr
 
     **6.** Write a method `countAbove(int[] arr, int threshold)` that returns how many elements are strictly greater than `threshold`.
 
+    **7.** Write a method `normalize(int[] arr, int divisor)` that divides every element of the array by the divisor in place (modifying the original array — no return value). Then write a `main` call that uses it.
+
     ---
     ---
 
@@ -217,6 +219,18 @@ Use a **return type** when the method's job is to compute something from the arr
         }
         return count;
     }
+    ```
+
+    **7.**
+    ```java
+    public static void normalize(int[] arr, int divisor) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = arr[i] / divisor;
+        }
+    }
+    // Example call in main:
+    // int[] data = {10, 20, 30};
+    // normalize(data, 10);   // data is now {1, 2, 3}
     ```
 
 ---
@@ -285,19 +299,15 @@ Use a **return type** when the method's job is to compute something from the arr
     All methods below should return a value — no printing inside the method.
 
     6. Write a method `sum` that takes an `int` array and returns the sum of its elements.
-    7. Write a method `max` that takes an `int` array and returns the largest element.
-    8. Write a method `countAbove` that takes an `int` array and an `int threshold`, and returns how many elements are strictly greater than the threshold.
-    9. Write a method `average` that takes a `double` array and returns the average as a `double`.
+    7. Write a method `average` that takes an `int` array and returns the average as a `double`.
 
     ### Part 3: Putting It Together
 
-    10. Using your `sum` and `average` methods from Part 2, write the `main` code (not the methods) that declares the array `{88, 72, 95, 61, 83}`, prints the sum, and prints the average.
-
-    11. Write a method `normalize` that takes an `int` array and an `int divisor`, and divides every element of the array by the divisor in place (modifying the original array, no return value needed). Then write a `main` call that uses it.
+    8. Using your `sum` and `average` methods from Part 2, write the `main` code (not the methods) that declares the array `{88, 72, 95, 61, 83}`, prints the sum, and prints the average.
 
     ### Part 4: Find the Bug
 
-    12. Find the bug. 
+    9. Find the bug. 
     ```java
     public static int sum(int[] arr) {
         int total = 0;
@@ -308,7 +318,7 @@ Use a **return type** when the method's job is to compute something from the arr
     }
     ```
 
-    13. Compiles and runs — but returns the wrong answer for most inputs. What is wrong?
+    10. Compiles and runs — but returns the wrong answer for most inputs. What is wrong?
     ```java
     public static double average(int[] arr) {
         int total = 0;
