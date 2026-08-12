@@ -12,7 +12,7 @@ Welcome to CS2 at Columbia Grammar and Preparatory School. This site contains **
 | [1.1 Java Review Pt 1](unit1/notes_01_java_review.md) | [HW1](unit1/notes_01_java_review.md#homework-1-java-review) | [Check Your Understanding](unit1/notes_01_java_review.md#check-your-understanding) |
 | [1.2 Java Review Pt 2: Loops](unit1/notes_02_loops.md) | [HW2](unit1/notes_02_loops.md#homework-2-loops-review) | [Check Your Understanding](unit1/notes_02_loops.md#check-your-understanding) |
 | [1.3 Introduction to Arrays](unit1/notes_03_arrays.md) | [HW3](unit1/notes_03_arrays.md#homework-3-arrays) | [Check Your Understanding](unit1/notes_03_arrays.md#check-your-understanding) |
-| [1.4 Traversing Arrays](unit1/notes_04_traversing_arrays.md) | [HW4](unit1/notes_04_traversing_arrays.md#homework-4-arrays-and-loops) | [Check Your Understanding](unit1/notes_04_traversing_arrays.md#check-your-understanding) |
+| [1.4 Putting It All Together](unit1/notes_04_traversing_arrays.md) | [HW4](unit1/notes_04_traversing_arrays.md#homework-4-review) | — |
 | **Unit 2 — Methods** | | |
 | [2.1 Introduction to Methods](unit2/notes_01_methods.md) | [HW5](unit2/notes_01_methods.md#homework-5-introduction-to-methods) | [Check Your Understanding](unit2/notes_01_methods.md#check-your-understanding) |
 | [2.2 Method Parameters](unit2/notes_02_method_parameters.md) | [HW6](unit2/notes_02_method_parameters.md#homework-6-method-parameters) | [Check Your Understanding](unit2/notes_02_method_parameters.md#check-your-understanding) | 

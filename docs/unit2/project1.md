@@ -10,6 +10,90 @@ For this project you will choose one of the two options below. Both options requ
 
 ---
 
+## Traversing Arrays
+
+Both project options require you to loop over an array and compute something from it — count matches, find the longest entry, build a total. This section covers the patterns you'll need.
+
+### The Traversal Template
+
+```java
+for (int i = 0; i < arr.length; i++) {
+    // do something with arr[i]
+}
+```
+
+Every algorithm below is a variation on this template — what changes is what happens inside the loop body.
+
+### Sum
+
+Add every element to a running total, declared *before* the loop.
+
+```java
+int[] prices = {15, 42, 8, 27, 63, 11};
+int sum = 0;
+for (int i = 0; i < prices.length; i++) {
+    sum += prices[i];
+}
+System.out.println(sum);   // 166
+```
+
+### Maximum / Minimum
+
+Initialize with the **first element**, not `0` — if every value were negative, `max = 0` would never update and you'd get a wrong answer.
+
+```java
+int[] scores = {88, 72, 95, 61, 83, 97, 74};
+int max = scores[0];
+for (int i = 1; i < scores.length; i++) {
+    if (scores[i] > max) {
+        max = scores[i];
+    }
+}
+System.out.println(max);   // 97
+```
+
+Minimum is the same structure with the comparison flipped.
+
+### Count with a Condition
+
+A counter starts at `0` and increments inside an `if`.
+
+```java
+int[] grades = {55, 78, 92, 61, 88, 45, 73, 90};
+int count = 0;
+for (int i = 0; i < grades.length; i++) {
+    if (grades[i] >= 80) {
+        count++;
+    }
+}
+System.out.println(count);   // 3
+```
+
+### Finding the Longest / Comparing Strings
+
+Same idea as maximum, but comparing `.length()` instead of a numeric value:
+
+```java
+String[] words = {"cat", "elephant", "dog"};
+String longest = words[0];
+for (String w : words) {
+    if (w.length() > longest.length()) {
+        longest = w;
+    }
+}
+System.out.println(longest);   // elephant
+```
+
+### Common Errors
+
+| Error | Problem | Fix |
+|---|---|---|
+| `i <= arr.length` | Out of bounds on the last iteration | `i < arr.length` |
+| `int max = 0` | Wrong result if every value is negative | `int max = arr[0]` |
+| Accumulator declared inside the loop | Resets every iteration | Declare it before the loop |
+
+---
+
 ## Option A: Text Analyzer
 
 Pick a song, poem, or short passage that means something to you. You will write a Java program that stores the text and analyzes it in several ways.

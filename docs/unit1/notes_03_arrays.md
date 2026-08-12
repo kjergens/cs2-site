@@ -101,7 +101,16 @@ System.out.println(nums[nums.length - 1]);   // 23 — the last element
 
 Common trap: `nums.length` is 5, but `nums[5]` doesn't exist. The last valid index is always `length - 1`.
 
-*Traversing every element of an array — visiting each one with a loop — gets its own dedicated treatment in the next chapter.*
+You already know `for` loops from Chapter 2, and you now know how to index into an array — combine them and you can visit every element with a loop:
+
+```java
+int[] nums = {4, 8, 15, 16, 23};
+for (int i = 0; i < nums.length; i++) {
+    System.out.println(nums[i]);
+}
+```
+
+That's all traversal is at its core: a `for` loop whose index runs from `0` to `arr.length - 1`, using that index to read each slot. Project 1 will build on this with real algorithms (totals, counts, finding values) — for now, just get comfortable with the pattern above.
 
 ---
 
@@ -196,3 +205,5 @@ Common trap: `nums.length` is 5, but `nums[5]` doesn't exist. The last valid ind
     4. True or false — explain your answer in one sentence.
        - a) You can change the value at `arr[2]` after the array is created.
        - b) You can change the size of an array after it is created.
+
+    5. Using the `temps` array from Question 1, write a `for` loop that prints each temperature on its own line.
