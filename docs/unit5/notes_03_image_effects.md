@@ -196,7 +196,7 @@ The method modifies the image in place (void) — this is the array-as-parameter
 
     **Unit 5 · Chapter 3**
 
-    *Assigned Class 31 · Due Class 32*
+    *Assigned Class 32 · Due Class 33*
 
     ### Part 1: The Read-Modify-Write Pattern
 
