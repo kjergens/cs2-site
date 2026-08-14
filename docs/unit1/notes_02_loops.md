@@ -368,7 +368,7 @@ Fix: declare `i` before the loop if you need it afterward.
             count++;
         }
     }
-    System.out.println(count);   // 26
+    System.out.println(count);   // 23
     ```
 
     ### Part D: Find the Bug
@@ -462,22 +462,11 @@ Fix: declare `i` before the loop if you need it afterward.
 
     8. Write a `while` loop that prints every multiple of 7 from 7 to 70 (inclusive).
 
-    9. Write a `for` loop that computes and prints the sum of all odd numbers from 1 to 99.
-
-    10. Write a `for` loop that counts how many integers from 1 to 100 are divisible by 4 but not by 8, and prints the count.
-
-    11. Write a loop (your choice of `while` or `for`) that prints the following pattern:
-    ```
-    5
-    10
-    15
-    20
-    25
-    ```
+    9. Write a `for` loop that counts how many integers from 1 to 100 are divisible by 4 but not by 8, and prints the count.
 
     ### Part 4: Find the Bug
 
-    12. Find the bug.
+    10. Find the bug.
     ```java
     int i = 0;
     while (i < 10) {
@@ -485,19 +474,11 @@ Fix: declare `i` before the loop if you need it afterward.
     }
     ```
 
-    13. This runs without error — but a student expected it to print the sum 1 through 10. What is wrong?
+    11. This runs without error — but a student expected it to print the sum 1 through 10. What is wrong?
     ```java
     int total = 0;
     for (int i = 1; i < 10; i++) {
         total += i;
     }
     System.out.println(total);
-    ```
-
-    14. This runs without error — but the output isn't what the student intended. What happens and why?
-    ```java
-    for (int i = 0; i <= 5; i++) {
-        System.out.println(i);
-        i++;
-    }
     ```

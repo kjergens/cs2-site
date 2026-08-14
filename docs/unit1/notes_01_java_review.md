@@ -507,7 +507,7 @@ if (sunny && weekend) {
 
     *Assigned Class 1 · Due Class 2*
 
-    **Rubric (100 points):** Part 1 (Q1–5) 20 pts · Part 2 (Q6–9) 60 pts · Part 3 (Q10–13) 20 pts.
+    **Rubric (100 points):** Part 1 (Q1–3) 15 pts · Part 2 (Q4–5) 60 pts · Part 3 (Q6–8) 25 pts.
 
     ### Part 1: Predict the Output
 
@@ -533,20 +533,6 @@ if (sunny && weekend) {
 
     3. Predict the output:
     ```java
-    int score = 82;
-    if (score >= 90) {
-        System.out.println("A");
-    } else if (score >= 80) {
-        System.out.println("B");
-    } else if (score >= 70) {
-        System.out.println("C");
-    } else {
-        System.out.println("Below C");
-    }
-    ```
-
-    4. Predict the output:
-    ```java
     int n = 15;
     if (n % 3 == 0 && n % 5 == 0) {
         System.out.println("FizzBuzz");
@@ -559,31 +545,17 @@ if (sunny && weekend) {
     }
     ```
 
-    5. Predict the output:
-    ```java
-    boolean raining = true;
-    boolean cold = false;
-    System.out.println(raining && cold);
-    System.out.println(raining || cold);
-    System.out.println(!raining);
-    System.out.println(!raining || cold);
-    ```
-
     ### Part 2: Write the Code
 
-    6. Write a complete if/else if/else block that prints a letter grade based on an `int score` (already declared): 90+ → `"A"`, 80–89 → `"B"`, 70–79 → `"C"`, 60–69 → `"D"`, below 60 → `"F"`.
+    4. Write a complete if/else if/else block that prints a letter grade based on an `int score` (already declared): 90+ → `"A"`, 80–89 → `"B"`, 70–79 → `"C"`, 60–69 → `"D"`, below 60 → `"F"`.
 
-    7. Write code to swap the values of two `int` variables `x` and `y` without changing either variable's name. After your code, `x` should hold the original value of `y` and vice versa. (Hint: you need a third variable.)
-
-    8. A variable `int temperature` is already declared. Write a single `if` statement (no `else`) that prints `"Stay inside"` only if the temperature is below 20 or above 95.
-
-    9. Write a complete Java program that declares a `String name` and an `int age` (any values), then uses if/else to print `"Welcome, [name]!"` if age is 13 or older, or `"Sorry, you must be at least 13."` otherwise.
+    5. A variable `int temperature` is already declared. Write a single `if` statement (no `else`) that prints `"Stay inside"` only if the temperature is below 20 or above 95.
 
     ### Part 3: Find the Bug
 
     Each snippet has exactly one error. Identify the line and describe the problem.
 
-    10. Find the bug:
+    6. Find the bug:
     ```java
     String password = "java123";
     String input = "java123";
@@ -594,7 +566,7 @@ if (sunny && weekend) {
     }
     ```
 
-    11. Find the bug:
+    7. Find the bug:
     ```java
     int x = 5;
     if (x = 5) {
@@ -602,7 +574,7 @@ if (sunny && weekend) {
     }
     ```
 
-    12. Find the bug:
+    8. Find the bug:
     ```java
     int age = 20;
     if (age >= 18) {
@@ -610,15 +582,4 @@ if (sunny && weekend) {
         else {
         System.out.println("Minor");
     }
-    ```
-
-    13. Find the bug:
-    ```java
-    double price = 9.99;
-    int quantity = 3;
-    double total = price * quantity;
-    System.out.println("Total: $" + total);
-
-    int discount = total * 0.1;
-    System.out.println("Discount: $" + discount);
     ```
