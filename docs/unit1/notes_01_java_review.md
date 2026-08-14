@@ -360,7 +360,7 @@ if (sunny && weekend) {
 
     ## Answer Key
 
-    ### Part A: Concepts
+    ### Part A: Short Answer 
 
     **1.** `=` is the assignment operator — it stores a value into a variable (`int x = 5`). `==` is the equality operator — it compares two values and returns true or false (`if (x == 5)`). Using `=` inside an `if` condition is a compile error.
 
@@ -378,7 +378,7 @@ if (sunny && weekend) {
 
     **6.** Truth table:
 
-    | `a` | `b` | `a && b` | `a \|\| b` | `!a` |
+    | `a` | `b` | `a && b` | `a || b` | `!a` |
     |---|---|---|---|---|
     | true | true | true | true | false |
     | true | false | false | true | false |
