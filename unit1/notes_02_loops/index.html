@@ -581,7 +581,7 @@ i steps: 10, 7, 4, 1, then 1-3 = -2 which is not &gt;= 1, so loop exits.</p>
 <a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="p">}</span>
-<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">count</span><span class="p">);</span><span class="w">   </span><span class="c1">// 26</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">count</span><span class="p">);</span><span class="w">   </span><span class="c1">// 23</span>
 </code></pre></div></p>
 <h3 id="part-d-find-the-bug_1">Part D: Find the Bug</h3>
 <p><strong>13.</strong> <code>i</code> is incremented twice each pass — once by <code>i++</code> in the body and once by the for header. It prints <code>1 3 5</code> instead of <code>1 2 3 4 5</code>. The student intended to print every value from 1 to 5. Fix: remove <code>i++</code> from the body.</p>
