@@ -157,7 +157,7 @@ The unit notes from Units 3–4 apply: each element in the list is an object wit
 
 !!! information
 
-    **Unit 5 · Chapter 2**
+    **Unit 6 · Chapter 2**
 
     **1.** Write a for-each loop that prints every element in `ArrayList<Integer> scores`.
 
