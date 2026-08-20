@@ -50,7 +50,7 @@ There are no required materials for this course. All the class notes will be in 
 
 **AI Tools (like ChatGPT):** Again, you are free to use AI tools, so long as you closely follow the rules above. However, to be clear:
 
-- You will not have access to AI tools on in-class activities, quizzes, or tests.
+- You will not have access to AI tools on quizzes or tests.
 - If you rely too heavily on AI tools to complete your homework, you will not learn the material well. This will result in lower scores on quizzes and exams, and in an overall worse learning and grade outcome for you in the course.
 
 The bottom line: while you may use AI tools, it is your responsibility to use them appropriately and effectively, and in a way that does not compromise your learning experience. If you are unsure if you are compromising your learning, it is best to simply avoid using them.
@@ -70,8 +70,6 @@ The bottom line: while you may use AI tools, it is your responsibility to use th
 ---
 
 ## In-class Assessments
-
-**In-class Activities:** They will not include anything that was not in the assigned homework. The point of an in-class activity is simply to confirm that you did in fact learn the assigned exercises well enough to facilely reproduce them in a proctored setting.
 
 **Quizzes:** Quizzes will be given once per Unit. Quizzes will be online or on paper and will involve writing code and answering written questions about code samples and concepts, without the use of other resources.
 
