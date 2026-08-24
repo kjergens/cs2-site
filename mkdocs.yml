@@ -8,6 +8,7 @@ theme:
 
 extra_javascript:
   - js/nav_scroll_fix.js
+  - js/copyright_footer.js
 
 markdown_extensions:
   - pymdownx.highlight:
