@@ -55,6 +55,8 @@ There are no required materials for this course. All the class notes will be in 
 
 The bottom line: while you may use AI tools, it is your responsibility to use them appropriately and effectively, and in a way that does not compromise your learning experience. If you are unsure if you are compromising your learning, it is best to simply avoid using them.
 
+**Due Dates and Late Work:** Homework is due before the start of the next class, since we typically go over it together at the beginning of that class before moving to new material. Submit before that review for full credit. Homework submitted after we've reviewed it in class, but before the end of the grading quarter, is capped at **85% credit**. Homework submitted after the end of that grading quarter is capped at **75% credit**. There's no cutoff — always finish it, even very late, since it's still useful practice and still counts toward your grade. (This is separate from the "lowest 3 dropped" policy below — that forgives a small number of low or missing scores outright; the late caps determine what a late submission earns in the first place.)
+
 ---
 
 ## Grading
@@ -62,9 +64,9 @@ The bottom line: while you may use AI tools, it is your responsibility to use th
 | Course Component | Weight | Notes |
 |---|---|---|
 | Community Building | 5% | For full credit, attend and actively participate in all classes. The only exemption is for approved absences, provided by your dean. |
-| Homework (about 15–20) | 15% | There are frequent homework assignments, which we go over in class and are your main way to study and practice for entry tickets, quizzes, and tests. Homework is graded for accuracy and we usually start working on them together at the end of the previous class period. ***The lowest 3 homework scores are dropped.*** |
+| Homework (about 15–20) | 15% | There are frequent homework assignments, which we go over in class and are your main way to study and practice for entry tickets, quizzes, and tests. Homework is graded for accuracy — see [Due Dates and Late Work](#homework-and-project-guidelines) above. ***The lowest 3 homework scores are dropped.*** |
 | Quizzes (about 4) | 24% | Quizzes cover at most one unit. |
-| Tests (3) | 38% | Tests cover multiple units, usually the three most recent. Previous quizzes, in-class activities, and homeworks are your study guides. The last test of the course covers all the material in the course but is not weighed any differently from the other tests. ***The lowest test score is dropped.*** |
+| Tests (3) | 38% | Tests cover multiple units, usually the three most recent. Previous quizzes and homeworks are your study guides. The last test of the course covers all the material in the course but is not weighed any differently from the other tests. ***The lowest test score is dropped.*** |
 | Projects (2) | 18% | Projects give students a chance to review and enhance the skills and knowledge covered in the course. There is a project assigned at the middle of the course and one at the end. |
 
 ---
