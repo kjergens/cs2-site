@@ -19,7 +19,7 @@ Welcome to CS2 at Columbia Grammar and Preparatory School. This site contains **
 | [2.3 Return Values](unit2/notes_03_return_values.md) | [HW7](unit2/notes_03_return_values.md#homework-7-return-values) | [Check Your Understanding: 2.3](unit2/notes_03_return_values.md#check-your-understanding) |
 | [2.4 Arrays as Parameters](unit2/notes_04_arrays_as_parameters.md) | [HW8](unit2/notes_04_arrays_as_parameters.md#homework-8-arrays-as-parameters) | [Check Your Understanding: 2.4](unit2/notes_04_arrays_as_parameters.md#check-your-understanding) |
 | [2.5 Putting It All Together](unit2/notes_05_method_overloading.md) | [HW9](unit2/notes_05_method_overloading.md#homework-9-review) | [Practice Quiz #2 (Unit 2)](https://docs.google.com/document/d/1LLtUdIiUziPBX8Gb76Akd9_-9EKYCuU_s6m5C4LJ2C0) |
-|  | [Project 1:Arrays & Methods](unit2/project1.md) | [Practice Test #1 (Units 1-2)](https://docs.google.com/document/d/1s04wJwrQblJtNPjQsBOHT3WcaVgP8FIJWc0fVfpBpEU) | 
+|  | [Project 1: Array Fun](unit2/project1.md) | [Practice Test #1 (Units 1-2)](https://docs.google.com/document/d/1s04wJwrQblJtNPjQsBOHT3WcaVgP8FIJWc0fVfpBpEU) | 
 | **Unit 3 — Introduction to Objects**| | |
 | [3.1 Introduction to Objects](unit3/notes_01_intro_to_objects.md) | [HW10](unit3/notes_01_intro_to_objects.md#homework-10-introduction-to-objects) | [Check Your Understanding: 3.1](unit3/notes_01_intro_to_objects.md#check-your-understanding) |
 | [3.2 Constructors](unit3/notes_02_constructors.md) | [HW11](unit3/notes_02_constructors.md#homework-11-constructors) | [Check Your Understanding: 3.2](unit3/notes_02_constructors.md#check-your-understanding) |
