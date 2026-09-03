@@ -23,7 +23,7 @@ nav:
   - Table of Contents: index.md
   - Syllabus, Policies & Contract: syllabus.md
   - Unit 1 — Java Review and Arrays:
-    - "1.1 Java Review Pt 1": unit1/notes_01_java_review.md
+    - "1.1 Java Review Pt 1 Basic Programs": unit1/notes_01_java_review.md
     - "1.2 Java Review Pt 2 Loops": unit1/notes_02_loops.md
     - "1.3 Introduction to Arrays": unit1/notes_03_arrays.md
     - "1.4 Putting It All Together": unit1/notes_04_traversing_arrays.md
