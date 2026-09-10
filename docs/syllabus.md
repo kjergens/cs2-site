@@ -8,12 +8,8 @@ Welcome! I am happy to have you in class. To make this a productive and lasting 
 
 ## Course Overview
 
-This course introduces the fundamentals of computer science, focusing on programming in Java. You'll complete engaging projects, homework, and quizzes to track your progress.
-
 ### Learning Objectives
 
-- Understand basic computer hardware and software concepts.
-- Master block-based coding to visualize programming logic.
 - Write, debug, and enhance simple Java programs.
 - Develop problem-solving and algorithmic thinking skills.
 - Collaborate responsibly while upholding academic integrity.
@@ -21,8 +17,6 @@ This course introduces the fundamentals of computer science, focusing on program
 ---
 
 ## Course Requirements
-
-There are no required materials for this course. All the class notes will be in Schoology. You may optionally take your own notes as well.
 
 **Community engagement and building** is **required** and includes:
 
@@ -55,7 +49,7 @@ There are no required materials for this course. All the class notes will be in 
 
 The bottom line: while you may use AI tools, it is your responsibility to use them appropriately and effectively, and in a way that does not compromise your learning experience. If you are unsure if you are compromising your learning, it is best to simply avoid using them.
 
-**Due Dates and Late Work:** Homework is due before the start of the next class, since we typically go over it together at the beginning of that class before moving to new material. Submit before that review for full credit. Homework submitted after we've reviewed it in class, but before the end of the grading quarter, is capped at **85% credit**. Homework submitted after the end of that grading quarter is capped at **75% credit**. There's no cutoff — always finish it, even very late, since it's still useful practice and still counts toward your grade. (This is separate from the "lowest 3 dropped" policy below — that forgives a small number of low or missing scores outright; the late caps determine what a late submission earns in the first place.)
+**Due Dates and Late Work:**  Submit homework on time for full credit. Homework submitted after we've reviewed it in class, but before the end of the grading quarter, is capped at **85% credit**. Homework submitted after the end of that grading quarter is capped at **75% credit**. There's no cutoff — always finish it, even very late, since it's still useful practice and still counts toward your grade. (This is separate from the "lowest 3 dropped" policy below — that forgives a small number of low or missing scores outright; the late caps determine what a late submission earns in the first place.)
 
 ---
 
