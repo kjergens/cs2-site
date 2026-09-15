@@ -187,7 +187,7 @@ That's all traversal is at its core: a `for` loop whose index runs from `0` to `
 
     **Unit 1 · Chapter 3**
 
-    *Assigned Class 3 · Due Class 4*
+    *Assigned Class 4 · Due Class 5*
 
     1. Write a single statement to declare and initialize an `int` array called `temps` containing the values `72, 68, 85, 90, 77`.
 

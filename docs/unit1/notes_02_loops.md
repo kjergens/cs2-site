@@ -3,7 +3,6 @@ These notes cover `while` and `for` loops from CS1. Both will appear constantly 
 
 Both loop types have the same three parts — just written in different places:
 
-![While and For Loop Anatomy](../images/loops.png)
 
 ---
 
@@ -59,6 +58,8 @@ Output:
 ---
 
 ## 2. The For Loop
+
+![While and For Loop Anatomy](../images/loops.png)
 
 A `for` loop packages initialize, check, and update into one line. Use it when you know exactly how many times you want to loop.
 
@@ -385,7 +386,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     **Unit 1 · Chapter 2**
 
-    *Assigned Class 2 · Due Class 3*
+    *Assigned Class 3 · Due Class 4*
 
     ### Part 1: Predict the Output — While Loops
 
