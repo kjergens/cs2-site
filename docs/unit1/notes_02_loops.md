@@ -386,9 +386,8 @@ Fix: declare `i` before the loop if you need it afterward.
 
     **Unit 1 · Chapter 2**
 
-    *Assigned Class 3 · Due Class 4*
-
     ### Part 1: While Loops
+    *Assigned Class 3 · Due Class 4*
 
     1. Predict the output.
     ```java
@@ -399,7 +398,7 @@ Fix: declare `i` before the loop if you need it afterward.
     }
     ```
 
-    2. Trace each iteration, then write the final output.
+    2. Trace each iteration: Write every value x will be in this code snippet, then write the final output.
     ```java
     int x = 100;
     while (x > 10) {
@@ -408,7 +407,7 @@ Fix: declare `i` before the loop if you need it afterward.
     System.out.println(x);
     ```
 
-    3. Predict the output.
+    3. Predict the output of this code snippet.
     ```java
     int count = 0;
     int i = 1;
@@ -423,7 +422,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     4. Write a `while` loop that prints every multiple of 7 from 7 to 70 (inclusive).
 
-    5. Find the bug.
+    5. This while loop has an error. Explain what is wrong.
     ```java
     int i = 0;
     while (i < 10) {
@@ -432,6 +431,7 @@ Fix: declare `i` before the loop if you need it afterward.
     ```
 
     ### Part 2: For Loops
+    *Assigned Class 4 · Due Class 5*
 
     4. Predict the output.
     ```java
