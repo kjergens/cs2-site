@@ -388,7 +388,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     *Assigned Class 3 · Due Class 4*
 
-    ### Part 1: Predict the Output — While Loops
+    ### Part 1: While Loops
 
     1. Predict the output.
     ```java
@@ -421,7 +421,17 @@ Fix: declare `i` before the loop if you need it afterward.
     System.out.println(count);
     ```
 
-    ### Part 2: Predict the Output — For Loops
+    4. Write a `while` loop that prints every multiple of 7 from 7 to 70 (inclusive).
+
+    5. Find the bug.
+    ```java
+    int i = 0;
+    while (i < 10) {
+        System.out.println(i);
+    }
+    ```
+
+    ### Part 2: For Loops
 
     4. Predict the output.
     ```java
@@ -459,23 +469,9 @@ Fix: declare `i` before the loop if you need it afterward.
     System.out.println(result);
     ```
 
-    ### Part 3: Write the Loop
+    8. Write a `for` loop that counts how many integers from 1 to 100 are divisible by 4 but not by 8, and prints the count.
 
-    8. Write a `while` loop that prints every multiple of 7 from 7 to 70 (inclusive).
-
-    9. Write a `for` loop that counts how many integers from 1 to 100 are divisible by 4 but not by 8, and prints the count.
-
-    ### Part 4: Find the Bug
-
-    10. Find the bug.
-    ```java
-    int i = 0;
-    while (i < 10) {
-        System.out.println(i);
-    }
-    ```
-
-    11. This runs without error — but a student expected it to print the sum 1 through 10. What is wrong?
+    9. This runs without error — but a student expected it to print the sum 1 through 10. What is wrong?
     ```java
     int total = 0;
     for (int i = 1; i < 10; i++) {
