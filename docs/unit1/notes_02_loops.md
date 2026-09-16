@@ -479,7 +479,7 @@ Fix: declare `i` before the loop if you need it afterward.
     }
     System.out.println(total);
     ```
-    10. The following code results in an error. a) What is wrong? b) Rewrite the snippet to successfully print a the final value of i.
+    10. The following code results in an error. a) What is wrong? b) Rewrite the snippet to successfully print the final value of i.
     ```java
     for (int i = 0; i < 5; i++) {
         System.out.println("Iteration: " + i);
