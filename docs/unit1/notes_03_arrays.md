@@ -193,11 +193,10 @@ That's all traversal is at its core: a `for` loop whose index runs from `0` to `
 
     2. Write two statements: first declare an `int` array called `scores` that can hold 6 values; then assign `100` to the last slot.
 
-    3. Given:
     ```java
     String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri"};
     ```
-    Answer each without running the code:
+    3. Given the code above. Answer each without running the code:
        - a) What does `days[0]` return?
        - b) What does `days[days.length - 1]` return?
        - c) What happens if you access `days[5]`?
