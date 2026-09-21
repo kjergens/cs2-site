@@ -230,32 +230,30 @@ if (sunny && weekend) {
     **Part A: Concepts**
 
     **1.** What is the difference between `=` and `==` in Java?
-
+    
     **2.** What does the `%` operator return? Give an example of when it would be useful.
-
+    
     **3.** Why is `input == "hello"` unreliable for comparing Strings? What should you use instead?
-
+    
     **4.** What is type casting? Write one line of code that casts an `int` variable called `total` to a `double` before dividing it by `4`.
-
+    
     **5.** What is the difference between `&&` and `||`? 
-
+    
     **6.** Complete the table:
-
     | `a` | `b` | `a && b` | `a \|\| b` | `!a` |
     |---|---|---|---|---|
     | true | true | | | |
     | true | false | | | |
     | false | true | | | |
     | false | false | | | |
-
+    
     **7.** Java evaluates `if / else if / else` chains from top to bottom and stops at the first true condition. Why does the order of conditions matter? Give an example where getting the order wrong would produce an incorrect result.
-
+    
     **8.** Without running it, what does this print — and why?
     ```java
     System.out.println("Result: " + 4 + 5);
     System.out.println("Result: " + (4 + 5));
     ```
-
     ---
 
     **Part B: Predict the Output**
@@ -268,7 +266,7 @@ if (sunny && weekend) {
     System.out.println(x % y);
     System.out.println((double) x / y);
     ```
-
+    
     **10.** Predict the output:
     ```java
     boolean hungry = false;
@@ -278,7 +276,7 @@ if (sunny && weekend) {
     System.out.println(!tired);
     System.out.println(!hungry && tired);
     ```
-
+    
     **11.** Predict the output:
     ```java
     int n = 12;
@@ -290,7 +288,7 @@ if (sunny && weekend) {
         System.out.println("Odd");
     }
     ```
-
+    
     **12.** Predict the output:
     ```java
     int a = 3;
@@ -299,7 +297,6 @@ if (sunny && weekend) {
     System.out.println("Sum: " + (a + b));
     System.out.println(a + b + " is the sum");
     ```
-
     *(Question 12 has a twist — think carefully about the last line.)*
 
     ---
@@ -308,14 +305,14 @@ if (sunny && weekend) {
     **13.** A variable `int n` is already declared. Write code that prints:
     - `"even"` if `n` is divisible by 2
     - `"odd"` otherwise
-
+    
     **14.** Write code that prints `"Divisible by both"` if a variable `int n` is divisible by both 3 and 7, and `"Not divisible by both"` otherwise.
-
+    
     **15.** Write a complete if / else if / else block for a variable `int temp` (already declared) that prints:
     - `"Cold"` if temp is below 40
     - `"Comfortable"` if temp is between 40 and 79 (inclusive)
     - `"Hot"` if temp is 80 or above
-
+    
     **16.** What is wrong with this swap attempt? Then write the correct version.
     ```java
     int x = 5;
@@ -323,7 +320,6 @@ if (sunny && weekend) {
     x = y;
     y = x;
     ```
-
     ---
 
     **Part D: Find the Bug**
@@ -338,14 +334,14 @@ if (sunny && weekend) {
     }
     ```
     This compiles and runs but produces the wrong output for a score of 95. What is the bug?
-
+    
     **18.** Find the bug:
     ```java
     double total = 49.99;
     int rounded = total;
     System.out.println(rounded);
     ```
-
+    
     **19.** Find the bug:
     ```java
     String answer = "yes";
@@ -359,32 +355,31 @@ if (sunny && weekend) {
     **Answer Key**
 
     **Part A: Short Answer** 
-
+    
     **1.** `=` is the assignment operator — it stores a value into a variable (`int x = 5`). `==` is the equality operator — it compares two values and returns true or false (`if (x == 5)`). Using `=` inside an `if` condition is a compile error.
-
+    
     **2.** `%` returns the remainder after integer division. Example: `17 % 5` returns `2` because 17 = 3×5 + 2. Useful for: checking if a number is even (`n % 2 == 0`), checking divisibility (`n % 3 == 0`), cycling through a fixed range.
-
+    
     **3.** `==` checks whether two variables point to the same object in memory — not whether their contents are the same. Two String variables can hold identical text but be different objects, so `==` may return false even when the text matches. Use `.equals()` to compare the actual content.
-
+    
     **4.** Type casting converts one type to another. Example:
     ```java
     System.out.println((double) total / 4);
     ```
     The `(double)` cast converts `total` to a double before the division, so the result is decimal.
-
+    
     **5.** && is "AND" (both conditions need to be true for the whole epxression to be true). || is "OR" (as long as at least one condition is true the whole expression will resolve to true)
-
+    
     **6.** Truth table:
-
     | `a` | `b` | `a && b` | `a || b` | `!a` |
     |---|---|---|---|---|
     | true | true | true | true | false |
     | true | false | false | true | false |
     | false | true | false | true | true |
     | false | false | false | false | true |
-
+    
     **7.** Because Java stops at the first true condition, a broader condition placed before a narrower one will "catch" cases that were meant to fall through. Example: if you check `score >= 60` before `score >= 90`, every score of 90 or above matches the first condition and prints `"Passing"` — it never reaches the `"Excellent"` branch.
-
+    
     **8.**
     ```
     Result: 45
@@ -404,7 +399,7 @@ if (sunny && weekend) {
     3.4
     ```
     `17 / 5 = 3` (integer division drops remainder). `17 % 5 = 2` (remainder). `(double) 17 / 5 = 3.4`.
-
+   
     **10.**
     ```
     true
@@ -413,13 +408,13 @@ if (sunny && weekend) {
     true
     ```
     `false || true = true`. `false && true = false`. `!true = false`. `!false && true = true && true = true`.
-
+   
     **11.**
     ```
     Big even
     ```
     `12 % 2 == 0` is true AND `12 > 10` is true → first condition matches, prints `"Big even"` and stops.
-
+    
     **12.**
     ```
     Sum: 34
@@ -442,7 +437,7 @@ if (sunny && weekend) {
         System.out.println("odd");
     }
     ```
-
+    
     **14.**
     ```java
     if (n % 3 == 0 && n % 7 == 0) {
@@ -451,7 +446,7 @@ if (sunny && weekend) {
         System.out.println("Not divisible by both");
     }
     ```
-
+    
     **15.**
     ```java
     if (temp < 40) {
@@ -462,14 +457,13 @@ if (sunny && weekend) {
         System.out.println("Hot");
     }
     ```
-
+    
     **16.** The bug: after `x = y`, x holds 10 — but then `y = x` sets y to 10 as well. The original value of x (5) is lost. You need a temporary variable:
     ```java
     int temp = x;
     x = y;
     y = temp;
     ```
-
     ---
 
     **Part D: Find the Bug**
@@ -482,12 +476,12 @@ if (sunny && weekend) {
         System.out.println("Passing");
     }
     ```
-
+    
     **18.** You cannot assign a `double` directly to an `int` — Java will not do this automatically because information (the decimal) would be lost. Fix: use a cast or change the type:
     ```java
     int rounded = (int) total;   // truncates to 49
     ```
-
+    
     **19.** `.equals` is a method and must be called with parentheses and a dot. The `= "yes"` syntax is not valid. Fix:
     ```java
     if (answer.equals("yes")) {
