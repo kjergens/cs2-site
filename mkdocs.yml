@@ -32,7 +32,7 @@ nav:
     - "2.2 Method Parameters": unit2/notes_02_method_parameters.md
     - "2.3 Return Values": unit2/notes_03_return_values.md
     - "2.4 Arrays as Parameters": unit2/notes_04_arrays_as_parameters.md
-    - "2.5 Putting It All Together": unit2/notes_05_method_overloading.md
+    - "2.5 Putting It All Together": unit2/notes_05.md
     - "Project 1: Array Fun": unit2/project1.md
   - Unit 3 — Introduction to Objects:
     - "3.1 Introduction to Objects": unit3/notes_01_intro_to_objects.md
