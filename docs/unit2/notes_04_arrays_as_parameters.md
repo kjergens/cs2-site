@@ -241,8 +241,6 @@ Use a **return type** when the method's job is to compute something from the arr
 
     **Unit 2 · Chapter 4**
 
-    *Assigned Class 9 · Due Class 10*
-
     ### Part 1: What Happens Inside the Method?
 
     1. Trace this code. What does `main` print?

@@ -3,7 +3,6 @@ These notes cover `while` and `for` loops from CS1. Both will appear constantly 
 
 Both loop types have the same three parts — just written in different places:
 
-
 ---
 
 ## 1. The While Loop
@@ -386,8 +385,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     **Unit 1 · Chapter 2**
 
-    ### Part 1: While Loops
-    *Assigned Class 3 · Due Class 4*
+    ### Part A: While Loops
 
     1. Predict the output.
     ```java
@@ -430,8 +428,7 @@ Fix: declare `i` before the loop if you need it afterward.
     }
     ```
 
-    ### Part 2: For Loops
-    *Assigned Class 4 · Due Class 5*
+    ### Part B: For Loops
 
     4. Predict the output.
     ```java
@@ -478,4 +475,12 @@ Fix: declare `i` before the loop if you need it afterward.
         total += i;
     }
     System.out.println(total);
+    ```
+
+    10. This code produces a compile error. Explain what's wrong and how to fix it.
+    ```java
+    for (int i = 1; i <= 5; i++) {
+        System.out.println(i);
+    }
+    System.out.println("Final value of i: " + i);
     ```

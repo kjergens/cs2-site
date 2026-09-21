@@ -22,8 +22,6 @@ This page ties together everything from Unit 2 before Quiz 2: methods (why they 
 
     **Unit 2 · Putting It All Together**
 
-    *Assigned Class 10 · Due Class 11*
-
     A mixed review set — no new material, just practice for Quiz 2.
 
     1. Predict the output.

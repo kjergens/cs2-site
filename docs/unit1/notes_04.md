@@ -28,8 +28,6 @@ That's the one array skill Quiz 1 will check — reading/printing every element 
 
     **Unit 1 · Putting It All Together**
 
-    *Assigned Class 5 · Due Class 6*
-
     A mixed review set — no new material, just practice for Quiz 1.
 
     1. Predict the output.

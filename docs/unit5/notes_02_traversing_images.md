@@ -156,8 +156,6 @@ for (int y = y1; y < y2; y++) {
 
     **Unit 5 · Chapter 2**
 
-    *Assigned Class 31 · Due Class 32*
-
     ### Part 1: Traversal Structure
 
     ```java

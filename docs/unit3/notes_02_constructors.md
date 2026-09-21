@@ -174,8 +174,6 @@ public BankAccount(String owner) {
 
     **Unit 3 · Chapter 2**
 
-    *Assigned Class 22 · Due Class 23*
-
     ### Part 1: Reading Constructors
 
     ```java

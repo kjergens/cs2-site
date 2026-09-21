@@ -266,8 +266,6 @@ After
 
     **Unit 2 · Chapter 1**
 
-    *Assigned Class 6 · Due Class 7*
-
     ### Part 1: Why Methods?
 
     Read the two versions of the same program, then answer the questions.

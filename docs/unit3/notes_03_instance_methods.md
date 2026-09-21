@@ -259,8 +259,6 @@ System.out.println(bob);     // Bob: $300.0
 
     **Unit 3 · Chapter 3**
 
-    *Assigned Class 23 · Due Class 24*
-
     ### Part 1: Reading Instance Methods
 
     ```java

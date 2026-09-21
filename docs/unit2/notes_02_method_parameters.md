@@ -242,8 +242,6 @@ public static void printBox(int size) {
 
     **Unit 2 · Chapter 2**
 
-    *Assigned Class 7 · Due Class 8*
-
     ### Part 1: Parameters — Copies, Not Connections
 
     1. Trace through this code. Fill in the value of `x` in `main` after each line.

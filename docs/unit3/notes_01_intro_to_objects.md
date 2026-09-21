@@ -196,8 +196,6 @@ By Class 23, the same class will have constructors and methods. The starting poi
 
     **Unit 3 · Chapter 1**
 
-    *Assigned Class 21 · Due Class 22*
-
     ### Part 1: Classes and Objects
 
     1. For each item below, write *class* or *object*:

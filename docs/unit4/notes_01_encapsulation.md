@@ -218,8 +218,6 @@ public class BankAccount {
 
     **Unit 4 · Chapter 1**
 
-    *Assigned Class 26 · Due Class 27*
-
     ### Part 1: Why Private?
 
     ```java

@@ -164,8 +164,6 @@ public class Dog {
 
     **Unit 4 · Chapter 2**
 
-    *Assigned Class 27 · Due Class 28*
-
     ### Part 1: Reading Setters
 
     ```java

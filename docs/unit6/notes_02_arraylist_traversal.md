@@ -205,8 +205,6 @@ The unit notes from Units 3–4 apply: each element in the list is an object wit
 
     **Unit 6 · Chapter 2**
 
-    *Assigned Class 38 · Due Class 39*
-
     An ArrayList becomes much more powerful once you combine it with loops — you can search, count, filter, and compute across every element. This homework uses an ArrayList of a custom object type, so you'll also practice calling methods on objects you retrieve from the list.
 
     The following `Student` class is used throughout:

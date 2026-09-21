@@ -505,8 +505,6 @@ if (sunny && weekend) {
 
     **Unit 1 · Chapter 1**
 
-    *Assigned Class 1 · Due Class 2*
-
     **Rubric (100 points):** Part 1 (Q1–3) 15 pts · Part 2 (Q4–5) 60 pts · Part 3 (Q6–8) 25 pts.
 
     ### Part 1: Predict the Output
