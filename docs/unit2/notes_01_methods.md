@@ -153,7 +153,7 @@ After
 
     **Unit 2 · Chapter 1**
 
-    ### Part A: Concepts
+    **Part A: Concepts**
 
     **1.** Name three benefits of using methods instead of copying code.
 
@@ -163,7 +163,7 @@ After
 
     ---
 
-    ### Part B: Predict the Output
+    **Part B: Predict the Output**
 
     **4.** Predict the output.
     ```java
@@ -195,7 +195,7 @@ After
 
     ---
 
-    ### Part C: Write the Code
+    **Part C: Write the Code**
 
     **6.** Write a void method `printBox` that takes an `int size` and prints a filled square of `*` characters. `printBox(3)` should print:
     ```
@@ -208,9 +208,9 @@ After
 
     ---
 
-    ## Answer Key
+    **Answer Key**
 
-    ### Part A
+    **Part A**
 
     **1.** DRY (write once, reuse), decomposition (break big problems into named pieces), readability (main reads like an outline).
 
@@ -218,7 +218,7 @@ After
 
     **3.** A **parameter** is the variable declared in the method header (`int n`). An **argument** is the actual value passed when the method is called (`printStars(4)` — `4` is the argument).
 
-    ### Part B
+    **Part B**
 
     **4.**
     ```
@@ -233,7 +233,7 @@ After
     ****
     ```
 
-    ### Part C
+    **Part C**
 
     **6.**
     ```java

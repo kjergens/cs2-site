@@ -128,7 +128,7 @@ public static void main(String[] args) {
 
     **Unit 2 · Chapter 3**
 
-    ### Part A: Predict the Output
+    **Part A: Predict the Output**
 
     **1.**
     ```java
@@ -162,7 +162,7 @@ public static void main(String[] args) {
 
     ---
 
-    ### Part B: Find the Bug
+    **Part B: Find the Bug**
 
     **4.**
     ```java
@@ -189,18 +189,17 @@ public static void main(String[] args) {
 
     ---
 
-    ### Part C: Write the Method
+    **Part C: Write the Method**
 
     **7.** Write `celsiusToFahrenheit(double c)` — returns the Fahrenheit equivalent. Formula: F = C × 9.0 / 5.0 + 32.
 
     **8.** Write `hypotenuse(double a, double b)` — returns the hypotenuse of a right triangle. Use `Math.sqrt` and `Math.pow`.
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
-    ### Part A
+    **Part A**
 
     **1.**
     ```
@@ -218,7 +217,7 @@ public static void main(String[] args) {
     ten is even
     ```
 
-    ### Part B
+    **Part B**
 
     **4.** Missing `return` — computes `result` but never sends it back. Add `return result;`.
 
@@ -226,7 +225,7 @@ public static void main(String[] args) {
 
     **6.** Not all paths return a value — if `n >= 0`, the method ends without returning anything. Add `return false;` after the if block.
 
-    ### Part C
+    **Part C**
 
     **7.**
     ```java

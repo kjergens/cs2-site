@@ -129,7 +129,7 @@ public static void printBox(int size) {
 
     **Unit 2 · Chapter 2**
 
-    ### Part A: Concepts
+    **Part A: Concepts**
 
     **1.** What does "passed by value" mean for primitives?
 
@@ -151,7 +151,7 @@ public static void printBox(int size) {
 
     ---
 
-    ### Part B: Predict the Output
+    **Part B: Predict the Output**
 
     **4.** Predict the output.
     ```java
@@ -189,16 +189,15 @@ public static void printBox(int size) {
 
     ---
 
-    ### Part C: Write the Code
+    **Part C: Write the Code**
 
     **6.** Write a void method `printMultiples(int n, int count)` that prints the first `count` multiples of `n`, one per line.
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
-    ### Part A
+    **Part A**
 
     **1.** The method receives its own copy of the value. Changing the copy inside the method does not affect the original variable in the caller.
 
@@ -206,7 +205,7 @@ public static void printBox(int size) {
 
     **3.** No. `total` is local to `setup()` and doesn't exist in `main`.
 
-    ### Part B
+    **Part B**
 
     **4.**
     ```
@@ -223,7 +222,7 @@ public static void printBox(int size) {
     ```
     Each call creates its own `count`. They don't accumulate.
 
-    ### Part C
+    **Part C**
 
     **6.**
     ```java

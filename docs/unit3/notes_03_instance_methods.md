@@ -228,9 +228,8 @@ System.out.println(bob);     // Bob: $300.0
     **3.** Add a method `decrementByN(int n)` that subtracts `n` from `count` but never lets `count` go below 0.
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
     **1.** `increment` adds 1 to `count`. It is a void method — it changes the object's state and returns nothing.
 

@@ -169,9 +169,8 @@ By Class 23, the same class will have constructors and methods. The starting poi
     **4.** You create two `Dog` objects, `d1` and `d2`, and set `d1.name = "Rex"`. Does `d2.name` change? Why or why not?
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
     **1.** A class is a blueprint — it defines what fields and methods exist. An object is one instance built from that blueprint. You can create many objects from the same class; each holds its own data.
 

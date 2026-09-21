@@ -217,7 +217,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     **Unit 1 · Chapter 2**
 
-    ### Part A: Concepts
+    **Part A: Concepts**
 
     **1.** What are the three things every loop needs to avoid running forever?
 
@@ -231,7 +231,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     ---
 
-    ### Part B: Predict the Output
+    **Part B: Predict the Output**
 
     **6.**
     ```java
@@ -269,7 +269,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     ---
 
-    ### Part C: Write the Loop
+    **Part C: Write the Loop**
 
     **10.** Write a `for` loop that prints every even number from 2 to 20.
 
@@ -279,7 +279,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     ---
 
-    ### Part D: Find the Bug
+    **Part D: Find the Bug**
 
     **13.**
     ```java
@@ -301,11 +301,10 @@ Fix: declare `i` before the loop if you need it afterward.
     Will this loop ever end? Explain.
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
-    ### Part A: Concepts
+    **Part A: Concepts**
 
     **1.** Initialize the variable before the loop; check the condition; update the variable inside the loop body (or in the for header).
 
@@ -317,7 +316,7 @@ Fix: declare `i` before the loop if you need it afterward.
 
     **5.** The condition never becomes false, so the loop runs forever — an infinite loop. The program appears to freeze.
 
-    ### Part B: Predict the Output
+    **Part B: Predict the Output**
 
     **6.**
     ```
@@ -342,7 +341,7 @@ Fix: declare `i` before the loop if you need it afterward.
     ```
     i steps: 10, 7, 4, 1, then 1-3 = -2 which is not >= 1, so loop exits.
 
-    ### Part C: Write the Loop
+    **Part C: Write the Loop**
 
     **10.**
     ```java
@@ -371,7 +370,7 @@ Fix: declare `i` before the loop if you need it afterward.
     System.out.println(count);   // 23
     ```
 
-    ### Part D: Find the Bug
+    **Part D: Find the Bug**
 
     **13.** `i` is incremented twice each pass — once by `i++` in the body and once by the for header. It prints `1 3 5` instead of `1 2 3 4 5`. The student intended to print every value from 1 to 5. Fix: remove `i++` from the body.
 

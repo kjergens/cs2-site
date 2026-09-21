@@ -129,7 +129,7 @@ That's all traversal is at its core: a `for` loop whose index runs from `0` to `
 
     **Unit 1 · Chapter 3**
 
-    ### Part A: Concepts
+    **Part A: Concepts**
 
     **1.** What is the index of the first element of any array? What is the index of the last element of an array with 8 elements?
 
@@ -143,7 +143,7 @@ That's all traversal is at its core: a `for` loop whose index runs from `0` to `
 
     ---
 
-    ### Part B: Predict the Output
+    **Part B: Predict the Output**
 
     **5.**
     ```java
@@ -154,11 +154,10 @@ That's all traversal is at its core: a `for` loop whose index runs from `0` to `
     ```
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
-    ### Part A
+    **Part A**
 
     **1.** First element is always index `0`. Last element of an 8-element array is index `7` (`length - 1`).
 
@@ -170,7 +169,7 @@ That's all traversal is at its core: a `for` loop whose index runs from `0` to `
     - a) **True** — you can assign a new value to any index at any time.
     - b) **False** — array size is fixed at creation. Use `ArrayList` for a resizable collection.
 
-    ### Part B
+    **Part B**
 
     **5.**
     ```

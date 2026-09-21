@@ -227,7 +227,7 @@ if (sunny && weekend) {
 
     ---
 
-    ### Part A: Concepts
+    **Part A: Concepts**
 
     **1.** What is the difference between `=` and `==` in Java?
 
@@ -258,7 +258,7 @@ if (sunny && weekend) {
 
     ---
 
-    ### Part B: Predict the Output
+    **Part B: Predict the Output**
 
     **9.** Predict the output:
     ```java
@@ -303,8 +303,7 @@ if (sunny && weekend) {
     *(Question 12 has a twist — think carefully about the last line.)*
 
     ---
-
-    ### Part C: Write the Code
+    **Part C: Write the Code**
 
     **13.** A variable `int n` is already declared. Write code that prints:
     - `"even"` if `n` is divisible by 2
@@ -327,7 +326,7 @@ if (sunny && weekend) {
 
     ---
 
-    ### Part D: Find the Bug
+    **Part D: Find the Bug**
 
     **17.** Find the bug:
     ```java
@@ -356,11 +355,10 @@ if (sunny && weekend) {
     ```
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
-    ### Part A: Short Answer 
+    **Part A: Short Answer** 
 
     **1.** `=` is the assignment operator — it stores a value into a variable (`int x = 5`). `==` is the equality operator — it compares two values and returns true or false (`if (x == 5)`). Using `=` inside an `if` condition is a compile error.
 
@@ -397,7 +395,7 @@ if (sunny && weekend) {
 
     ---
 
-    ### Part B: Predict the Output
+    **Part B: Predict the Output**
 
     **9.**
     ```
@@ -434,7 +432,7 @@ if (sunny && weekend) {
 
     ---
 
-    ### Part C: Write the Code
+    **Part C: Write the Code**
 
     **13.**
     ```java
@@ -474,7 +472,7 @@ if (sunny && weekend) {
 
     ---
 
-    ### Part D: Find the Bug
+    **Part D: Find the Bug**
 
     **17.** The conditions are in the wrong order. `score >= 60` is checked first — a score of 95 satisfies it immediately and prints `"Passing"`. The `"Excellent"` branch is never reached. Fix: check the more restrictive condition first:
     ```java

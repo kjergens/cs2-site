@@ -135,9 +135,8 @@ public BankAccount(String owner) {
     **5.** If a class has a constructor `public Dog(String name, String breed)`, will `new Dog()` compile? Explain.
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
     **1.** No return type (not even void); name must match the class name exactly.
 
