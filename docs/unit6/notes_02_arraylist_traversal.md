@@ -171,9 +171,8 @@ The unit notes from Units 3–4 apply: each element in the list is an object wit
     **4.** Why is it unsafe to remove elements from an ArrayList using a forward for loop?
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
     **1.**
     ```java

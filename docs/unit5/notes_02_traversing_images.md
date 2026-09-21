@@ -123,9 +123,8 @@ for (int y = y1; y < y2; y++) {
     **4.** What loop bounds would you use to traverse only the right half of a 400-wide image?
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
     **1.** 400 × 300 = 120,000 pixels.
 

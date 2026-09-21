@@ -190,9 +190,8 @@ public class BankAccount {
     **6.** Add a non-void method `area()` to `Rectangle` that returns width × height. Is this a getter? Why or why not?
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
     **1.** `private` means only code inside the same class can access it. Code outside the class gets a compile error if it tries to read or write the field directly.
 

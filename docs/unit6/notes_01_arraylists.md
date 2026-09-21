@@ -164,9 +164,8 @@ System.out.println(scores);          // [92, 95, 90]
     ```
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
     **1.** `import java.util.ArrayList;` (or `import java.util.*;`)
 

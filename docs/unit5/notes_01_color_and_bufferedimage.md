@@ -121,9 +121,8 @@ System.out.println("B: " + pixel.getBlue());
     **4.** An image is 800 pixels wide and 600 pixels tall. What are the x and y coordinates of the bottom-right corner pixel?
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
     **1.** R=0, G=0, B=255.
 

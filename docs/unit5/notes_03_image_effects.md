@@ -165,9 +165,8 @@ The method modifies the image in place (void) — this is the array-as-parameter
     **4.** If a pixel has R=200, G=150, B=100, what are the new R, G, B values after a brightness increase of 80?
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
     **1.** `clamp(300)` → 255. `clamp(-10)` → 0.
 

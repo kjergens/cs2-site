@@ -141,9 +141,8 @@ public class Dog {
     **2.** Should `Rectangle` have a setter for `height`? Does it depend on anything?
 
     ---
-    ---
 
-    ## Answer Key
+    **Answer Key**
 
     **1.**
     ```java
