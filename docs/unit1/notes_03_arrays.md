@@ -187,23 +187,10 @@ That's all traversal is at its core: a `for` loop whose index runs from `0` to `
     **Unit 1 · Chapter 3**
 
     1. Write a single statement to declare and initialize an `int` array called `temps` containing the values `72, 68, 85, 90, 77`.
-
     2. Write two statements: first declare an `int` array called `scores` that can hold 6 values; then assign `100` to the last slot.
-
     ```java
     String[] days = {"Mon", "Tue", "Wed", "Thu", "Fri"};
     ```
-    3. Given the `days` array above, answer each without running the code:
-    
-       - a) What does `days[0]` return?
-       - b) What does `days[days.length - 1]` return?
-       - c) What happens if you access `days[5]`?
-
-
-    4. True or false — explain your answer in one sentence.
-    
-       - a) You can change the value at a specific spot, e.g. `arr[2]`, after the array is created.
-       - b) You can change the size of an array after it is created.
-
-
+    3. Given the `days` array above, answer each without running the code: <br>(a) What does `days[0]` return? <br>(b) What does `days[days.length - 1]` return? <br>(c) What happens if you access `days[5]`?
+    4. True or false — explain your answer in one sentence. <br>(a) You can change the value at a specific spot, e.g. `arr[2]`, after the array is created. <br>(b) You can change the size of an array after it is created.
     5. Using the `temps` array from Question 1, write a `for` loop that prints each temperature on its own line.
