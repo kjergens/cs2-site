@@ -151,7 +151,8 @@ After
 
 !!! information
 
-    **Unit 2 · Chapter 1: Introduction to Methods **
+    **Unit 2 · Chapter 1: Introduction to Methods**
+    
     Test your understanding of methods with the questions and exercises below. Then check your work with the Answer Key.
 
     1. Name three benefits of using methods instead of copying code.
