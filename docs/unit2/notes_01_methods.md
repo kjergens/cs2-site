@@ -177,9 +177,9 @@ After
     }
 
     public static void main(String[] args) {
-        printLine(4, "*");
-        printLine(3, "-");
-        printLine(4, "*");
+        printLine(4, "!");
+        printLine(3, "&");
+        printLine(4, "^");
     }
     ```
     - Write a void method `printBox` that takes an `int size` and prints a filled square of `*` characters. `printBox(3)` should print:
@@ -194,7 +194,6 @@ After
 
     **Answer Key**
 
-
     1. DRY (write once, reuse), decomposition (break big problems into named pieces), readability (main reads like an outline).
     - The method performs an action but does not return a value to the caller.
     - A **parameter** is the variable declared in the method header (`int n`). An **argument** is the actual value passed when the method is called (`printStars(4)` — `4` is the argument).
@@ -205,9 +204,9 @@ After
     ```
     - 
     ```
-    ****
-    ---
-    ****
+    !!!!
+    &&&&
+    ^^^^
     ```
     -
     ```java
