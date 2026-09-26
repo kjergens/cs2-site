@@ -153,19 +153,10 @@ After
 
     **Unit 2 · Chapter 1**
 
-    **Part A: Concepts**
-
-    **1.** Name three benefits of using methods instead of copying code.
-
-    **2.** What does `void` mean in a method header?
-
-    **3.** What is the difference between a **parameter** and an **argument**?
-
-    ---
-
-    **Part B: Predict the Output**
-
-    **4.** Predict the output.
+    1. Name three benefits of using methods instead of copying code.
+    - What does `void` mean in a method header?
+    - What is the difference between a **parameter** and an **argument**?
+    - Predict the output.
     ```java
     public static void shout(String word) {
         System.out.println(word.toUpperCase() + "!!!");
@@ -176,8 +167,7 @@ After
         shout("java");
     }
     ```
-
-    **5.** Predict the output.
+    - Predict the output.
     ```java
     public static void printLine(int n, String ch) {
         for (int i = 0; i < n; i++) {
@@ -192,50 +182,34 @@ After
         printLine(4, "*");
     }
     ```
-
-    ---
-
-    **Part C: Write the Code**
-
-    **6.** Write a void method `printBox` that takes an `int size` and prints a filled square of `*` characters. `printBox(3)` should print:
+    - Write a void method `printBox` that takes an `int size` and prints a filled square of `*` characters. `printBox(3)` should print:
     ```
     * * *
     * * *
     * * *
     ```
-
-    **7.** Write a `main` method that calls `printBox` with sizes 2, 4, and 2, with a blank line between each box.
+    - Write a `main` method that calls `printBox` with sizes 2, 4, and 2, with a blank line between each box.
 
     ---
 
     **Answer Key**
 
-    **Part A**
 
-    **1.** DRY (write once, reuse), decomposition (break big problems into named pieces), readability (main reads like an outline).
-
-    **2.** The method performs an action but does not return a value to the caller.
-
-    **3.** A **parameter** is the variable declared in the method header (`int n`). An **argument** is the actual value passed when the method is called (`printStars(4)` — `4` is the argument).
-
-    **Part B**
-
-    **4.**
+    1. DRY (write once, reuse), decomposition (break big problems into named pieces), readability (main reads like an outline).
+    - The method performs an action but does not return a value to the caller.
+    - A **parameter** is the variable declared in the method header (`int n`). An **argument** is the actual value passed when the method is called (`printStars(4)` — `4` is the argument).
+    - 
     ```
     HELLO!!!
     JAVA!!!
     ```
-
-    **5.**
+    - 
     ```
     ****
     ---
     ****
     ```
-
-    **Part C**
-
-    **6.**
+    -
     ```java
     public static void printBox(int size) {
         for (int row = 0; row < size; row++) {
@@ -246,8 +220,7 @@ After
         }
     }
     ```
-
-    **7.**
+    - 
     ```java
     public static void main(String[] args) {
         printBox(2);
