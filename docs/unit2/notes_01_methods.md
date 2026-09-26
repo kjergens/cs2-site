@@ -178,7 +178,7 @@ After
     }
 
     public static void main(String[] args) {
-        printLine(4, "!");
+        printLine(4, "p");
         printLine(3, "&");
         printLine(4, "^");
     }
@@ -205,8 +205,8 @@ After
     ```
     - 
     ```
-    !!!!
-    &&&&
+    pppp
+    &&&
     ^^^^
     ```
     -
