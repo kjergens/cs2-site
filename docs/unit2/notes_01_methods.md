@@ -151,7 +151,7 @@ After
 
 !!! information
 
-    **Unit 2 · Chapter 1**
+    **Unit 2 · Chapter 1: Introduction to Methods **
     Test your understanding of methods with the questions and exercises below. Then check your work with the Answer Key.
 
     1. Name three benefits of using methods instead of copying code.
@@ -198,12 +198,12 @@ After
     1. DRY (write once, reuse), decomposition (break big problems into named pieces), readability (main reads like an outline).
     - The method performs an action but does not return a value to the caller.
     - A **parameter** is the variable declared in the method header (`int n`). An **argument** is the actual value passed when the method is called (`printStars(4)` — `4` is the argument).
-    - 
+    - The output would be:
     ```
     HELLO!!!
     JAVA!!!
     ```
-    - 
+    - The output would be:
     ```
     pppp
     &&&
@@ -230,14 +230,13 @@ After
         printBox(2);
     }
     ```
-
 ---
 
 ## Homework 5: Introduction to Methods
 
 !!! attention
 
-    **Unit 2 · Chapter 1**
+    **Unit 2 · Chapter 1 Homework**
 
     ### Part 1: Why Methods?
 
