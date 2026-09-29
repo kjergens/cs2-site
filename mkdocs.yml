@@ -28,9 +28,9 @@ nav:
     - "1.3 Introduction to Arrays": unit1/notes_03_arrays.md
     - "1.4 Putting It All Together": unit1/notes_04.md
   - Unit 2 — Methods:
-    - "2.1 Introduction to Methods": unit2/notes_01_methods.md
-    - "2.2 Method Parameters": unit2/notes_02_method_parameters.md
-    - "2.3 Return Values": unit2/notes_03_return_values.md
+    - "2.1 Methods: Input, Output": unit2/notes_01_methods.md
+    - "2.2 Void Methods": unit2/notes_02_method_parameters.md
+    - "2.3 void vs. Return Value": unit2/notes_03_return_values.md
     - "2.4 Arrays as Parameters": unit2/notes_04_arrays_as_parameters.md
     - "2.5 Putting It All Together": unit2/notes_05.md
     - "Project 1: Array Fun": unit2/project1.md

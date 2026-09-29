@@ -1,39 +1,48 @@
-# CS2 — Unit Chapter: Method Parameters and Local Scope
+# CS2 — Unit 2 Chapter 2: Void Methods
+
+You've been writing methods that hand back a value, so `main` can decide what to do with it — print it, store it, use it in more math. **Sometimes you don't need anything handed back.** If all a method needs to do is *perform an action* — like printing something formatted a certain way — there's nothing to return.
+
+That's a **void method**.
 
 ---
 
-## 1. Parameters Are Copies
+## 1. Same Idea, No Output
 
-When you pass a **primitive** value (int, double, boolean, etc.) to a method, Java gives the method its own **copy** of that value. Changing the copy inside the method has no effect on the original variable in the caller.
+Compare two versions of "square something":
 
 ```java
-public static void addFive(int n) {
-    n = n + 5;
-    System.out.println("Inside method: n = " + n);
+// Returns a value — the caller decides what to do with it
+public static int square(int n) {
+    return n * n;
 }
 
-public static void main(String[] args) {
-    int x = 10;
-    addFive(x);
-    System.out.println(x);   // still 10
+// void — just does the printing itself, hands nothing back
+public static void printSquare(int n) {
+    System.out.println(n * n);
 }
 ```
 
-Output:
-```
-Inside method: n = 15
-10
+```java
+System.out.println(square(5));   // caller prints it
+printSquare(5);                  // method prints it directly — same output, different approach
 ```
 
-`x` is still 10 because `n` is a separate variable that holds a copy of `x`. When `addFive` changes `n`, it is only changing its own copy.
+The word `void` where the return type goes means "nothing comes back." There's no `return` statement needed (though a bare `return;` with no value is legal, to exit early) — the method just runs its code and control returns to the caller when it hits the closing `}`.
 
-**The rule:** primitives are passed **by value** — the method gets a copy, not the original.
+| Part | Example | Meaning |
+|---|---|---|
+| Access modifier | `public` | Visible to the whole program |
+| `static` | `static` | Belongs to the class, not an object |
+| Return type | `void` | Nothing comes back |
+| Method name | `printSquare` | What you call it |
+| Parameter list | `int n` | Input(s), same as any other method |
+| Body | `{ ... }` | The code that runs |
 
 ---
 
-## 2. Multiple Parameters
+## 2. Parameters Work Exactly the Same Way
 
-A method can take multiple parameters, separated by commas. Each parameter has its own type and name.
+Void methods take parameters exactly like methods that return a value — nothing changes about how inputs work, only about what comes out the other side.
 
 ```java
 public static void printMultiples(int n, int count) {
@@ -45,57 +54,24 @@ public static void printMultiples(int n, int count) {
 
 **Calling it:**
 ```java
-printMultiples(3, 4);   // prints 3, 6, 9, 12
-printMultiples(7, 3);   // prints 7, 14, 21
+printMultiples(3, 4);  // prints 3, 6, 9, 12 — one per line
 ```
 
-**Order matters:** the first argument maps to the first parameter, the second to the second. `printMultiples(4, 3)` and `printMultiples(3, 4)` produce different output.
+Everything you already know still applies: arguments map to parameters in order, primitives are passed by value, and parameters are local to the method.
 
 ---
 
-## 3. Local Scope
+## 3. When to Reach for `void`
 
-A variable declared inside a method **only exists inside that method**. It is created when the method is called and destroyed when the method returns. This is called **local scope**.
-
-```java
-public static void compute() {
-    int result = 42;        // local to compute()
-    System.out.println(result);
-}
-
-public static void main(String[] args) {
-    compute();
-    System.out.println(result);   // COMPILE ERROR — result doesn't exist here
-}
-```
-
-Parameters are also local — they behave like variables declared at the top of the method.
-
-**Two methods can use the same variable name with no conflict:**
+Use a return value whenever a method computes something the caller needs to use, store, or pass along. Use `void` when the method's entire job is an action with nothing left to hand back — most commonly, **printing**.
 
 ```java
-public static void methodA() {
-    int count = 0;
-    count++;
-    System.out.println("A: " + count);   // A: 1
+public static void printBanner() {
+    System.out.println("==========");
+    System.out.println("Welcome!");
+    System.out.println("==========");
 }
 
-public static void methodB() {
-    int count = 100;
-    count--;
-    System.out.println("B: " + count);   // B: 99
-}
-```
-
-Each `count` is a separate variable that only exists while its method is running. They do not interfere.
-
----
-
-## 4. Putting It Together: Void Methods with Parameters
-
-A void method that uses parameters and local variables:
-
-```java
 public static void printBox(int size) {
     for (int row = 0; row < size; row++) {
         for (int col = 0; col < size; col++) {
@@ -106,9 +82,30 @@ public static void printBox(int size) {
 }
 ```
 
-- `size` is a parameter (set by the caller)
-- `row` and `col` are local variables (only exist during the loop)
-- Nothing is returned — `void` does the action directly
+Neither of these computes a value worth handing back — their whole purpose is what they print. That's the signal to make them `void`.
+
+---
+
+## 4. How Method Calls Work
+
+When Java reaches a method call — void or not — it pauses the current method, jumps to the called method and runs it, then returns to where it left off.
+
+```java
+public static void main(String[] args) {
+    System.out.println("Before");
+    printBanner();
+    System.out.println("After");
+}
+```
+
+Output:
+```
+Before
+==========
+Welcome!
+==========
+After
+```
 
 ---
 
@@ -116,10 +113,10 @@ public static void printBox(int size) {
 
 | Error | Problem | Fix |
 |---|---|---|
-| `System.out.println(result)` in main after `result` declared in another method | Compile error: variable not in scope | Variables are local; they can't escape their method |
-| Expecting a primitive to change after being passed to a method | Logic error | Primitives are copied; the original is unchanged |
-| `printMultiples(4)` when method needs two params | Compile error | Supply all required arguments |
-| Declaring a variable with the same name as a parameter | Compile error | The parameter already declares that name in this scope |
+| `int x = printSquare(4);` | Void methods produce no value to store | Either make the method return a value, or don't try to capture one |
+| `System.out.println(printBanner());` | Same issue — trying to use a void call as if it were a value | Just call `printBanner();` on its own line |
+| Forgetting parentheses: `printBanner` instead of `printBanner();` | Won't compile | Always include `()` when calling |
+| `printMultiples(4)` when the method needs two params | Compile error | Supply all required arguments |
 
 ---
 
@@ -127,188 +124,119 @@ public static void printBox(int size) {
 
 !!! information
 
-    **Unit 2 · Chapter 2**
+    **Unit 2 · Chapter 2: Void Methods**
 
-    **Part A: Concepts**
-
-    **1.** What does "passed by value" mean for primitives?
-
-    **2.** After this runs, what does `main` print for `x`?
+    1. What does `void` mean in a method header?
+    - Rewrite this returning method as a void method that prints its result directly instead:
     ```java
-    public static void triple(int n) { n = n * 3; }
-    public static void main(String[] args) {
-        int x = 5;
-        triple(x);
-        System.out.println(x);
+    public static int cube(int n) {
+        return n * n * n;
     }
     ```
-
-    **3.** Will this compile? Why or why not?
+    - Predict the output.
     ```java
-    public static void setup() { int total = 0; }
-    public static void main(String[] args) { System.out.println(total); }
-    ```
-
-    ---
-
-    **Part B: Predict the Output**
-
-    **4.** Predict the output.
-    ```java
-    public static void mystery(int a, int b) {
-        a = a * 2;
-        b = b + 3;
-        System.out.println(a + " " + b);
+    public static void shout(String word) {
+        System.out.println(word.toUpperCase() + "!!!");
     }
     public static void main(String[] args) {
-        int p = 4;
-        int q = 7;
-        mystery(p, q);
-        System.out.println(p + " " + q);
+        shout("hello");
+        shout("java");
     }
     ```
-
-    **5.** Predict the output.
-    ```java
-    public static void methodA() {
-        int count = 0;
-        count++;
-        System.out.println("A: " + count);
-    }
-    public static void methodB() {
-        int count = 100;
-        count--;
-        System.out.println("B: " + count);
-    }
-    public static void main(String[] args) {
-        methodA();
-        methodB();
-        methodA();
-    }
-    ```
-
-    ---
-
-    **Part C: Write the Code**
-
-    **6.** Write a void method `printMultiples(int n, int count)` that prints the first `count` multiples of `n`, one per line.
+    - Why can't you write `int x = printBanner();`?
+    - Write a void method `printLine` that takes an `int n` and a `String ch`, and prints `ch` repeated `n` times followed by a newline. `printLine(4, "p")` should print `pppp`.
 
     ---
 
     **Answer Key**
 
-    **Part A**
-
-    **1.** The method receives its own copy of the value. Changing the copy inside the method does not affect the original variable in the caller.
-
-    **2.** `5` — `triple` changes its local copy of `n`, not the original `x`.
-
-    **3.** No. `total` is local to `setup()` and doesn't exist in `main`.
-
-    **Part B**
-
-    **4.**
-    ```
-    8 10
-    4 7
-    ```
-    Inside `mystery`: a=8, b=10 (copies of p and q modified). Back in main: p and q unchanged.
-
-    **5.**
-    ```
-    A: 1
-    B: 99
-    A: 1
-    ```
-    Each call creates its own `count`. They don't accumulate.
-
-    **Part C**
-
-    **6.**
+    1. The method performs an action but does not return a value to the caller.
+    -
     ```java
-    public static void printMultiples(int n, int count) {
-        for (int i = 1; i <= count; i++) {
-            System.out.println(n * i);
+    public static void printCube(int n) {
+        System.out.println(n * n * n);
+    }
+    ```
+    - Output:
+    ```
+    HELLO!!!
+    JAVA!!!
+    ```
+    - `printBanner` is `void` — it never produces a value, so there's nothing for `x` to store.
+    -
+    ```java
+    public static void printLine(int n, String ch) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(ch);
         }
+        System.out.println();
     }
     ```
 
 ---
 
-## Homework 6: Method Parameters
+## Homework 6: Void Methods
 
 !!! attention
 
-    **Unit 2 · Chapter 2**
+    **Unit 2 · Chapter 2 Homework**
 
-    ### Part 1: Parameters — Copies, Not Connections
+    ### Part 1: Return Value or Void?
 
-    1. Trace through this code. Fill in the value of `x` in `main` after each line.
+    For each task, decide whether the method should return a value or be `void`, and say why.
+
+    1. A method that computes the area of a circle.
+    2. A method that prints a row of stars.
+    3. A method that checks whether a number is prime.
+    4. A method that prints a formatted receipt given a price and a quantity.
+
+    ### Part 2: Reading and Predicting
+
+    5. What does the following method do? Describe it in one sentence.
     ```java
-    public static void main(String[] args) {
-        int x = 10;                  // x = ____
-        addFive(x);                  // prints: ________________
-        System.out.println(x);       // prints: ________________
-    }
-
-    public static void addFive(int n) {
-        n = n + 5;
-        System.out.println("Inside method: n = " + n);
+    public static void printStars(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print("* ");
+        }
+        System.out.println();
     }
     ```
-    2. Why doesn't `x` change after `addFive(x)` is called? Explain in one or two sentences.
-    3. Predict the output of this program:
+    6. What would `printStars(4)` display?
+    7. Predict the output.
     ```java
-    public static void main(String[] args) {
-        int p = 4;
-        int q = 7;
-        mystery(p, q);
-        System.out.println(p + " " + q);
+    public static void printLine(int n, String ch) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(ch);
+        }
+        System.out.println();
     }
-
-    public static void mystery(int a, int b) {
-        a = a * 2;
-        b = b + 3;
-        System.out.println(a + " " + b);
+    public static void main(String[] args) {
+        printLine(4, "p");
+        printLine(3, "&");
     }
     ```
 
-    ### Part 2: Local Scope
+    ### Part 3: Local Scope Check
 
-    4. Will this code compile? Explain why or why not.
+    8. Will this code compile? Explain why or why not.
     ```java
     public static void main(String[] args) {
         compute();
         System.out.println(result);
     }
-
     public static void compute() {
         int result = 42;
-    }
-    ```
-    5. Two methods each declare a variable named `count`. Do they interfere with each other? Why or why not?
-    ```java
-    public static void main(String[] args) {
-        methodA();
-        methodB();
-        methodA();
-    }
-
-    public static void methodA() {
-        int count = 0;
-        count++;
-        System.out.println("A: " + count);
-    }
-
-    public static void methodB() {
-        int count = 100;
-        count--;
-        System.out.println("B: " + count);
+        System.out.println(result);
     }
     ```
 
-    ### Part 3: Write the Method
+    ### Part 4: Write the Method
 
-    6. Write a void method called `printMultiples` that takes two `int` parameters — a number `n` and a count `k` — and prints the first `k` multiples of `n`, each on its own line. Example: `printMultiples(3, 4)` should print `3 6 9 12`, one per line.
+    9. Write a void method `printBox` that takes an `int size` and prints a filled square of `*` characters. `printBox(3)` should print:
+    ```
+    * * *
+    * * *
+    * * *
+    ```
 
-    7. Write a void method called `printBox` that takes an `int size` and prints a filled square of `*` characters of that size. Example: `printBox(3)` should print a 3×3 grid of `* * *` rows.
+    10. Write a `main` method that calls `printBox` with sizes 2, 4, and 2, with a blank line between each box.

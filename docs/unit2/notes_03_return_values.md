@@ -1,124 +1,64 @@
-# CS2 — Unit 2 Chapter 3: Return Values
+# CS2 — Unit 2 Chapter 3: Choosing Between void and a Return Value
+
+You now know both kinds of methods. This chapter is practice deciding which one fits a given problem, and moving comfortably between them.
 
 ---
 
-## 1. Why Return Values?
+## 1. The Decision
 
-A void method prints a result. But what if you need to *use* the result — store it, add it to something, pass it to another method?
+| Ask yourself... | Choose |
+|---|---|
+| Does the caller need to *use* this result — store it, do more math with it, pass it somewhere else? | Return a value |
+| Is the method's whole job just to perform an action, most often printing? | `void` |
+| Am I tempted to print *inside* a method that's also supposed to hand back a value? | Don't. Return the value; let the caller print it. |
+
+The same underlying computation can almost always be written either way — the difference is who ends up in control of the output.
 
 ```java
-// Void version — prints, but you can't use the result
-public static void squareAndPrint(int n) {
+// Version 1: void — the method controls the output
+public static void printSquare(int n) {
     System.out.println(n * n);
 }
 
-// Return version — gives the value back so you can use it
+// Version 2: return — the caller controls the output
 public static int square(int n) {
     return n * n;
 }
 ```
 
-With `square`, you can do:
-```java
-int result = square(5);           // store it
-System.out.println(square(4));    // print it
-System.out.println(square(3) + square(4));  // use it in math
-```
-
-**Rule going forward:** methods should *compute and return*. The caller decides what to do with the result — including whether to print it.
+`printSquare` can only ever print. `square` can be printed, stored, added to something else, or passed into another method — `printSquare(5) + printSquare(4)` isn't even legal Java, but `square(5) + square(4)` is. **When in doubt, prefer a return value — it's more flexible, since a void result can't be reused.**
 
 ---
 
-## 2. The Return Type
+## 2. Refactoring Practice
 
-The return type appears where `void` used to be. It tells Java what type of value the method will send back.
+**From return → void:** drop the `return`, replace it with the action.
 
 ```java
-public static int square(int n) {
-    return n * n;
+public static double average(double a, double b) {
+    return (a + b) / 2;
+}
+```
+becomes
+```java
+public static void printAverage(double a, double b) {
+    System.out.println((a + b) / 2);
 }
 ```
 
-| Return type | Means |
-|---|---|
-| `void` | Nothing comes back |
-| `int` | An integer comes back |
-| `double` | A decimal comes back |
-| `boolean` | true or false comes back |
-| `String` | A String comes back |
-
----
-
-## 3. The return Statement
-
-The `return` statement:
-1. Sends the value back to the caller
-2. Immediately ends the method — no code after `return` runs
+**From void → return:** replace the action with `return`, and give the method a real return type.
 
 ```java
-public static int bigger(int a, int b) {
-    if (a > b) {
-        return a;    // method ends here if a > b
-    }
-    return b;        // only reached if a <= b
+public static void printIsEven(int n) {
+    System.out.println(n % 2 == 0);
 }
 ```
-
-**Every path through the method must return a value.** If Java can reach the end of a non-void method without hitting a `return`, it is a compile error.
-
----
-
-## 4. Using Return Values
-
-```java
-public static int square(int n) {
-    return n * n;
-}
-
-public static void main(String[] args) {
-    System.out.println(square(4));              // 16
-    System.out.println(square(3) + square(4)); // 25
-    int x = square(5);
-    System.out.println(x);                     // 25
-}
-```
-
-Return values can be:
-- Stored in a variable: `int x = square(5);`
-- Printed directly: `System.out.println(square(5));`
-- Used in expressions: `square(3) + square(4)`
-- Passed as arguments: `square(square(2))` → `square(4)` → `16`
-
----
-
-## 5. Boolean-Returning Methods
-
-A method that returns `boolean` can be used directly in an `if` condition.
-
+becomes
 ```java
 public static boolean isEven(int n) {
     return n % 2 == 0;
 }
-
-public static void main(String[] args) {
-    System.out.println(isEven(6));   // true
-    System.out.println(isEven(7));   // false
-    if (isEven(10)) {
-        System.out.println("ten is even");
-    }
-}
 ```
-
----
-
-## 6. Common Errors
-
-| Error | Problem | Fix |
-|---|---|---|
-| `public static int tripleIt(int n) { int result = n * 3; }` | Missing `return` — compile error | Add `return result;` |
-| `public static double half(int n) { return n / 2; }` | Integer division — returns wrong answer | Cast: `return (double) n / 2;` |
-| `public static boolean isNeg(int n) { if (n < 0) { return true; } }` | Not all paths return — compile error | Add `return false;` after the if |
-| `int x = printStars(4);` | Void method used as if it returned a value | Void methods produce no value to store |
 
 ---
 
@@ -128,222 +68,82 @@ public static void main(String[] args) {
 
     **Unit 2 · Chapter 3**
 
-    **Part A: Predict the Output**
-
-    **1.**
+    1. Rewrite this `void` method so it returns a value instead of printing:
     ```java
-    public static int square(int n) { return n * n; }
-    public static void main(String[] args) {
-        System.out.println(square(4));
-        System.out.println(square(3) + square(4));
-        int x = square(5);
-        System.out.println(x);
-    }
-    ```
-
-    **2.**
-    ```java
-    public static int add(int a, int b) { return a + b; }
-    public static void main(String[] args) {
-        int result = add(add(1, 2), add(3, 4));
-        System.out.println(result);
-    }
-    ```
-
-    **3.**
-    ```java
-    public static boolean isEven(int n) { return n % 2 == 0; }
-    public static void main(String[] args) {
-        System.out.println(isEven(6));
-        System.out.println(isEven(7));
-        if (isEven(10)) { System.out.println("ten is even"); }
-    }
-    ```
-
-    ---
-
-    **Part B: Find the Bug**
-
-    **4.**
-    ```java
-    public static int tripleIt(int n) {
-        int result = n * 3;
-    }
-    ```
-
-    **5.**
-    ```java
-    public static double half(int n) {
-        return n / 2;
-    }
-    ```
-
-    **6.**
-    ```java
-    public static boolean isNegative(int n) {
-        if (n < 0) {
-            return true;
+    public static void printMax(int a, int b) {
+        if (a > b) {
+            System.out.println(a);
+        } else {
+            System.out.println(b);
         }
     }
     ```
-
-    ---
-
-    **Part C: Write the Method**
-
-    **7.** Write `celsiusToFahrenheit(double c)` — returns the Fahrenheit equivalent. Formula: F = C × 9.0 / 5.0 + 32.
-
-    **8.** Write `hypotenuse(double a, double b)` — returns the hypotenuse of a right triangle. Use `Math.sqrt` and `Math.pow`.
+    2. Rewrite this returning method as a `void` method that prints its own result:
+    ```java
+    public static String greeting(String name) {
+        return "Hello, " + name + "!";
+    }
+    ```
+    3. A method needs to compute a shipping cost and then *also* add it to a running total elsewhere in the program. Should it be `void` or return a value? Why?
+    4. A method just needs to print a divider line of dashes. Should it be `void` or return a value? Why?
 
     ---
 
     **Answer Key**
 
-    **Part A**
-
-    **1.**
-    ```
-    16
-    25
-    25
-    ```
-
-    **2.** `10` — `add(1,2)` = 3, `add(3,4)` = 7, `add(3,7)` = 10.
-
-    **3.**
-    ```
-    true
-    false
-    ten is even
-    ```
-
-    **Part B**
-
-    **4.** Missing `return` — computes `result` but never sends it back. Add `return result;`.
-
-    **5.** Integer division: `n / 2` divides two ints and drops the decimal. Fix: `return (double) n / 2;`.
-
-    **6.** Not all paths return a value — if `n >= 0`, the method ends without returning anything. Add `return false;` after the if block.
-
-    **Part C**
-
-    **7.**
+    1.
     ```java
-    public static double celsiusToFahrenheit(double c) {
-        return c * 9.0 / 5.0 + 32;
-    }
-    ```
-
-    **8.**
-    ```java
-    public static double hypotenuse(double a, double b) {
-        return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-    }
-    ```
-
----
-
-## Homework 7: Return Values
-
-!!! attention
-
-    **Unit 2 · Chapter 3**
-
-    **Rule going forward:** methods should compute and return; `main` (or the caller) decides what to do with the result — including whether to print it.
-
-    ### Part 1: Reading Return Types
-
-    For each method header, state the return type and what the method must hand back.
-
-    1. `public static int countVowels(String s)`
-    2. `public static double circleArea(double radius)`
-    3. `public static boolean isPrime(int n)`
-    4. `public static String initials(String first, String last)`
-
-    ### Part 2: Predict the Output
-
-    5. Predict the output.
-    ```java
-    public static int square(int n) {
-        return n * n;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(square(4));
-        System.out.println(square(3) + square(4));
-        int x = square(5);
-        System.out.println(x);
-    }
-    ```
-
-    6. Predict the output.
-    ```java
-    public static int add(int a, int b) {
-        return a + b;
-    }
-
-    public static void main(String[] args) {
-        int result = add(add(1, 2), add(3, 4));
-        System.out.println(result);
-    }
-    ```
-
-    7. Predict the output.
-    ```java
-    public static boolean isEven(int n) {
-        return n % 2 == 0;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(isEven(6));
-        System.out.println(isEven(7));
-        if (isEven(10)) {
-            System.out.println("ten is even");
-        }
-    }
-    ```
-
-    8. Predict the output.
-    ```java
-    public static int bigger(int a, int b) {
+    public static int max(int a, int b) {
         if (a > b) {
             return a;
         }
         return b;
     }
-
-    public static void main(String[] args) {
-        System.out.println(bigger(3, 7));
-        System.out.println(bigger(bigger(2, 5), bigger(8, 4)));
+    ```
+    2.
+    ```java
+    public static void printGreeting(String name) {
+        System.out.println("Hello, " + name + "!");
     }
     ```
+    3. Return a value — the result needs to be reused (added to a total), and a `void` method has nothing to hand off.
+    4. `void` — there's no result to use elsewhere, only an action to perform.
+
+---
+
+## Homework 7: void vs. Return — Practice
+
+!!! attention
+
+    **Unit 2 · Chapter 3 Homework**
+
+    ### Part 1: Refactor
+
+    1. Rewrite as a method that returns a value instead of printing:
+    ```java
+    public static void printTripled(int n) {
+        System.out.println(n * 3);
+    }
+    ```
+    2. Rewrite as a `void` method that prints its own result:
+    ```java
+    public static boolean isPositive(int n) {
+        return n > 0;
+    }
+    ```
+
+    ### Part 2: Decide, Then Write
+
+    For each, decide `void` or return-a-value, then write the method.
+
+    3. `celsiusToFahrenheit(double c)` — converts and hands back the Fahrenheit equivalent. Formula: `F = C × 9.0 / 5.0 + 32`.
+    4. `printReceipt(String item, double price)` — prints a formatted line like `Item: <item> — $<price>`.
+    5. `clamp(int value, int min, int max)` — returns `value` if it's within `[min, max]`, otherwise the nearest bound. Examples: `clamp(5, 0, 10)` → `5`, `clamp(-3, 0, 10)` → `0`, `clamp(15, 0, 10)` → `10`.
+    6. `hypotenuse(double a, double b)` — returns the hypotenuse of a right triangle with legs `a` and `b`. Use `Math.sqrt` and `Math.pow`.
 
     ### Part 3: Find the Bug
 
-    9. Find the bug
-    ```java
-    public static int tripleIt(int n) {
-        int result = n * 3;
-    }
-    ```
-
-    10. Compiles and runs — but returns the wrong answer. Why?
-    ```java
-    public static double half(int n) {
-        return n / 2;
-    }
-    ```
-
-    11. Find the bug.
-    ```java
-    public static boolean isNegative(int n) {
-        if (n < 0) {
-            return true;
-        }
-    }
-    ```
-
-    12. Find the bug. 
+    7. Find the bug.
     ```java
     public static int absolute(int n) {
         if (n < 0) {
@@ -353,13 +153,9 @@ public static void main(String[] args) {
         }
     }
     ```
-
-    ### Part 4: Write the Method
-
-    For each problem, write a method that returns the result — do not print inside the method.
-
-    13. Write a method `celsiusToFahrenheit` that takes a `double` Celsius temperature and returns the Fahrenheit equivalent. Formula: `F = C × 9.0 / 5.0 + 32`.
-
-    14. Write a method `clamp` that takes three `int` parameters — a value, a min, and a max — and returns the value if it falls within `[min, max]`, the min if the value is too low, or the max if it is too high. Examples: `clamp(5, 0, 10)` → `5`, `clamp(-3, 0, 10)` → `0`, `clamp(15, 0, 10)` → `10`.
-
-    15. Write a method `hypotenuse` that takes two `double` parameters representing the legs of a right triangle and returns the length of the hypotenuse. Use `Math.sqrt` and `Math.pow`.
+    8. Compiles and runs — but returns the wrong answer. Why?
+    ```java
+    public static double half(int n) {
+        return n / 2;
+    }
+    ```
