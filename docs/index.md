@@ -14,9 +14,9 @@ Welcome to CS2 at Columbia Grammar and Preparatory School. This site contains **
 | [1.3 Introduction to Arrays](unit1/notes_03_arrays.md) | [HW3](unit1/notes_03_arrays.md#homework-3-arrays) | [Check Your Understanding: 1.3](unit1/notes_03_arrays.md#check-your-understanding) | 
 | [1.4 Putting It All Together](unit1/notes_04.md) | [HW4](unit1/notes_04.md#homework-4-review) |[Practice Quiz #1 (Unit 1)](https://docs.google.com/document/d/1so-Neb6nKE3MPDsHHI3ttIzpamysDI1GKtfUfvrBY4Y) |
 | **Unit 2 — Methods** | | |
-| [2.1 Introduction to Methods](unit2/notes_01_methods.md) | [HW5](unit2/notes_01_methods.md#homework-5-introduction-to-methods) | [Check Your Understanding: 2.1](unit2/notes_01_methods.md#check-your-understanding) |
-| [2.2 Method Parameters](unit2/notes_02_method_parameters.md) | [HW6](unit2/notes_02_method_parameters.md#homework-6-method-parameters) | [Check Your Understanding: 2.2](unit2/notes_02_method_parameters.md#check-your-understanding) | 
-| [2.3 Return Values](unit2/notes_03_return_values.md) | [HW7](unit2/notes_03_return_values.md#homework-7-return-values) | [Check Your Understanding: 2.3](unit2/notes_03_return_values.md#check-your-understanding) |
+| [2.1 Methods: Input, Output](unit2/notes_01_methods.md) | [HW5](unit2/notes_01_methods.md#homework-5-methods-input-output) | [Check Your Understanding: 2.1](unit2/notes_01_methods.md#check-your-understanding) |
+| [2.2 Void Methods](unit2/notes_02_method_parameters.md) | [HW6](unit2/notes_02_method_parameters.md#homework-6-void-methods) | [Check Your Understanding: 2.2](unit2/notes_02_method_parameters.md#check-your-understanding) | 
+| [2.3 void vs. Return Value](unit2/notes_03_return_values.md) | [HW7](unit2/notes_03_return_values.md#homework-7-void-vs-return-practice) | [Check Your Understanding: 2.3](unit2/notes_03_return_values.md#check-your-understanding) |
 | [2.4 Arrays as Parameters](unit2/notes_04_arrays_as_parameters.md) | [HW8](unit2/notes_04_arrays_as_parameters.md#homework-8-arrays-as-parameters) | [Check Your Understanding: 2.4](unit2/notes_04_arrays_as_parameters.md#check-your-understanding) |
 | [2.5 Putting It All Together](unit2/notes_05.md) | [HW9](unit2/notes_05.md#homework-9-review) | [Practice Quiz #2 (Unit 2)](https://docs.google.com/document/d/1LLtUdIiUziPBX8Gb76Akd9_-9EKYCuU_s6m5C4LJ2C0) |
 |  | [Project 1: Array Fun](unit2/project1.md) | [Practice Test #1 (Units 1-2)](https://docs.google.com/document/d/1s04wJwrQblJtNPjQsBOHT3WcaVgP8FIJWc0fVfpBpEU) | 

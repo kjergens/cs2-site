@@ -255,6 +255,7 @@ public static boolean isEven(int n) {
     ```
     `x` is unchanged because `triple` only modifies its own copy of the parameter, `n`. The only value that reaches `main` is the one `triple` returns, stored in `y`.
     - Not all paths return a value — if `n >= 0`, the method ends without returning anything. Add `return false;` after the `if` block.
+
     -
     ```java
     public static double average(double a, double b) {

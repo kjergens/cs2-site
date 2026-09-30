@@ -151,6 +151,7 @@ After
     **Answer Key**
 
     1. The method performs an action but does not return a value to the caller.
+
     -
     ```java
     public static void printCube(int n) {
@@ -163,6 +164,7 @@ After
     JAVA!!!
     ```
     - `printBanner` is `void` — it never produces a value, so there's nothing for `x` to store.
+
     -
     ```java
     public static void printLine(int n, String ch) {
