@@ -18,14 +18,14 @@ System.out.println(12 * 12);
 **Solution with a method:**
 
 ```java
-public static int square(int n) {
-    return n * n;
-}
-
 public static void main(String[] args) {
     System.out.println(square(5));
     System.out.println(square(9));
     System.out.println(square(12));
+}
+
+public static int square(int n) {
+    return n * n;
 }
 ```
 
@@ -131,14 +131,15 @@ public static void main(String[] args) {
 **Local scope:** a variable declared inside a method — including its parameters — only exists inside that method. It's created when the method is called and destroyed when the method returns.
 
 ```java
-public static int compute() {
-    int result = 42;        // local to compute()
-    return result;
+public static void main(String[] args) {
+    int r = 0;                   // local to main() - only exists in main
+    int x = compute(4);
+    System.out.println(x);        // 
 }
 
-public static void main(String[] args) {
-    int x = compute();
-    System.out.println(result);   // COMPILE ERROR — result doesn't exist here
+public static int compute(int a) {
+    a = a + r;   // ERROR — r hasn't been declared here so can't use it     
+    return a;
 }
 ```
 
