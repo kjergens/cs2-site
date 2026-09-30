@@ -113,16 +113,16 @@ add(add(1, 2), add(3, 4));   // add(3, 7) → 10
 When you pass a **primitive** (`int`, `double`, `boolean`, etc.) to a method, Java gives the method its own **copy**. Changing the copy inside the method has no effect on the original variable in the caller.
 
 ```java
-public static int triple(int n) {
-    n = n * 3;
-    return n;
-}
-
 public static void main(String[] args) {
     int x = 5;
     int y = triple(x);
     System.out.println(x);   // 5 — unchanged
     System.out.println(y);   // 15 — the returned value
+}
+
+public static int triple(int n) {
+    n = n * 3;
+    return n;
 }
 ```
 
@@ -152,15 +152,15 @@ Two different methods can each declare a variable with the same name (`count`, `
 A returned value isn't printed automatically — the caller decides what to do with it:
 
 ```java
-public static int square(int n) {
-    return n * n;
-}
-
 public static void main(String[] args) {
     System.out.println(square(4));               // print it directly: 16
     int x = square(5);                            // store it: 25
     System.out.println(square(3) + square(4));   // use it in an expression: 25
     System.out.println(square(square(2)));       // pass it into another call: 16
+}
+
+public static int square(int n) {
+    return n * n;
 }
 ```
 
@@ -173,15 +173,15 @@ public static void main(String[] args) {
 A method that returns `boolean` can be used directly in an `if` condition — it's still just a value being handed back, the value just happens to be `true` or `false`.
 
 ```java
-public static boolean isEven(int n) {
-    return n % 2 == 0;
-}
-
 public static void main(String[] args) {
     System.out.println(isEven(6));   // true
     if (isEven(10)) {
         System.out.println("ten is even");
     }
+}
+
+public static boolean isEven(int n) {
+    return n % 2 == 0;
 }
 ```
 
