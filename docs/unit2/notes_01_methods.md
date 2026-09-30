@@ -368,4 +368,4 @@ public static boolean isEven(int n) {
 
     14. Write a method `clamp` that takes three `int` parameters — a value, a min, and a max — and returns the value if it falls within `[min, max]`, the min if the value is too low, or the max if it is too high. Examples: `clamp(5, 0, 10)` → `5`, `clamp(-3, 0, 10)` → `0`, `clamp(15, 0, 10)` → `10`.
 
-    15. Write a method `hypotenuse` that takes two `double` parameters representing the legs of a right triangle and returns the length of the hypotenuse. Use `Math.sqrt` and `Math.pow`.
+    15. Write a method `hypotenuse` that takes two `double` parameters representing the legs of a right triangle and returns the length of the hypotenuse. Use `Math.sqrt( )` to get the square root.
