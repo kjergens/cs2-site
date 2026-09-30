@@ -132,16 +132,18 @@ public static int triple(int n) {
 
 ```java
 public static void main(String[] args) {
-    int r = 0;                   // local to main() - only exists in main
+    int r = 0;                   // local to main() — only exists in main
     int x = compute(4);
-    System.out.println(x);        // 
+    System.out.println(x);       // never runs — compute() below fails to compile
 }
 
 public static int compute(int a) {
-    a = a + r;   // ERROR — r hasn't been declared here so can't use it     
+    a = a + r;   // COMPILE ERROR — r is local to main(), not visible here
     return a;
 }
 ```
+
+**This is not about which method is written first in the file** — `r` is declared *above* `compute` in the file, and `compute` still can't see it. Java doesn't care about definition order; the error is about the `{ }` boundaries. `r` only exists between `main`'s own braces, no matter what's written above or below it.
 
 Two different methods can each declare a variable with the same name (`count`, `result`, whatever) with no conflict — each one only lives while its own method is running.
 
@@ -197,6 +199,7 @@ public static boolean isEven(int n) {
 | `square(4, 5)` when method only takes one param | Wrong number of arguments | Match the parameter count |
 | `square("four")` | Wrong argument type | Pass an `int`, not a `String` |
 | `System.out.println(result)` outside the method that declared `result` | Compile error: variable not in scope | Variables are local — they can't escape their method |
+| Assuming a method must be written above where it's called | Doesn't apply in Java — method order within the class doesn't matter | Methods can be defined in any order; only *variable* scope (the `{ }` a variable is declared in) matters |
 
 ---
 
@@ -212,21 +215,21 @@ public static boolean isEven(int n) {
     - A method's header is `public static double circleArea(double radius)`. What is the input? What is the output?
     - Predict the output.
     ```java
-    public static int add(int a, int b) { return a + b; }
     public static void main(String[] args) {
         int result = add(add(1, 2), add(3, 4));
         System.out.println(result);
     }
+    public static int add(int a, int b) { return a + b; }
     ```
     - Predict the output, then explain why `x` prints the value it does.
     ```java
-    public static int triple(int n) { return n * 3; }
     public static void main(String[] args) {
         int x = 5;
         int y = triple(x);
         System.out.println(x);
         System.out.println(y);
     }
+    public static int triple(int n) { return n * 3; }
     ```
     - Find the bug.
     ```java
@@ -287,30 +290,30 @@ public static boolean isEven(int n) {
 
     7. Predict the output.
     ```java
-    public static int square(int n) {
-        return n * n;
-    }
-
     public static void main(String[] args) {
         System.out.println(square(4));
         System.out.println(square(3) + square(4));
         int x = square(5);
         System.out.println(x);
     }
+
+    public static int square(int n) {
+        return n * n;
+    }
     ```
 
     8. Predict the output.
     ```java
+    public static void main(String[] args) {
+        System.out.println(bigger(3, 7));
+        System.out.println(bigger(bigger(2, 5), bigger(8, 4)));
+    }
+
     public static int bigger(int a, int b) {
         if (a > b) {
             return a;
         }
         return b;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(bigger(3, 7));
-        System.out.println(bigger(bigger(2, 5), bigger(8, 4)));
     }
     ```
 

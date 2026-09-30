@@ -135,12 +135,12 @@ After
     ```
     - Predict the output.
     ```java
-    public static void shout(String word) {
-        System.out.println(word.toUpperCase() + "!!!");
-    }
     public static void main(String[] args) {
         shout("hello");
         shout("java");
+    }
+    public static void shout(String word) {
+        System.out.println(word.toUpperCase() + "!!!");
     }
     ```
     - Why can't you write `int x = printBanner();`?
@@ -204,15 +204,15 @@ After
     6. What would `printStars(4)` display?
     7. Predict the output.
     ```java
+    public static void main(String[] args) {
+        printLine(4, "p");
+        printLine(3, "&");
+    }
     public static void printLine(int n, String ch) {
         for (int i = 0; i < n; i++) {
             System.out.print(ch);
         }
         System.out.println();
-    }
-    public static void main(String[] args) {
-        printLine(4, "p");
-        printLine(3, "&");
     }
     ```
 
