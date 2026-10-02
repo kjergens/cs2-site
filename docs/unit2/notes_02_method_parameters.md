@@ -2,7 +2,7 @@
 
 Let's review the structure of a method:
 
-(../images/javamethod.png)
+![Anatomy of a Java Method](../images/javamethod.png)
 
 You've been writing methods that hand back a value, so `main` can decide what to do with it — print it, store it, use it in more math. **Sometimes you don't need anything handed back.** If all a method needs to do is *perform an action* — like printing something formatted a certain way — there's nothing to return.
 
