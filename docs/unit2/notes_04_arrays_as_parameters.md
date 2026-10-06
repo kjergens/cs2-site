@@ -125,11 +125,9 @@ Use a **return type** when the method's job is to compute something from the arr
 
     **Part A: Concepts**
 
-    **1.** What is the difference between passing a primitive and passing an array to a method?
-    **2.** A method has signature `public static void fill(int[] arr, int val)`. After calling `fill(data, 0)`, what do you expect `data` to contain?
-    ---
-    **Part B: Predict the Output**
-    **3.**
+    1. What is the difference between passing a primitive and passing an array to a method?
+    - A method has signature `public static void fill(int[] arr, int val)`. After calling `fill(data, 0)`, what do you expect `data` to contain?
+    - Predict the Output
     ```java
     public static void main(String[] args) {
         int[] nums = {3, 5, 7};
@@ -145,7 +143,7 @@ Use a **return type** when the method's job is to compute something from the arr
         }
     }
     ```
-    **4.**
+    - Predict the Output
     ```java
     public static void main(String[] args) {
         int[] vals = {10, 20, 30};
@@ -161,31 +159,25 @@ Use a **return type** when the method's job is to compute something from the arr
         return total;
     }
     ```
-    ---
-    **Part C: Write the Code**
-    **5.** Write a method `max(int[] arr)` that returns the largest element.
-    **6.** Write a method `countAbove(int[] arr, int threshold)` that returns how many elements are strictly greater than `threshold`.
-    **7.** Write a method `normalize(int[] arr, int divisor)` that divides every element of the array by the divisor in place (modifying the original array — no return value). Then write a `main` call that uses it.
+    - Write a method `max(int[] arr)` that returns the largest element.
+    - Write a method `countAbove(int[] arr, int threshold)` that returns how many elements are strictly greater than `threshold`.
+    - Write a method `normalize(int[] arr, int divisor)` that divides every element of the array by the divisor in place (modifying the original array — no return value). Then write a `main` call that uses it.
 
     ---
 
     **Answer Key**
 
     **Part A**
-    **1.** Primitives are passed by value — the method gets a copy and cannot change the original. Arrays are passed by reference — the method works on the same array, so changes to elements persist after the method returns.
-    **2.** Every element of `data` would be set to 0.
-
-    **Part B**
-    **3.** `6 10 14 ` — `doubleAll` modifies the original array through the reference.
-    **4.**
+    1. Primitives are passed by value — the method gets a copy and cannot change the original. Arrays are passed by reference — the method works on the same array, so changes to elements persist after the method returns.
+    - Every element of `data` would be set to 0.
+    - `6 10 14 ` — `doubleAll` modifies the original array through the reference.
+    - output:
     ```
     60
     10
     ```
     `sum` reads the array but does not modify it. `vals[0]` is still 10.
-
-    **Part C**
-    **5.**
+    - output:
     ```java
     public static int max(int[] arr) {
         int max = arr[0];
@@ -195,7 +187,7 @@ Use a **return type** when the method's job is to compute something from the arr
         return max;
     }
     ```
-    **6.**
+    - output:
     ```java
     public static int countAbove(int[] arr, int threshold) {
         int count = 0;
@@ -205,7 +197,7 @@ Use a **return type** when the method's job is to compute something from the arr
         return count;
     }
     ```
-    **7.**
+    - output:
     ```java
     public static void normalize(int[] arr, int divisor) {
         for (int i = 0; i < arr.length; i++) {
@@ -216,7 +208,6 @@ Use a **return type** when the method's job is to compute something from the arr
     // int[] data = {10, 20, 30};
     // normalize(data, 10);   // data is now {1, 2, 3}
     ```
-
 ---
 
 ## Homework 8: Arrays as Parameters
