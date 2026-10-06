@@ -226,8 +226,8 @@ Use a **return type** when the method's job is to compute something from the arr
         System.out.println(nums[0]);
     }
 
-    public static void doubleFirst(int[] nums) {
-        nums[0] = nums[0] * 2;
+    public static void doubleFirst(int[] ids) {
+        ids[0] = ids[0] * 2;
     }
     ```
 
@@ -264,8 +264,8 @@ Use a **return type** when the method's job is to compute something from the arr
     ```
 
     5. True or false — explain your answer.
-       - a) A method can permanently change the contents of an array it receives as a parameter.
-       - b) A method can permanently change an `int` variable it receives as a parameter.
+       <br>a) A method can permanently change the contents of an array it receives as a parameter.
+       <br> b) A method can permanently change an `int` variable it receives as a parameter.
 
     ### Part 2: Methods That Take Arrays and Return Values
 
