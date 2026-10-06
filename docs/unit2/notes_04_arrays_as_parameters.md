@@ -9,27 +9,27 @@ When you pass a **primitive** (int, double, boolean) to a method, the method get
 When you pass an **array**, the method gets a **reference** — a pointer to the same array in memory. Changes the method makes to array elements *do* affect the original.
 
 ```java
-public static void doubleFirst(int[] arr) {
-    arr[0] = arr[0] * 2;
-}
-
 public static void main(String[] args) {
     int[] nums = {5, 10, 15};
     doubleFirst(nums);
     System.out.println(nums[0]);   // 10 — the original was changed!
 }
+
+public static void doubleFirst(int[] arr) {
+    arr[0] = arr[0] * 2;
+}
 ```
 
 Compare with a primitive:
 ```java
-public static void tryToChange(int n) {
-    n = n * 2;
-}
-
 public static void main(String[] args) {
     int x = 5;
     tryToChange(x);
     System.out.println(x);   // still 5 — copy unchanged
+}
+
+public static void tryToChange(int n) {
+    n = n * 2;
 }
 ```
 
@@ -44,17 +44,17 @@ public static void main(String[] args) {
 A void method can take an array and modify its elements in place:
 
 ```java
-public static void addOne(int[] arr) {
-    for (int i = 0; i < arr.length; i++) {
-        arr[i] += 1;
-    }
-}
-
 public static void main(String[] args) {
     int[] data = {10, 20, 30};
     addOne(data);
     for (int i = 0; i < data.length; i++) {
         System.out.print(data[i] + " ");   // 11 21 31
+    }
+}
+
+public static void addOne(int[] arr) {
+    for (int i = 0; i < arr.length; i++) {
+        arr[i] += 1;
     }
 }
 ```
@@ -126,20 +126,11 @@ Use a **return type** when the method's job is to compute something from the arr
     **Part A: Concepts**
 
     **1.** What is the difference between passing a primitive and passing an array to a method?
-
     **2.** A method has signature `public static void fill(int[] arr, int val)`. After calling `fill(data, 0)`, what do you expect `data` to contain?
-
     ---
-
     **Part B: Predict the Output**
-
     **3.**
     ```java
-    public static void doubleAll(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] *= 2;
-        }
-    }
     public static void main(String[] args) {
         int[] nums = {3, 5, 7};
         doubleAll(nums);
@@ -147,10 +138,21 @@ Use a **return type** when the method's job is to compute something from the arr
             System.out.print(nums[i] + " ");
         }
     }
+        
+    public static void doubleAll(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] *= 2;
+        }
+    }
     ```
-
     **4.**
     ```java
+    public static void main(String[] args) {
+        int[] vals = {10, 20, 30};
+        System.out.println(sum(vals));
+        System.out.println(vals[0]);
+    }
+
     public static int sum(int[] arr) {
         int total = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -158,21 +160,11 @@ Use a **return type** when the method's job is to compute something from the arr
         }
         return total;
     }
-    public static void main(String[] args) {
-        int[] vals = {10, 20, 30};
-        System.out.println(sum(vals));
-        System.out.println(vals[0]);
-    }
     ```
-
     ---
-
     **Part C: Write the Code**
-
     **5.** Write a method `max(int[] arr)` that returns the largest element.
-
     **6.** Write a method `countAbove(int[] arr, int threshold)` that returns how many elements are strictly greater than `threshold`.
-
     **7.** Write a method `normalize(int[] arr, int divisor)` that divides every element of the array by the divisor in place (modifying the original array — no return value). Then write a `main` call that uses it.
 
     ---
@@ -180,15 +172,11 @@ Use a **return type** when the method's job is to compute something from the arr
     **Answer Key**
 
     **Part A**
-
     **1.** Primitives are passed by value — the method gets a copy and cannot change the original. Arrays are passed by reference — the method works on the same array, so changes to elements persist after the method returns.
-
     **2.** Every element of `data` would be set to 0.
 
     **Part B**
-
     **3.** `6 10 14 ` — `doubleAll` modifies the original array through the reference.
-
     **4.**
     ```
     60
@@ -197,7 +185,6 @@ Use a **return type** when the method's job is to compute something from the arr
     `sum` reads the array but does not modify it. `vals[0]` is still 10.
 
     **Part C**
-
     **5.**
     ```java
     public static int max(int[] arr) {
@@ -208,7 +195,6 @@ Use a **return type** when the method's job is to compute something from the arr
         return max;
     }
     ```
-
     **6.**
     ```java
     public static int countAbove(int[] arr, int threshold) {
@@ -219,7 +205,6 @@ Use a **return type** when the method's job is to compute something from the arr
         return count;
     }
     ```
-
     **7.**
     ```java
     public static void normalize(int[] arr, int divisor) {
@@ -244,27 +229,27 @@ Use a **return type** when the method's job is to compute something from the arr
 
     1. Trace this code. What does `main` print?
     ```java
-    public static void doubleFirst(int[] arr) {
-        arr[0] = arr[0] * 2;
-    }
-
     public static void main(String[] args) {
         int[] nums = {5, 10, 15};
         doubleFirst(nums);
         System.out.println(nums[0]);
     }
+
+    public static void doubleFirst(int[] arr) {
+        arr[0] = arr[0] * 2;
+    }
     ```
 
     2. Now trace this code. What does `main` print?
     ```java
-    public static void tryToChange(int n) {
-        n = n * 2;
-    }
-
     public static void main(String[] args) {
         int x = 5;
         tryToChange(x);
         System.out.println(x);
+    }
+
+    public static void tryToChange(int n) {
+        n = n * 2;
     }
     ```
 
@@ -272,17 +257,17 @@ Use a **return type** when the method's job is to compute something from the arr
 
     4. Trace this code fully. What does `main` print after `addOne` is called?
     ```java
-    public static void addOne(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] += 1;
-        }
-    }
-
     public static void main(String[] args) {
         int[] data = {10, 20, 30};
         addOne(data);
         for (int i = 0; i < data.length; i++) {
             System.out.print(data[i] + " ");
+        }
+    }
+
+    public static void addOne(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] += 1;
         }
     }
     ```
