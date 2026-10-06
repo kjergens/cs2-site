@@ -15,8 +15,8 @@ public static void main(String[] args) {
     System.out.println(nums[0]);   // 10 — the original was changed!
 }
 
-public static void doubleFirst(int[] arr) {
-    arr[0] = arr[0] * 2;
+public static void doubleFirst(int[] nums) {
+    nums[0] = nums[0] * 2;
 }
 ```
 
@@ -52,9 +52,9 @@ public static void main(String[] args) {
     }
 }
 
-public static void addOne(int[] arr) {
-    for (int i = 0; i < arr.length; i++) {
-        arr[i] += 1;
+public static void addOne(int[] nums) {
+    for (int i = 0; i < nums.length; i++) {
+        nums[i] += 1;
     }
 }
 ```
@@ -68,16 +68,16 @@ The method uses no `return` — it modifies the array through the reference.
 A method can take an array, compute something, and return the result:
 
 ```java
-public static int sum(int[] arr) {
+public static int sum(int[] nums) {
     int total = 0;
-    for (int i = 0; i < arr.length; i++) {
-        total += arr[i];
+    for (int i = 0; i < nums.length; i++) {
+        total += nums[i];
     }
     return total;
 }
 
-public static double average(int[] arr) {
-    return (double) sum(arr) / arr.length;
+public static double average(int[] nums) {
+    return (double) sum(nums) / nums.length;
 }
 ```
 
@@ -96,10 +96,10 @@ Notice: `average` calls `sum` — one method can call another. This is decomposi
 
 | Method | Does what | Returns |
 |---|---|---|
-| `void addOne(int[] arr)` | Modifies array elements in place | Nothing |
-| `int sum(int[] arr)` | Computes a value from the array | The value |
-| `int max(int[] arr)` | Finds the largest element | The value |
-| `void normalize(int[] arr, int d)` | Divides every element by d in place | Nothing |
+| `void addOne(int[] nums)` | Modifies array elements in place | Nothing |
+| `int sum(int[] nums)` | Computes a value from the array | The value |
+| `int max(int[] nums)` | Finds the largest element | The value |
+| `void normalize(int[] nums, int d)` | Divides every element by d in place | Nothing |
 
 Use **void** when the method's job is to modify the array.  
 Use a **return type** when the method's job is to compute something from the array.
@@ -110,8 +110,8 @@ Use a **return type** when the method's job is to compute something from the arr
 
 | Error | Problem | Fix |
 |---|---|---|
-| `i <= arr.length` in loop | Off by one — crashes last iteration | `i < arr.length` |
-| `return total / arr.length` when average should be double | Integer division drops decimal | `return (double) total / arr.length` |
+| `i <= nums.length` in loop | Off by one — crashes last iteration | `i < nums.length` |
+| `return total / nums.length` when average should be double | Integer division drops decimal | `return (double) total / nums.length` |
 | Expecting array to be unchanged after passing to a method | Arrays pass by reference — method can modify them | Check whether the method modifies elements |
 | Expecting `int x = 5` to change after method call | Primitives pass by copy | Primitives are safe from modification |
 
@@ -235,8 +235,8 @@ Use a **return type** when the method's job is to compute something from the arr
         System.out.println(nums[0]);
     }
 
-    public static void doubleFirst(int[] arr) {
-        arr[0] = arr[0] * 2;
+    public static void doubleFirst(int[] nums) {
+        nums[0] = nums[0] * 2;
     }
     ```
 
@@ -265,9 +265,9 @@ Use a **return type** when the method's job is to compute something from the arr
         }
     }
 
-    public static void addOne(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] += 1;
+    public static void addOne(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] += 1;
         }
     }
     ```
