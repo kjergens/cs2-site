@@ -123,8 +123,6 @@ Use a **return type** when the method's job is to compute something from the arr
 
     **Unit 2 · Chapter 4**
 
-    **Part A: Concepts**
-
     1. What is the difference between passing a primitive and passing an array to a method?
     - A method has signature `public static void fill(int[] arr, int val)`. After calling `fill(data, 0)`, what do you expect `data` to contain?
     - Predict the Output
@@ -167,7 +165,6 @@ Use a **return type** when the method's job is to compute something from the arr
 
     **Answer Key**
 
-    **Part A**
     1. Primitives are passed by value — the method gets a copy and cannot change the original. Arrays are passed by reference — the method works on the same array, so changes to elements persist after the method returns.
     - Every element of `data` would be set to 0.
     - `6 10 14 ` — `doubleAll` modifies the original array through the reference.
