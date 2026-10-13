@@ -64,7 +64,7 @@ Your `main` method should only act as a controller. It should not contain any lo
 
 ---
 
-## Code Starter Template
+## Starter Code
 
 ```java
 /**
