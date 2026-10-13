@@ -5,7 +5,11 @@ For this project, you will create a text encryption program.
 
 **Summary:** You will store lines of text inside a `String[]` array and pass that array through different methods. Because arrays in Java are passed by **reference**, any changes you make to the array inside a method will permanently change the original array in your `main` method.
 
-**Setup:** Create a free account with your school Google Account on [CodePad.app](https://codepad.app/).
+**Setup:** 
+1. Create a free account with your school Google Account on [CodePad.app](https://codepad.app/).
+2. Go to **MyPads** -> **+New Pad**
+3. Select **Java** -> **Create**
+4. Select the three dots and **Rename** `Main.java` to `CryptoMutator.java`
 
 ---
 
