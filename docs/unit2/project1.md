@@ -8,7 +8,7 @@ For this project, you will create a text encryption program.
 **Setup:** 
 ![CodePad](../images/codepad_example.png)
 
-1. Create a free account with your school Google Account on [CodePad.app](https://codepad.app/).
+1. Create a [CodePad.app](https://codepad.app/) account with your school Google Account.
 1. Go to **MyPads** -> **+New Pad**
 1. Select **Java** -> **Create**
 1. Name the project `Project1`.
