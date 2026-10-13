@@ -173,13 +173,4 @@ At the top of your code as a comment block, answer the following:
 
 ---
 
-## Timeline
-
-| Class | Goal |
-|---|---|
-| 1 | Choose your option. Plan your array and method list on paper. Start coding. |
-| 2 | Methods drafted. Array working. |
-| 3 | All requirements met. Testing and debugging. |
-| 4 | Final polish. Submit. |
-
 **Submission:** Upload your `.java` file to Schoology by the end of Class 4.
