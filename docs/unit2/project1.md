@@ -1,9 +1,11 @@
 # Project 1: The Crypto Mutator
 
-## Project Overview
-In CS1, you wrote programs that analyzed data without changing it. In CS2, we modify data directly in the computer's memory. For this project, you will create a text encryption program. 
+## Project Overview & Setup
+For this project, you will create a text encryption program. 
 
-You will store lines of text inside a `String[]` array and pass that array through different methods. Because arrays in Java are passed by **reference**, any changes you make to the array inside a method will permanently change the original array in your `main` method.
+**Summary:** You will store lines of text inside a `String[]` array and pass that array through different methods. Because arrays in Java are passed by **reference**, any changes you make to the array inside a method will permanently change the original array in your `main` method.
+
+**Setup:**: Create a free account with your school Google Account on CodePad.app[https://codepad.app/].
 
 ---
 
