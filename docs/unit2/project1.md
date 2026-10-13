@@ -10,6 +10,20 @@ For this project, you will create a text encryption program.
 2. Go to **MyPads** -> **+New Pad**
 3. Select **Java** -> **Create**
 4. Select the three dots and **Rename** `Main.java` to `CryptoMutator.java`
+5. Finally, paste the Starter Code (below) and **Run**
+   
+Your setup is correct if you see the following:
+
+```java
+=== 1. ORIGINAL PASSAGE ===
+
+=== 2. ANALYSIS ===
+Highest density of 's' found at Index: -1
+
+=== 3. SANITIZED PASSAGE (In-Place Change) ===
+
+=== 4. ENCRYPTED PASSAGE (Shift = 3) ===
+```
 
 ---
 
