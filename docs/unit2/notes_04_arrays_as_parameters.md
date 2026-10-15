@@ -124,9 +124,7 @@ Use a **return type** when the method's job is to compute something from the arr
     **Unit 2 · Chapter 4**
 
     1. What is the difference between passing a primitive and passing an array to a method?
-    
     - A method has signature `public static void fill(int[] arr, int val)`. After calling `fill(data, 0)`, what do you expect `data` to contain?
-    
     - Predict the Output
     
     ```java
@@ -164,9 +162,7 @@ Use a **return type** when the method's job is to compute something from the arr
     ```
     
     5. Write a method `max(int[] arr)` that returns the largest element.
-    
     - Write a method `countAbove(int[] arr, int threshold)` that returns how many elements are strictly greater than `threshold`.
-    
     - Write a method `normalize(int[] arr, int divisor)` that divides every element of the array by the divisor in place (modifying the original array — no return value). Then write a `main` call that uses it.
 
     ---
@@ -174,9 +170,7 @@ Use a **return type** when the method's job is to compute something from the arr
     **Answer Key**
 
     1. Primitives are passed by value — the method gets a copy and cannot change the original. Arrays are passed by reference — the method works on the same array, so changes to elements persist after the method returns.
-    
     - Every element of `data` would be set to 0.
-    
     - `6 10 14 ` 
     — `doubleAll` modifies the original array through the reference.
     - output:
@@ -186,7 +180,6 @@ Use a **return type** when the method's job is to compute something from the arr
     ```
     `sum` reads the array but does not modify it. `vals[0]` is still 10.
     6. output:
-    
     ```java
     public static int max(int[] arr) {
         int max = arr[0];
