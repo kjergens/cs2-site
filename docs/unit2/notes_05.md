@@ -112,7 +112,23 @@ This page ties together everything from Unit 2 before Quiz 2: methods (input/out
         String[] cart = items;
     }
     ```
+
+      * a. The primitive variable price is stored on the: ______________________
+      * b. The reference variable cart is stored on the stack, but the actual sequence of String objects it points to is stored on the: ______________________
+      * c. If you execute cart[2] = "Desk";, what will be the value of items[2] immediately after? ______________________
+
+    10. What is printed by the following program? Trace your memory carefully!
+    ```java
+    public static void main(String[] args) {
+        int[] values = {5, 10, 15};
+        alterArray(values);
+        System.out.println(values[0] + " " + values[1] + " " + values[2]);
+    }
+
+    public static void alterArray(int[] data) {
+        data = new int[]{100, 200, 300};
+        data[0] = 999;
+    }
+    ```
     
-    * a. The primitive variable price is stored on the: ______________________
-    * b. The reference variable cart is stored on the stack, but the actual sequence of String objects it points to is stored on the: ______________________
-    * c. If you execute cart[2] = "Desk";, what will be the value of items[2] immediately after? ______________________
+    
