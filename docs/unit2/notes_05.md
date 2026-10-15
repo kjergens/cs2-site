@@ -102,4 +102,17 @@ This page ties together everything from Unit 2 before Quiz 2: methods (input/out
     }
     ```
 
-    8. In one sentence, what's the difference between a `void` method and a method that returns a value?
+    8. For an array, for example `String[] words = {"cat", "dog", "fish"}, what is `words.length`?
+
+    9. For this code:
+    ```java
+    public static void main(String[] args) {
+        double price = 19.99;
+        String[] items = {"Book", "Pen", "Bag"};
+        String[] cart = items;
+    }
+    ```
+    
+    * a. The primitive variable price is stored on the: ______________________
+    * b. The reference variable cart is stored on the stack, but the actual sequence of String objects it points to is stored on the: ______________________
+    * c. If you execute cart[2] = "Desk";, what will be the value of items[2] immediately after? ______________________
