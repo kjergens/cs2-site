@@ -102,7 +102,7 @@ This page ties together everything from Unit 2 before Quiz 2: methods (input/out
     }
     ```
 
-    8. For an array, for example `String[] words = {"cat", "dog", "fish"}, what is `words.length`?
+    8. For an array, for example `String[] words = {"cat", "dog", "fish"}`, what is `words.length`?
 
     9. For this code:
     ```java
