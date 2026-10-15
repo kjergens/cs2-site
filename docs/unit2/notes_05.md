@@ -113,9 +113,9 @@ This page ties together everything from Unit 2 before Quiz 2: methods (input/out
     }
     ```
 
-      * a. The primitive variable price is stored on the: ______________________
-      * b. The reference variable cart is stored on the stack, but the actual sequence of String objects it points to is stored on the: ______________________
-      * c. If you execute cart[2] = "Desk";, what will be the value of items[2] immediately after? ______________________
+      * a. The primitive variable `price` is stored on the: ______________________
+      * b. The reference variable `cart` is stored on the stack, but the actual sequence of String objects it points to is stored on the: ______________________
+      * c. If you execute `cart[2] = "Desk";`, what will be the value of `items[2]` immediately after? ______________________
 
     10. What is printed by the following program? Trace your memory carefully!
     ```java
