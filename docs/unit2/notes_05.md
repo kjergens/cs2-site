@@ -68,17 +68,17 @@ This page ties together everything from Unit 2 before Quiz 2: methods (input/out
 
     5. What is printed by the following code?
     ```java
-    public static int sumArray(int[] arr) {
-        int total = 0;
-        for (int n : arr) {
-            total += n;
-        }
-        return total;
-    }
-
     public static void main(String[] args) {
         int[] nums = {4, 7, 2};
         System.out.println(sumArray(nums));
+    }
+    
+    public static int sumArray(int[] arr) {
+        int total = 0;
+        for (int i = 0; i < arr.length; i++) {
+            total += arr[i];
+        }
+        return total;
     }
     ```
 
