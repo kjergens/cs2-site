@@ -4,9 +4,8 @@
 For this project, you will create a text analysis program and use it to analyze the script of Star Wars (1977).
 
 
-|   |   |
-| :---: | :---: |
-| ![Script](../images/starwarsscript.png)| ![Cover](../images/starwarscover.png) |
+| ![Script](../images/starwarsscript.png){width="100"}| ![Cover](../images/starwarscover.png){width="75"} |
+
 
 
 **Summary:** You will store lines of a movie script inside a `String[]` array and pass that array through different methods. Because arrays in Java are passed by **reference**, any changes you make to the array inside a method will permanently change the original array in your `main` method.
