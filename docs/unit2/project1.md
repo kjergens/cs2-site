@@ -41,4 +41,16 @@ Your setup is correct if you see the following:
 LUKE speaks 0 times in this file.
 ```
 
-**Follow the comments in the code to complete the project.**
+## Complete the Project
+
+Follow the comments in the code to complete the project. You will complete the methods for:
+1. printScript
+2. cleanScript
+3. censorWord
+4. countCharacterLines
+
+## Reflection
+Submit your code with the answers to these questions:
+1. How would you show the first 25 lines of the script instead of the first 10?
+2. How would you censor "LIGHT SABER" to "LIGHT BEAM"?
+3. How would you count how many times HANS SOLO spoke?
