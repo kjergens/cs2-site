@@ -3,16 +3,10 @@
 ## Project Overview
 For this project, you will create a text analysis program and use it to analyze the script of Star Wars (1977).
 
-<table style="border: none; border-collapse: collapse; width: 100%;">
-  <tr style="border: none;">
-    <td style="border: none; padding: 10px; text-align: center; width: 50%;">
-      <img src="../images/starwarsscript.png" alt="Script" style="width: 100%; max-width: 100px;">
-    </td>
-    <td style="border: none; padding: 10px; text-align: center; width: 50%;">
-      <img src="../images/starwarscover.png" alt="Cover 2" style="width: 100%; max-width: 50px;">
-    </td>
-  </tr>
-</table>
+
+|   |   |
+| :---: | :---: |
+| ![Script](../images/starwarsscript.png){ width="200" } | ![Cover](../images/starwarscover.png){ width="200" } |
 
 
 **Summary:** You will store lines of a movie script inside a `String[]` array and pass that array through different methods. Because arrays in Java are passed by **reference**, any changes you make to the array inside a method will permanently change the original array in your `main` method.
