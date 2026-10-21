@@ -4,7 +4,7 @@
 For this project, you will create a text analysis program and use it to analyze the script of Star Wars (1977).
 
 
- ![Cover](../images/starwarscover.png){width="150"} ![Script](../images/starwarsscript.png){width="175"} ![Toy](../images/starwarsslegos.png){width="175"} 
+ ![Cover](../images/starwarscover.png){width="150"} ![Script](../images/starwarsscript.png){width="175"} ![Toy](../images/starwarslegos.png){width="175"} 
 
 
 
