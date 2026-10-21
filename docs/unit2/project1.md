@@ -6,7 +6,7 @@ For this project, you will create a text analysis program and use it to analyze 
 <table style="border: none; border-collapse: collapse; width: 100%;">
   <tr style="border: none;">
     <td style="border: none; padding: 10px; text-align: center; width: 50%;">
-      <img src="../images/starwarsscript.png)" alt="Description 1" style="width: 100%; max-width: 250px;">
+      <img src="../images/starwarsscript.png" alt="Description 1" style="width: 100%; max-width: 250px;">
     </td>
     <td style="border: none; padding: 10px; text-align: center; width: 50%;">
       <img src="../images/starwarscover.png" alt="Description 2" style="width: 100%; max-width: 250px;">
