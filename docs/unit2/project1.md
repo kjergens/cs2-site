@@ -4,7 +4,7 @@
 How many times does Luke Skywalker speak in the first Star Wars movie? How about C3P0? Princess Leia? For this project, you will create a text analysis program, use it on the script of Star Wars (1977) and answer questions like these.
 
 
- ![Cover](../images/starwarscover.png){width="150"} ![Script](../images/starwarsscript.png){width="175"}  ![Toy](../images/starwarslegos.png){width="195"} 
+ ![Cover](../images/starwarscover.png){width="150"} ![Script](../images/starwarsscript.png){width="175"} &nbsp&nbsp ![Toy](../images/starwarslegos.png){width="195"} 
 
 
 
