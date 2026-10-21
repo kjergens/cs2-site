@@ -44,5 +44,5 @@ Follow the comments in the code to complete the project. You will complete the m
 Submit your code with the answers to these questions:
 
 1. How would you show the first 25 lines of the script instead of the first 10?
-2. How would you censor "LIGHT SABER" to "LIGHT BEAM"?
-3. How would you count how many times HANS SOLO spoke?
+2. How would you censor "kill" to "hurt"?
+3. How would you count how many times HAN spoke?
