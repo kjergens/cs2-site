@@ -29,17 +29,7 @@ How many times does Luke Skywalker speak in the first Star Wars movie? How about
    
 Your setup is correct if you see the following:
 ![CodePad Setup](../images/cs2_codepad.png)
-```java
->  java ScriptParser 
-=== 1. RAW INCOMING SCRIPT (First 10 lines) ===
 
-=== 2. CLEANING & STANDARDIZING ===
-
-=== 3. CONTENT MODERATION ===
-
-=== 4. CHARACTER DIALOGUE TRACKING ===
-LUKE speaks 0 times in this file.
-```
 
 ## Complete the Project
 
