@@ -8,12 +8,12 @@ For this project, you will create a text analysis program.
 **Setup:** 
 ![CodePad](../images/cs2_codepad.png)
 
-1. Create a [CodePad.app](https://codepad.app/) account with your school Google Account.
+1. Create a [CodePad.app](https://codepad.app/){:target="_blank"} account with your school Google Account.
 1. Go to **MyPads** -> **+New Pad**
 1. Select **Java** -> **Create**
 1. Name the project `CS2Project1-YOURNAME`.
 1. Select the three dots and **Rename** `Main.java` to `ScriptParser.java`
-1. Paste the [Starter Code](https://codepad.app/edit/zp93qynw) 
+1. Paste the [Starter Code](https://codepad.app/edit/zp93qynw){:target="_blank"} 
 1. Copy and paste the text file dialogue.txt.
 1. Copy and paste the StringsCheatSheet.txt.
 1. **Run** the program.  
