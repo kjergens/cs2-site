@@ -1,7 +1,10 @@
 # Project 1: Script Parser
 
 ## Project Overview
-For this project, you will create a text analysis program. 
+For this project, you will create a text analysis program and use it to analyze the script of Star Wars (1977).
+
+![Star Wars Script](../images/starwarsscript.png)
+![Star Wars Cover](../images/starwarscover.png)
 
 **Summary:** You will store lines of a movie script inside a `String[]` array and pass that array through different methods. Because arrays in Java are passed by **reference**, any changes you make to the array inside a method will permanently change the original array in your `main` method.
 
@@ -23,7 +26,7 @@ For this project, you will create a text analysis program.
 1. **Run** the program.  
    
 Your setup is correct if you see the following:
-![CodePad](../images/cs2_codepad.png)
+![CodePad Setup](../images/cs2_codepad.png)
 ```java
 >  java ScriptParser 
 === 1. RAW INCOMING SCRIPT (First 10 lines) ===
