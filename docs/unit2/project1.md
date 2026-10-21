@@ -6,7 +6,7 @@ For this project, you will create a text analysis program.
 **Summary:** You will store lines of a movie script inside a `String[]` array and pass that array through different methods. Because arrays in Java are passed by **reference**, any changes you make to the array inside a method will permanently change the original array in your `main` method.
 
 **Setup:** 
-![CodePad](../images/codepad_example.png)
+![CodePad](../images/cs2_codepad.png)
 
 1. Create a [CodePad.app](https://codepad.app/) account with your school Google Account.
 1. Go to **MyPads** -> **+New Pad**
