@@ -198,6 +198,7 @@ By Class 23, the same class will have constructors and methods. The starting poi
     ### Part 1: Classes and Objects
 
     1. For each item below, write *class* or *object*:
+    
        - a) The concept of a "Dog" in general — a description of what every dog has and can do
        - b) A specific dog named Fido who is 3 years old and is a Labrador
        - c) The description of what every Student has: a name, a GPA, and a grade level
