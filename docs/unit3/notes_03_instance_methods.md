@@ -349,9 +349,9 @@ System.out.println(bob);     // Bob: $300.0
     }
     ```
 
-    8. Add a method `changeHeight` that changes the `height`. It should take a `double` parameter as input.
-    9. Add a method `changeWidth` that changes the `width`. It should take a `double` parameter as input.
-    10. Add a `toString` method that returns a String in this format: `"Rectangle: W x H"` (e.g. `"Rectangle: 4.0 x 3.0"`). Then write a `main` that creates a `Rectangle` with width `4.0` and height `3.0`, prints it directly with `System.out.println` (which calls `toString` automatically), and prints its area.
+    8. Add a method `changeHeight` that changes the `height`. It should take a `double` parameter as input. It does not return anything.
+    9. Add a method `changeWidth` that changes the `width`. It should take a `double` parameter as input. It does not return anything.
+    10. Add a `shrink` method that takes no input and does not return anything. It should change both the `height` and the `width` to half their size.
 
     ### Part 4: Write Instance Methods with Return Values
 
