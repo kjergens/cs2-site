@@ -330,7 +330,7 @@ System.out.println(bob);     // Bob: $300.0
         s.adjustGpa(-0.2);
         System.out.println(s.isHonorRoll());
         s.promote();
-        System.out.println(s.toString());
+        System.out.println(s);
     }
     ```
 
