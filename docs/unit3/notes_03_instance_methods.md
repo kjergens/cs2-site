@@ -342,20 +342,28 @@ System.out.println(bob);     // Bob: $300.0
         public double width;
         public double height;
 
-        public Rectangle(double width, double height) {
-            this.width = width;
-            this.height = height;
+        public Rectangle(double w, double h) {
+            width = w;
+            height = h;
         }
     }
     ```
 
-    8. Add a method `area` that returns `width * height` as a `double`.
-    9. Add a method `perimeter` that returns `2 * (width + height)` as a `double`.
+    8. Add a method `changeHeight` that changes the `height`. It should take a `double` parameter as input.
+    9. Add a method `changeWidth` that changes the `width`. It should take a `double` parameter as input.
     10. Add a `toString` method that returns a String in this format: `"Rectangle: W x H"` (e.g. `"Rectangle: 4.0 x 3.0"`). Then write a `main` that creates a `Rectangle` with width `4.0` and height `3.0`, prints it directly with `System.out.println` (which calls `toString` automatically), and prints its area.
 
-    ### Part 4: Find the Bug
+    ### Part 4: Write Instance Methods with Return Values
 
-    11. Find the bug.
+    Use the Rectangle class for problems 9–11:
+
+    9. Add a method `area` that returns `width * height` as a `double`.
+    10. Add a method `perimeter` that returns `2 * (width + height)` as a `double`.
+    11. Add a `toString` method that returns a String in this format: `"Rectangle: W x H"` (e.g. `"Rectangle: 4.0 x 3.0"`). Then write a `main` that creates a `Rectangle` with width `4.0` and height `3.0`, prints it directly with `System.out.println` (which calls `toString` automatically), and prints its area.
+
+    ### Part 5: Find the Bug
+
+    12. Find the bug.
     ```java
     public class Thermometer {
         public double tempC;
@@ -370,7 +378,7 @@ System.out.println(bob);     // Bob: $300.0
     }
     ```
 
-    12. Find the bug.
+    13. Find the bug.
     ```java
     public class Circle {
         public double radius;
@@ -385,7 +393,7 @@ System.out.println(bob);     // Bob: $300.0
     }
     ```
 
-    13. Find the bug. 
+    14. Find the bug. 
     ```java
     public class Counter {
         public int count;
