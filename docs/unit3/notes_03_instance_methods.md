@@ -262,9 +262,9 @@ System.out.println(bob);     // Bob: $300.0
 
     ```java
     public class Student {
-        public String name;
-        public int grade;
-        public double gpa;
+        String name;
+        int grade;
+        double gpa;
 
         public Student(String n, int g, double gp) {
             name = n;
@@ -339,8 +339,8 @@ System.out.println(bob);     // Bob: $300.0
     Use this class for problems 8–10:
     ```java
     public class Rectangle {
-        public double width;
-        public double height;
+        double width;
+        double height;
 
         public Rectangle(double w, double h) {
             width = w;
@@ -366,7 +366,7 @@ System.out.println(bob);     // Bob: $300.0
     12. Find the bug.
     ```java
     public class Thermometer {
-        public double tempC;
+        double tempC;
 
         public Thermometer(double t) {
             tempC = t;
@@ -396,7 +396,7 @@ System.out.println(bob);     // Bob: $300.0
     14. Find the bug. 
     ```java
     public class Counter {
-        public int count;
+        int count;
 
         public Counter(int start) {
             count = start;
