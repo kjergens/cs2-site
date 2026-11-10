@@ -13,9 +13,9 @@ public class BankAccount {
     String owner;
     double balance;
 
-    public BankAccount(String owner, double balance) {
-        this.owner = owner;
-        this.balance = balance;
+    public BankAccount(String o, double b) {
+        owner = o;
+        balance = b;
     }
 }
 ```
@@ -33,9 +33,9 @@ public class BankAccount {
     String owner;
     double balance;
 
-    public BankAccount(String owner, double balance) {
-        this.owner = owner;
-        this.balance = balance;
+    public BankAccount(String o, double b) {
+        owner = o;
+        balance = b;
     }
 
     public void deposit(double amount) {
@@ -115,9 +115,9 @@ public class BankAccount {
     String owner;
     double balance;
 
-    public BankAccount(String owner, double balance) {
-        this.owner = owner;
-        this.balance = balance;
+    public BankAccount(String o, double b) {
+        owner = o;
+        balance = b;
     }
 
     public void deposit(double amount) {
@@ -266,10 +266,10 @@ System.out.println(bob);     // Bob: $300.0
         public int grade;
         public double gpa;
 
-        public Student(String name, int grade, double gpa) {
-            this.name = name;
-            this.grade = grade;
-            this.gpa = gpa;
+        public Student(String n, int g, double gp) {
+            name = n;
+            grade = g;
+            gpa = gp;
         }
 
         public void promote() {
@@ -368,8 +368,8 @@ System.out.println(bob);     // Bob: $300.0
     public class Thermometer {
         public double tempC;
 
-        public Thermometer(double tempC) {
-            this.tempC = tempC;
+        public Thermometer(double t) {
+            tempC = t;
         }
 
         public static double toFahrenheit() {
@@ -383,8 +383,8 @@ System.out.println(bob);     // Bob: $300.0
     public class Circle {
         public double radius;
 
-        public Circle(double radius) {
-            this.radius = radius;
+        public Circle(double r) {
+            radius = r;
         }
 
         public double area() {
