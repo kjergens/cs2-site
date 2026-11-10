@@ -336,7 +336,7 @@ System.out.println(bob);     // Bob: $300.0
 
     ### Part 3: Write Instance Methods
 
-    Use this class for problems 8–10:
+    Use this object class for problems 8–10:
     ```java
     public class Rectangle {
         double width;
@@ -355,7 +355,7 @@ System.out.println(bob);     // Bob: $300.0
 
     ### Part 4: Write Instance Methods with Return Values
 
-    Use the Rectangle class for problems 9–11:
+    Use the Rectangle class from above for the following problems 9–11:
 
     9. Add a method `area` that returns `width * height` as a `double`.
     10. Add a method `perimeter` that returns `2 * (width + height)` as a `double`.
