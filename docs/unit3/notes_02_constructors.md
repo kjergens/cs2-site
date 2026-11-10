@@ -199,8 +199,7 @@ public BankAccount(String owner) {
     ```
 
     1. List two ways a constructor is different from a regular method.
-    2. What does `this.name` refer to? What does the parameter `name` refer to? Why do we need `this` here?
-    3. With the old version (no constructor), you created a Dog like this:
+    2. With the old version (no constructor), you created a Dog like this:
     ```java
     Dog fido = new Dog();
     fido.name = "Fido";
@@ -212,50 +211,44 @@ public BankAccount(String owner) {
 
     ### Part 2: Predict the Output
 
-    5. Predict the output.
+    3. Predict the output.
     ```java
     public class Point {
-        public int x;
-        public int y;
+        int x;
+        int y;
 
-        public Point(int x, int y) {
-            this.x = x;
-            this.y = y;
+        public Point(int xp, int yp) {
+            x = xp;
+            y = yp;
         }
 
-        public void print() {
-            System.out.println("(" + x + ", " + y + ")");
+        public String toString()  {
+            return "(" + x + ", " + y + ")";
         }
     }
 
     public static void main(String[] args) {
         Point p1 = new Point(3, 4);
         Point p2 = new Point(0, 0);
-        p1.print();
-        p2.print();
+        
         p1.x = 10;
-        p1.print();
+
     }
     ```
 
     6. Predict the output.
     ```java
     public class Counter {
-        public int count;
+        int count;
 
         public Counter(int start) {
             count = start;
         }
 
-        public void increment() {
-            count++;
-        }
     }
 
     public static void main(String[] args) {
         Counter c = new Counter(5);
-        c.increment();
-        c.increment();
         System.out.println(c.count);
     }
     ```
@@ -263,27 +256,21 @@ public BankAccount(String owner) {
     7. Predict the output.
     ```java
     public class Box {
-        public double width;
-        public double height;
-        public double depth;
+        double width;
+        double height;
+        double depth;
 
-        public Box(double width, double height, double depth) {
-            this.width = width;
-            this.height = height;
-            this.depth = depth;
-        }
-
-        public double volume() {
-            return width * height * depth;
+        public Box(double w, double h, double d) {
+            width = w;
+            height = h;
+            depth = d;
         }
     }
 
     public static void main(String[] args) {
         Box b1 = new Box(2.0, 3.0, 4.0);
         Box b2 = new Box(1.0, 1.0, 1.0);
-        System.out.println(b1.volume());
-        System.out.println(b2.volume());
-        System.out.println(b1.volume() + b2.volume());
+        
     }
     ```
 
@@ -292,16 +279,16 @@ public BankAccount(String owner) {
     8. Add a constructor to the class below. The constructor should take `title` and `year` as parameters and initialize both instance variables.
     ```java
     public class Movie {
-        public String title;
-        public int year;
+        String title;
+        int year;
 
         // Write your constructor here
     }
     ```
 
-    9. Write a complete class called `Circle` with a `double radius` instance variable, a constructor that takes `radius` and initializes it, a method `area` that returns `Math.PI * radius * radius` (no printing inside), and a void method `describe` that prints `"Circle with radius R"` (substituting the actual value).
+    9. Write a complete class called `Circle` with a `double radius` instance variable, a default constructor that takes `radius` and initializes it to 1 and a parameterized constructor.
 
-    10. Write a `main` method (not inside `Circle`) that creates two `Circle` objects — one with radius `5.0` and one with radius `3.0` — and prints the area of each.
+    10. Write a `main` method (not inside `Circle`) that creates two `Circle` objects — one with radius `5.0` and one with the default.
 
     ### Part 4: Find the Bug
 
