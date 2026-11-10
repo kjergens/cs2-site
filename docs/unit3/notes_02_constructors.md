@@ -282,11 +282,11 @@ public BankAccount(String owner) {
         String title;
         int year;
 
-        // Write your constructor here
+        // Write your parameterized constructor here
     }
     ```
 
-    9. Write a complete class called `Circle` with a `double radius` instance variable, a default constructor that takes `radius` and initializes it to 1 and a parameterized constructor.
+    9. Write a complete class called `Circle` with a `double radius` instance variable, a default constructor that initialized radius to 1, and a parameterized construct that takes `radius` input.
 
     10. Write a `main` method (not inside `Circle`) that creates two `Circle` objects — one with radius `5.0` and one with the default.
 
